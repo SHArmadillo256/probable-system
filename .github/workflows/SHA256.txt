@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$SHA256 - Screaming Hairy Armadillo </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-bottom: 1px solid #c8ccd0;
+        }
+
+        #header h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+        }
+
+        #content {
+            padding: 20px;
+        }
+
+        #footer {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-top: 1px solid #c8ccd0;
+            text-align: center;
+        }
+
+        #footer p {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>SHA256 - Screaming Hairy Armadillo Memetoken</h1>
+    </div>
+
+    <div id="content">
+        <h2>Welcome to SHA256 - Screaming Hairy Armadillo Memetoken Mint Site</h2>
+        <p>This is a place where you can get Screaming Hairy Armadillos!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+    </div>
+
+    <div id="footer">
+        <p>&copy; 2024 $SHA256 - Screaming Hairy Armadillo</p>
+    </div>
+</body>
+</html>
