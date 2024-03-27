@@ -9,6 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f8f9fa;
         }
 
         #header {
@@ -16,16 +17,27 @@
             padding: 10px;
             border-bottom: 1px solid #c8ccd0;
             text-align: center;
+            position: relative;
         }
 
         #header h1 {
             margin: 0;
             padding: 0;
             font-size: 24px;
+            display: inline-block;
+        }
+
+        #header img {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            height: 50px;
+            width: 50px;
         }
 
         #content {
             padding: 20px;
+            max-width: 800px;
             text-align: center;
         }
 
@@ -41,6 +53,26 @@
             width: 15%;
             background-color: #f8f9fa;
             padding: 20px;
+        }
+
+        .info-box {
+            background-color: #fff8dc;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #c8ccd0;
+        }
+
+        .info-box h2 {
+            background-color: #ffeeaa;
+            padding: 5px 10px;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .info-box img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
         }
 
         #footer {
@@ -69,6 +101,7 @@
 </head>
 <body>
     <div id="header">
+         <img src="https://pbs.twimg.com/profile_images/1772860313978667008/aIdJMtL7_400x400.jpg" alt="Logo">
         <h1>$SHA256 - Screaming Hairy Armadillo</h1>
         <button onclick="connectWeb3Wallet()">Connect Web3 Wallet</button>
     </div>
@@ -82,29 +115,55 @@
             <a class="sidebar-link" href="#conservation">Conservation</a>
         </div>
 
-        
-<div id="additional-info">
+        <div id="content">
+        <div class="info-box">
+            <h2>Screaming Hairy Armadillo</h2>
+            <img src="armadillo_image.jpg" alt="Armadillo Image">
+        </div>
+
+        <div class="info-box">
+            <h2>Conservation Status</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/220px-Status_iucn3.1_LC.svg.png" alt="Conservation Image">
+            <p>Least Concern (IUCN 3.1)[2]</p>
+        </div>
+
+            <div id="additional-info">
         <h2>Scientific Classifications</h2>
         <ul>
-            <li>Domain: </li>
+            <li>Domain: Eukaryota </li>
             <li>Kingdom: Animalia</li>
             <li>Phylum: Chordata</li>
             <li>Class: Mammalia</li>
             <li>Order: Cingulata</li>
             <li>Family: Chlamyphoridae</li>
             <li>Genus: Chatophractus</li>
-            <li>Species : C. Vellerosus</li>
+            <li>Species: C. Vellerosus</li>
             <li>Binomial name: Chatophractus vellerosus</li>
         </ul>
+        </div>
 
-        <h2>Synonyms</h2>
-        <ul>
+        <div class="info-box">
+            <h2>Binomial Name</h2>
+            <p>Scientific classification of the screaming hairy armadillo.</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Screaming_Hairy_Armadillo_area.png" alt="Binomial Image">
+        </div>
+
+        <div class="info-box">
+            <h2>Synonyms</h2>
+            <ul>
             <li>Chaetophactus nationi</li>
             <li>Dasypus vellerosus</li>
         </ul>
+        </div>
+    
+        
 
-        <h2>Skull Image</h2>
-        <img src="skull_image.jpg" alt="Armadillo Skull">
+
+        <h2>Synonyms</h2>
+        
+
+        <h2>Image</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Chaetophractus_villosus_01_MWNH_310.JPG/220px-Chaetophractus_villosus_01_MWNH_310.JPG" alt="Armadillo Skull">
     </div>
         
         <h2 id="overview">Overview</h2>
