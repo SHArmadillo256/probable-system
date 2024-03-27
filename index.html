@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$SHA256 - Screaming Hairy Armadillo </title>
+    <title>$SHA256 - Screaming Hairy Armadillo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,6 +15,7 @@
             background-color: #f8f9fa;
             padding: 10px;
             border-bottom: 1px solid #c8ccd0;
+            text-align: center;
         }
 
         #header h1 {
@@ -24,6 +25,13 @@
         }
 
         #content {
+            padding: 20px;
+        }
+
+        #sidebar {
+            float: right;
+            width: 25%;
+            background-color: #f8f9fa;
             padding: 20px;
         }
 
@@ -38,21 +46,59 @@
             margin: 0;
             padding: 0;
         }
+
+        .sidebar-link {
+            display: block;
+            margin-bottom: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .sidebar-link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <div id="header">
-        <h1>SHA256 - Screaming Hairy Armadillo Memetoken</h1>
+        <h1>$SHA256 - Screaming Hairy Armadillo</h1>
+        <button onclick="connectWeb3Wallet()">Connect Web3 Wallet</button>
     </div>
 
     <div id="content">
-        <h2>Welcome to SHA256 - Screaming Hairy Armadillo Memetoken Mint Site</h2>
-        <p>This is a place where you can get Screaming Hairy Armadillos!</p>
+        <div id="sidebar">
+            <a class="sidebar-link" href="#overview">Overview</a>
+            <a class="sidebar-link" href="#habitat">Habitat</a>
+            <a class="sidebar-link" href="#behavior">Behavior</a>
+            <a class="sidebar-link" href="#diet">Diet</a>
+            <a class="sidebar-link" href="#conservation">Conservation</a>
+        </div>
+
+        <h2 id="overview">Overview</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+
+        <h2 id="habitat">Habitat</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+
+        <h2 id="behavior">Behavior</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+
+        <h2 id="diet">Diet</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+
+        <h2 id="conservation">Conservation</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
     </div>
 
     <div id="footer">
-        <p>&copy; 2024 $SHA256 - Screaming Hairy Armadillo</p>
+        <p>&copy; 2024 $SHA256 - Screaming Hairy Armadillo Memetoken</p>
     </div>
+
+    <script>
+        function connectWeb3Wallet() {
+            // Add your Web3 wallet connection logic here
+            alert("Connect Web3 Wallet functionality coming soon!");
+        }
+    </script>
 </body>
 </html>
