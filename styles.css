@@ -6,7 +6,7 @@
         }   
 
         .container {
-            max-width: 800px;
+            max-width: 600px;
             margin: 0 auto;
             background-color: #ffffff; /* Background color for the container */
             padding: 20px; /* Add padding to create space between content and container edge */
