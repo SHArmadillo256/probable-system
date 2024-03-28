@@ -57,6 +57,7 @@
             top: 0;
             bottom: 0;
             left: 0;
+            display: none;
         }
 
         #additional-info {
@@ -115,6 +116,27 @@
         .sidebar-link:hover {
             text-decoration: underline;
         }
+
+        /* Media query for mobile devices */
+@media only screen and (max-width: 600px) {
+    #content {
+        width: 100%; /* Full width on mobile */
+    }
+
+    #center-content {
+        width: 100%; /* Full width on mobile */
+    }
+
+    #sidebar {
+        display: block; /* Display sidebar on mobile */
+        width: 100%; /* Full width on mobile */
+        position: static; /* Remove fixed positioning */
+    }
+
+    #additional-info {
+        width: 100%; /* Full width on mobile */
+        position: static; /* Remove fixed positioning */
+    }
     </style>
 
     <div id="header">
