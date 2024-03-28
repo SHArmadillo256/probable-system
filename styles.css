@@ -1,17 +1,23 @@
-body {
+    body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
-        }
+        }   
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff; /* Background color for the container */
+            padding: 20px; /* Add padding to create space between content and container edge */
+            border: 1px solid #c8ccd0; /* Add border to create the box effect */
+       }
 
         #header {
             background-color: #f8f9fa;
             padding: 10px;
             border-bottom: 1px solid #c8ccd0;
-            position: fixed;
-            width: 100%;
-            z-index: 999;
+            text-align: center;
         }
 
         #header h1 {
@@ -22,17 +28,18 @@ body {
         }
 
         #header img {
+            display: block;
             position: fixed;
-            top: 20px;
-            left: 20px;
             height: 100px;
             width: 100px;
+            margin: 0 auto;
         }
 
         #content {
+                display: flex;
+                justify-content: space-between;
             padding: 10px;
             width: 25%;
-            margin: 0 auto;
         }
 
         #center-content h2 {
@@ -40,9 +47,10 @@ body {
         }
 
         #center-content {
+            flex-grow: 1;
             width: 100%;
             text-align: center;
-            margin: 0 auto;
+            padding-right: 20px; 
         }
 
         #sidebar {
@@ -55,6 +63,7 @@ body {
             top: 145px;
             bottom: 0;
             left: 120px;
+            flex-shrink: 0;
         }
 
         #additional-info {
@@ -74,7 +83,7 @@ body {
             padding: 10px;
             
             border: 1px solid #c8ccd0;
-            text-align: relative;
+           margin-bottom: 10px;
         }
 
         .info-box p b {
@@ -115,12 +124,6 @@ body {
             text-decoration: underline;
         }
 
-        .container {
-    background-color: #ffffff; /* Background color for the container */
-    padding: 20px; /* Add padding to create space between content and container edge */
-    border: 1px solid #c8ccd0; /* Add border to create the box effect */
-    }
-
         /* Media query for mobile devices */
 @media only screen and (max-width: 600px) {
     #content {
@@ -129,22 +132,14 @@ body {
 
     #center-content {
         width: 100%; /* Full width on mobile */
+        padding-right: 0;
     }
 
     #sidebar {
-        display: block; /* Display sidebar on mobile */
         width: 100%; /* Full width on mobile */
-        position: fixed; /* Remove fixed positioning */
+        
     }
 
     #additional-info {
         width: 100%; /* Full width on mobile */
-        position: static; /* Remove fixed positioning */
-    }
-
-    /* Clearfix for floating elements */
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
     }
