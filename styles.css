@@ -3,7 +3,13 @@
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
-        }
+        }   
+
+        .container {
+            background-color: #ffffff; /* Background color for the container */
+            padding: 20px; /* Add padding to create space between content and container edge */
+            border: 1px solid #c8ccd0; /* Add border to create the box effect */
+       }
 
         #header {
             background-color: #f8f9fa;
@@ -22,14 +28,18 @@
         }
 
         #header img {
+            display: block;
             position: fixed;
             top: 20px;
             left: 20px;
             height: 100px;
             width: 100px;
+            margin: 0 auto;
         }
 
         #content {
+                display: flex;
+                justify-content: space-between;
             padding: 10px;
             width: 25%;
             margin: 0 auto;
@@ -40,9 +50,11 @@
         }
 
         #center-content {
+            flex-grow: 1;
             width: 100%;
             text-align: center;
             margin: 0 auto;
+            padding-right: 20px; 
         }
 
         #sidebar {
@@ -55,6 +67,7 @@
             top: 145px;
             bottom: 0;
             left: 120px;
+            flex-shrink: 0;
         }
 
         #additional-info {
@@ -114,12 +127,6 @@
         .sidebar-link:hover {
             text-decoration: underline;
         }
-
-        .container {
-    background-color: #ffffff; /* Background color for the container */
-    padding: 20px; /* Add padding to create space between content and container edge */
-    border: 1px solid #c8ccd0; /* Add border to create the box effect */
-    }
 
         /* Media query for mobile devices */
 @media only screen and (max-width: 600px) {
