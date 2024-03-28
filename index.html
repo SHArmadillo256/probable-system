@@ -16,7 +16,11 @@
             background-color: #f8f9fa;
             padding: 10px;
             border-bottom: 1px solid #c8ccd0;
-            position: relative;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
         }
 
         #header h1 {
@@ -59,10 +63,11 @@
             padding: 20px;
             box-sizing: border-box;
             position: fixed;
-            top: 50px;
+            top: 60px;
             bottom: 0;
             left: 20px;
             align: center;
+            overflow-y: auto;
         }
 
         #additional-info {
@@ -145,13 +150,13 @@
     }
     </style>
 
-    <div id="header">
-         <img src="https://pbs.twimg.com/profile_images/1772860313978667008/aIdJMtL7_400x400.jpg" alt="Logo">
+    
         
     </div>
     
 </head>
-    
+    <div id="header">
+         <img src="https://pbs.twimg.com/profile_images/1772860313978667008/aIdJMtL7_400x400.jpg" alt="Logo">
     <body>
     
 
