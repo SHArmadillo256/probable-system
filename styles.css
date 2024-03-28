@@ -1,4 +1,4 @@
-        body {
+ body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -6,7 +6,8 @@
         }   
 
         .container {
-            max-width: 600px;
+            max-width: 800px;
+            margin: 0 auto;
             background-color: #ffffff; /* Background color for the container */
             padding: 20px; /* Add padding to create space between content and container edge */
             border: 1px solid #c8ccd0; /* Add border to create the box effect */
@@ -28,6 +29,7 @@
 
         #header img {
             display: block;
+            position: fixed;
             height: 100px;
             width: 100px;
             margin: 0 auto;
@@ -57,7 +59,10 @@
             background-color: #f8f9fa;
             padding: 10px;
             box-sizing: border-box;
+            position: fixed;
+            top: 145px;
             bottom: 0;
+            left: 120px;
             flex-shrink: 0;
         }
 
