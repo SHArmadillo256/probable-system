@@ -18,6 +18,8 @@
             padding: 10px;
             border-bottom: 1px solid #c8ccd0;
             position: fixed;
+            width: 100%;
+            z-index: 999;
         }
 
         #header h1 {
@@ -129,7 +131,7 @@
     #sidebar {
         display: block; /* Display sidebar on mobile */
         width: 100%; /* Full width on mobile */
-        position: static; /* Remove fixed positioning */
+        position: fixed; /* Remove fixed positioning */
     }
 
     #additional-info {
@@ -145,16 +147,16 @@
     }
     
     </style>
-        
-    <div id="header">
-         <img src="https://pbs.twimg.com/profile_images/1772860313978667008/aIdJMtL7_400x400.jpg" alt="Logo">
-        </div>
 
     
 </head>
-    <center><button onclick="connectWeb3Wallet()">Connect Web3 Wallet</button></center>
     <body>
-    
+
+        <div id="header">
+         <img src="https://pbs.twimg.com/profile_images/1772860313978667008/aIdJMtL7_400x400.jpg" alt="Logo">
+           <center><button onclick="connectWeb3Wallet()">Connect Web3 Wallet</button></center>
+        </div>
+        
 <div id="content">
   <div id="sidebar">
             <p><center>Content</p></center>
