@@ -6,7 +6,7 @@
         }
 
     .container {
-    max-width: 1000px;
+    max-width: 1024px;
     margin: 0 auto;
     background-color: #f8f9fa; /* Background color for the container */
     padding: 20px; /* Add padding to create space between content and container edge */
@@ -17,8 +17,7 @@
             background-color: #f8f9fa;
             padding: 10px;
             border-bottom: 1px solid #c8ccd0;
-            position: fixed;
-            
+            position: fixed, center;
             width: 100%;
             z-index: 999;
         }
@@ -35,7 +34,6 @@
            margin: 0 auto;
             height: 100px;
             width: 100px;
-           
         }
 
         #content {
