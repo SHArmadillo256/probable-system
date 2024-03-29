@@ -63,7 +63,6 @@
 
         #sidebar {
             position: fixed;
-            flex-basis: 200px;
             width: 12%;
             background-color: #f8f9fa;
             padding: 10px;
