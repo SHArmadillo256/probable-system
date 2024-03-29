@@ -9,7 +9,7 @@
     max-width: 1260px;
     margin: 0 auto;
     background-color: #f8f9fa; /* Background color for the container */
-    padding-top: 100px;
+    padding-top: 120px;
     padding: 10px; /* Add padding to create space between content and container edge */
     border: 1px solid #c8ccd0; /* Add border to create the box effect */
     display: flex;
@@ -25,7 +25,7 @@
             position: fixed;
             border-bottom: 1px solid #c8ccd0;
             width: 100%;
-            z-index: 1000;
+            z-index: 999;
         }
 
         #header h1 {
@@ -57,6 +57,7 @@
         #center-content {
             flex-grow: 1;
              padding-right: 30px;
+            margin: left 12%;
             text-align: center;
             margin: 0 auto;
         }
@@ -67,6 +68,7 @@
             background-color: #f8f9fa;
             padding: 10px;
             box-sizing: border-box;
+            z-index: 1000;
         }
 
         #additional-info {
@@ -77,6 +79,7 @@
             padding: 20px;
             box-sizing: border-box;
             right: 0;
+            z-index: 999;
         }
 
         .info-box {
