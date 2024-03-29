@@ -10,8 +10,6 @@
     margin: 0 auto;
     background-color: #f8f9fa; /* Background color for the container */
     padding-top: 120px;
-
-    padding: 10px; /* Add padding to create space between content and container edge */
     border: 1px solid #c8ccd0; /* Add border to create the box effect */
     display: flex;
     }
@@ -48,6 +46,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    overflow-y: auto;
     z-index: 999;
     ...
 }
@@ -59,7 +58,7 @@
         #center-content {
             flex-grow: 1;
              padding-right: 30px;
-            margin: left 12%;
+            margin-left: 12%;
             text-align: center;
             margin: 0 auto;
         }
