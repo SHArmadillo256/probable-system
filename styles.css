@@ -9,6 +9,7 @@
     max-width: 1260px;
     margin: 0 auto;
     background-color: #f8f9fa; /* Background color for the container */
+    padding-top: 100px;
 
     padding: 10px; /* Add padding to create space between content and container edge */
     border: 1px solid #c8ccd0; /* Add border to create the box effect */
@@ -21,7 +22,7 @@
             align-items: center;
             justify-content: center;
             background-color: #f8f9fa;
-            padding-top: 120px;
+            padding-top: 100px;
             padding: 20px;
             position: fixed;
             border-bottom: 1px solid #c8ccd0;
