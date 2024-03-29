@@ -63,6 +63,7 @@
             background-color: #f8f9fa;
             padding: 10px;
             box-sizing: border-box;
+           position: fixed;
         }
 
         #additional-info {
@@ -71,16 +72,14 @@
             background-color: #f8f9fa;
             padding: 20px;
             box-sizing: border-box;
-            top: 0;
-            bottom: 0;
-            right: 0;
+           
             z-index: 1000; /* Ensure additional-info appears above other elements */
         }
 
         .info-box {
             background-color: #fff8dc;
             padding: 10px;
-            
+          
             margin-bottom: 10px;
             border: 1px solid #c8ccd0;
             text-align: relative;
