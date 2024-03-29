@@ -66,7 +66,7 @@
         }
 
         #additional-info {
-            float: right;
+            position: right;
             width: 15%;
             background-color: #f8f9fa;
             padding: 20px;
