@@ -70,6 +70,7 @@
             width: 10%;
             background-color: #f8f9fa;
             padding: 20px;
+            box-sizing: border-box;
 
             z-index: 1000; /* Ensure additional-info appears above other elements */
         }
