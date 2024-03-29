@@ -56,7 +56,6 @@
             background-color: #f8f9fa;
             padding: 20px;
             box-sizing: border-box;
-            position: fixed;
             top: 0;
             bottom: 0;
             right: 0;
@@ -127,7 +126,7 @@
 
     #sidebar {
         display: block; /* Display sidebar on mobile */
-        width: 100%; /* Full width on mobile */
+        width: 15%; /* Full width on mobile */
         position: fixed; /* Remove fixed positioning */
     }
 
