@@ -21,7 +21,6 @@
             background-color: #f8f9fa;
             padding: 10px;
             border-bottom: 1px solid #c8ccd0;
-            position: fixed;
             width: 100%;
             z-index: 999;
         }
@@ -34,16 +33,15 @@
         }
 
         #header img {
-           display: block;
-           margin: 0 auto;
+           display: inline-block;
             height: 100px;
             width: 100px;
         }
 
 .content-area {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    position: center;
     ...
 }
 
@@ -61,7 +59,6 @@
         #sidebar {
             flex-grow: 1;
             flex-basis: 200px;
-            float: left;
             width: 12%;
             background-color: #f8f9fa;
             padding: 10px;
