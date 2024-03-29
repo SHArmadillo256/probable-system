@@ -17,7 +17,7 @@
             background-color: #f8f9fa;
             padding: 10px;
             border-bottom: 1px solid #c8ccd0;
-            position: center;
+            position: fixed;
             
             width: 100%;
             z-index: 999;
@@ -42,7 +42,7 @@
             display: flex;
             justify-content: space-between; 
             padding: 10px;
-            width: 10%;
+            width: 40%;
             margin: 0 auto;
            position: center;
         }
@@ -64,7 +64,7 @@
             background-color: #f8f9fa;
             padding: 10px;
             box-sizing: border-box;
-           position: fixed;
+           
         }
 
         #additional-info {
