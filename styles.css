@@ -9,6 +9,7 @@
     max-width: 1260px;
     margin: 0 auto;
     background-color: #f8f9fa; /* Background color for the container */
+    padding-top: 100px;
     padding: 10px; /* Add padding to create space between content and container edge */
     border: 1px solid #c8ccd0; /* Add border to create the box effect */
     display: flex;
@@ -58,7 +59,6 @@
         }
 
         #sidebar {
-            flex-grow: 1;
             flex-basis: 200px;
             width: 12%;
             background-color: #f8f9fa;
