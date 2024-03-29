@@ -11,9 +11,13 @@
     background-color: #f8f9fa; /* Background color for the container */
     padding: 10px; /* Add padding to create space between content and container edge */
     border: 1px solid #c8ccd0; /* Add border to create the box effect */
+    display: flex;
     }
 
         #header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             background-color: #f8f9fa;
             padding: 10px;
             border-bottom: 1px solid #c8ccd0;
@@ -45,6 +49,12 @@
            position: center;
         }
 
+.content-area {
+    display: flex;
+    justify-content: space-between;
+    ...
+}
+
         #center-content h2 {
             text-align: left;
         }
@@ -63,10 +73,10 @@
             padding: 10px;
             box-sizing: border-box;
             position: fixed;
+            left: 0;
         }
 
         #additional-info {
-            float: right;
             width: 15%;
             background-color: #f8f9fa;
             padding: 20px;
