@@ -2,19 +2,19 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
+            background-color: #ffffff;
         }
 
     .container {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #ffffff; /* Background color for the container */
+    background-color: #f8f9fa; /* Background color for the container */
     padding: 20px; /* Add padding to create space between content and container edge */
     border: 1px solid #c8ccd0; /* Add border to create the box effect */
     }
 
         #header {
-            background-color: #f8f9fa;
+            background-color: #ffffff;
             padding: 10px;
             border-bottom: 1px solid #c8ccd0;
             position: left;
@@ -42,7 +42,7 @@
             display: flex;
             justify-content: space-between; 
             padding: 10px;
-            width: 30%;
+            width: 25%;
             margin: 0 auto;
         }
 
@@ -60,7 +60,7 @@
 
         #sidebar {
             float: left;
-            width: 7%;
+            width: 8%;
             background-color: #f8f9fa;
             padding: 10px;
             box-sizing: border-box;
