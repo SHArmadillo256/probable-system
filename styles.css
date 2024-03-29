@@ -67,6 +67,7 @@
         }
 
         #sidebar {
+            flex-grow: 1;
             float: left;
             width: 10%;
             background-color: #f8f9fa;
@@ -77,6 +78,7 @@
         }
 
         #additional-info {
+            flex-grow: 1;
             width: 15%;
             background-color: #f8f9fa;
             padding: 20px;
