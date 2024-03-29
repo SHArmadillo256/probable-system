@@ -62,7 +62,7 @@
             flex-grow: 1;
             flex-basis: 200px;
             float: left;
-            width: 10%;
+            width: 12%;
             background-color: #f8f9fa;
             padding: 10px;
             box-sizing: border-box;
@@ -72,10 +72,11 @@
         #additional-info {
             flex-grow: 1;
             flex-basis: 250px;
-            width: 15%;
+            width: 18%;
             background-color: #f8f9fa;
             padding: 20px;
             box-sizing: border-box;
+            right: 0;
         }
 
         .info-box {
