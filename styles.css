@@ -30,11 +30,15 @@
         }
 
         #header img {
+           display: block;
+           margin: 0 auto;
             height: 100px;
             width: 100px;
         }
 
         #content {
+            display: flex;
+            justify-content: space-between; 
             padding: 10px;
             width: 25%;
             margin: 0 auto;
