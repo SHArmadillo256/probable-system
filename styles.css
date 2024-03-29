@@ -146,10 +146,3 @@
         width: 100%; /* Full width on mobile */
         position: static; /* Remove fixed positioning */
     }
-
-    /* Clearfix for floating elements */
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
-    }
