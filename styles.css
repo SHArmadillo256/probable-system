@@ -17,7 +17,7 @@
             background-color: #f8f9fa;
             padding: 10px;
             border-bottom: 1px solid #c8ccd0;
-            position: fixed;
+            position: left;
             
             width: 100%;
             z-index: 999;
@@ -35,14 +35,14 @@
            margin: 0 auto;
             height: 100px;
             width: 100px;
-           position: left;
+           
         }
 
         #content {
             display: flex;
             justify-content: space-between; 
             padding: 10px;
-            width: 25%;
+            width: 30%;
             margin: 0 auto;
         }
 
