@@ -25,7 +25,7 @@
             position: fixed;
             border-bottom: 1px solid #c8ccd0;
             width: 100%;
-            z-index: 999;
+            z-index: 1000;
         }
 
         #header h1 {
