@@ -38,19 +38,40 @@
     }
 
         #header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            
             padding-top: 100px;
-            padding: 20px;
+            padding: 10px 20px;
             position: fixed;
-            border-bottom: 1px solid #c8ccd0;
             width: 100%;
-            z-index: 1000;
+            z-index: 1500;
         }
 
+     .network-actions, .main-navigation {
+        display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+}
+
+button {
+    padding: 8px 16px; /* Sizing of buttons */
+    border: none; /* Remove default border */
+    background-color: #007bff; /* Example background color */
+    color: white; /* Text color */
+    text-transform: uppercase; /* Styling choice */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
         #header h1 {
             margin: 0;
             padding: 0;
@@ -86,9 +107,12 @@
         }
 
         #sidebar {
-            position: fixed;
+            position: absolute;
             width: 12%;
-            
+            left: 0;
+            top: 0;
+            width: 12%;
+            height: 100%;
             padding: 10px;
             box-sizing: border-box;
             z-index: 1000;
