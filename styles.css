@@ -3,7 +3,7 @@
             margin: 0;
             height: 100%;
             padding: 0;
-            background-color: #f8f9fa;
+            
         }
 
 .animated-background {
@@ -68,7 +68,6 @@
     justify-content: space-between;
     overflow-y: auto;
     z-index: 999;
-    ...
 }
 
         #center-content h2 {
