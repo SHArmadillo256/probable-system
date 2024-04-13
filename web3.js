@@ -15,7 +15,6 @@ export const getWeb3 = () => {
             }
         }
         window.alert('Solana object not found! Get a Phantom Wallet 👻');
-        alert("Connect Web3 functionality coming very soon!");
     };
 
     // Function to connect the wallet
