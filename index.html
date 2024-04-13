@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>$SHA256 - Screaming Hairy Armadillo</title>
     <link rel="stylesheet" href="styles.css">
-
+     <script src="./web3.js"></script>
 
   
 </head>
@@ -125,7 +125,23 @@ Its natural habitats are subtropical or tropical dry forests, temperate shrublan
         </div>
     </div>
 
-   
+
+<button onclick="connectWallet()">Connect Wallet</button>
+    <button onclick="sendTransaction('YourPublicKey', 'DestinationPublicKey', 1000)">Send Transaction</button>
+
+    <script>
+        const { connectWallet, sendTransaction } = getWeb3();
+
+        async function makeTransaction() {
+            try {
+                await connectWallet();
+                const signature = await sendTransaction('YourPublicKey', 'DestinationPublicKey', 1000);
+                console.log('Transaction signature', signature);
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+    </script>        
     
    
    
