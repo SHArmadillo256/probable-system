@@ -17,8 +17,26 @@
 <div id="header">
          <h1>$SHA256</h1>
          <img src="https://pbs.twimg.com/profile_images/1772860313978667008/aIdJMtL7_400x400.jpg" alt="Logo">
-              <button onclick="connectWallet()">Connect Web3 Wallet</button>
-              <button onclick="sendTransaction('YourPublicKey', 'DestinationPublicKey', 1000)">Send Transaction</button>
+              
+
+     
+    <div class="network-actions">
+        <!-- Connect & Change Network -->
+        <button onclick="connectWallet();">Connect</button>
+        <button onclick="changeNetwork();">Change Network</button>
+         <button onclick="sendTransaction('YourPublicKey', 'DestinationPublicKey', 1000)">Send Transaction</button>
+    
+    </div>
+    <div class="main-navigation">
+        <!-- Main navigation buttons -->
+        <button onclick="loadSwap();">Swap</button>
+        <button onclick="loadBridge();">Bridge</button>
+        <button onclick="loadStakeLiquidity();">Stake/Liquidity</button>
+        <button onclick="loadDashboard();">Dashboard</button>
+        <button onclick="loadLock();">Lock</button>
+        <!-- Add more buttons as needed -->
+    </div>
+              
 
     <script>
         const { connectWallet, sendTransaction } = getWeb3();
