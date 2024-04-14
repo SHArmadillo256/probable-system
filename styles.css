@@ -41,7 +41,7 @@
             width: 100%;
             position: fixed;
             top: 0;
-            
+            height 60px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -49,7 +49,6 @@
             padding-top: 100px;
             padding: 10px 20px;
             position: fixed;
-            width: 100%;
             z-index: 1500;
         }
 
@@ -100,29 +99,29 @@ button:hover {
 
         #center-content {
             flex-grow: 1;
-             padding-right: 30px;
-            margin-left: 12%;
+            padding-right: 30px;
+            margin-left: 220px;
             text-align: center;
-            margin: 0 auto;
-        }
+            margin: 0 auto;     
+      }
 
         #sidebar {
-            position: absolute;
-            width: 12%;
+            position: fixed;
             left: 0;
-            top: 0;
-            width: 12%;
-            height: 100%;
+            top: 60px;
+            width: 200px;
+            height: calc(100% - 60px); /* Subtract the header height from the total height */
             padding: 10px;
             box-sizing: border-box;
             z-index: 1000;
+            background: rgba(0, 0, 0, 0.5); /* Adding a semi-transparent background */
         }
 
         #additional-info {
             flex-grow: 1;
             flex-basis: 220px;
             width: 18%;
-            
+            background: rgba(0, 0, 0, 0.5); /* Adding a semi-transparent background */
             padding: 20px;
             box-sizing: border-box;
             right: 0;
@@ -184,13 +183,14 @@ button:hover {
     }
 
     #center-content {
-        width: 100%; /* Full width on mobile */
+        margin-left: 0;
     }
 
     #sidebar {
         display: block; /* Display sidebar on mobile */
-        width: 15%; /* Full width on mobile */
-        position: fixed; /* Remove fixed positioning */
+        width: 100%
+        height: auto%; /* Full width on mobile */
+        position: relative; /* Remove fixed positioning */
     }
 
     #additional-info {
