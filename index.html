@@ -12,28 +12,45 @@
   
 </head>
 
-<div class="animated-background"></div> 
-     
-<div id="header">
-         <h1>$SHA256</h1>
-         <img src="https://pbs.twimg.com/profile_images/1772860313978667008/aIdJMtL7_400x400.jpg" alt="Logo">
-              
+<div class="animated-background"></div>
+                   
 
+    <div id="header">
+    <div class="header-left">
+        <!-- Logo and Navigation -->
+        <h1>$SHA256</h1>
+        <img src="https://pbs.twimg.com/profile_images/1772860313978667008/aIdJMtL7_400x400.jpg" alt="Logo" style="vertical-align: middle;">
+        <button onclick="loadSwap();">Swap</button>
+        <button onclick="loadBridge();">Bridge</button>
+        <button onclick="loadDashboard();">Dashboard</button>
+        <button onclick="loadStakeLiquidity();">Stake/Liquidity</button>
+        <button onclick="loadAirdrops();">Airdrops</button>
+        <button onclick="loadLock();">Lock</button>
+    </div>
+    <div class="header-right">
+        <!-- Connect and Network -->
+        
+        <button onclick="changeNetwork();">Change Network</button>
+        <button onclick="sendTransaction('YourPublicKey', 'DestinationPublicKey', 1000)">Send Transaction</button>
+        <button onclick="connectWallet();">Connect</button>
+    </div>
+</div>
+
+     
      
     <div class="network-actions">
         <!-- Connect & Change Network -->
         <button onclick="connectWallet();">Connect</button>
         <button onclick="changeNetwork();">Change Network</button>
-         <button onclick="sendTransaction('YourPublicKey', 'DestinationPublicKey', 1000)">Send Transaction</button>
+         
     
     </div>
     <div class="main-navigation">
         <!-- Main navigation buttons -->
         <button onclick="loadSwap();">Swap</button>
         <button onclick="loadBridge();">Bridge</button>
-        <button onclick="loadStakeLiquidity();">Stake/Liquidity</button>
-        <button onclick="loadDashboard();">Dashboard</button>
-        <button onclick="loadLock();">Lock</button>
+        
+        
         <!-- Add more buttons as needed -->
     </div>
               
