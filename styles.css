@@ -6,6 +6,19 @@
             overflow: hidden; /* Hide scrollbars */
    }
 
+   body, button, h1, h2, h3, p { /* Targeting all text elements */
+    color: white; /* Sets text color to white */
+    font-family: Arial, sans-serif; /* Ensures a consistent font across all text */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #121212;  /* Dark background for better neon effect visibility */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: auto; /* Allows vertical scrolling */
+}
+
 .animated-background {
     position: fixed;
     top: 0; left: 0;
@@ -38,23 +51,26 @@
     }
 
         #header {
-            width: 100%;
+            width: 90%;
             display: flex;
             top: 0;
-            height 60px;
+            height: 60px;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
             padding-top: 100px;
-            padding: 10px 20px;
+            padding: 10px 5%;
             position: fixed;
             z-index: 1500;
         }
    .header-left, .header-right {
       display: flex;
-      align-items: center;
       gap: 10px;
    }
+
+  .header-controls {
+    justify-content: flex-end;
+}
 
      .network-actions, .main-navigation {
         display: flex;
@@ -74,6 +90,30 @@ button {
 button:hover {
     background-color: #0056b3; /* Darker shade on hover */
 }
+
+.neon-button {
+    border: 2px solid #0F0;  /* Neon green outline */
+    color: white;
+    background: none;
+    padding: 8px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5), 0 0 25px rgba(0, 255, 0, 0.75); /* Glow effect */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.neon-button:hover, .neon-button:focus {
+    background-color: rgba(0, 255, 0, 0.2);  /* Subtle green fill on hover/focus */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.8), 0 0 30px rgba(0, 255, 0, 1); /* Increased glow on hover/focus */
+}
+
+.neon-button:active {
+    background-color: rgba(0, 255, 0, 0.4); /* Deeper green fill on active/click */
+}
+
         #header h1 {
             margin: 0;
             padding: 0;
@@ -100,13 +140,17 @@ button:hover {
             text-align: left;
         }
 
-        #center-content {
+        #center-content, #additional-info {
             flex-grow: 1;
-            padding-right: 30px;
+            flex-bsis: 220px;
+            width: 18%;
             margin-left: 220px;
             text-align: center;
-            margin: 0 auto;     
-      }
+            margin: 0 auto;
+            box-sizing: border-box;
+            padding: 20px;
+            overflow-y: auto; /* Content scrollable */
+}
 
         #sidebar {
             position: fixed;
@@ -114,17 +158,8 @@ button:hover {
             top: 60px;
             width: 200px;
             height: calc(100% - 60px); /* Subtract the header height from the total height */
+            overflow-y: auto; /* Makes sidebar scrollable independently */
             background: rgba(0, 0, 0, 0.5); /* Adding a semi-transparent background */
-        }
-
-        #additional-info {
-            flex-grow: 1;
-            flex-basis: 220px;
-            width: 18%;
-            padding: 20px;
-            box-sizing: border-box;
-            right: 0;
-            z-index: 999;
         }
 
         .info-box {
