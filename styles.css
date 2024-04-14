@@ -12,7 +12,7 @@
     width: 100%;
     height: 100%;
     z-index: 1 ;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #243B55, #141E30, #0A0F0D, #2F3C4F);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
 }
@@ -111,9 +111,6 @@ button:hover {
             top: 60px;
             width: 200px;
             height: calc(100% - 60px); /* Subtract the header height from the total height */
-            padding: 10px;
-            box-sizing: border-box;
-            z-index: 1000;
             background: rgba(0, 0, 0, 0.5); /* Adding a semi-transparent background */
         }
 
