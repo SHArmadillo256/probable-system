@@ -121,7 +121,6 @@ button:hover {
             flex-grow: 1;
             flex-basis: 220px;
             width: 18%;
-            background: rgba(0, 0, 0, 0.5); /* Adding a semi-transparent background */
             padding: 20px;
             box-sizing: border-box;
             right: 0;
@@ -174,21 +173,26 @@ button:hover {
             text-decoration: underline;
         }
 
-        
+        .container, #sidebar, #center-content, #additional-info {
+    background: rgba(0, 0, 0, 0.2); /* Adjust opacity (0.2) as needed */
+    /* Other styles as necessary */
+}
 
         /* Media query for mobile devices */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     #content {
         width: 100%; /* Full width on mobile */
     }
 
     #center-content {
         margin-left: 0;
+        margin-top: 10px;
     }
 
     #sidebar {
         display: block; /* Display sidebar on mobile */
         width: 100%
+        top: 0;
         height: auto%; /* Full width on mobile */
         position: relative; /* Remove fixed positioning */
     }
@@ -196,4 +200,8 @@ button:hover {
     #additional-info {
         width: 100%; /* Full width on mobile */
         position: static; /* Remove fixed positioning */
+    }
+
+    .container, #sidebar, #center-content, #additional-info, #content {
+        background: rgba(0, 0, 0, 0.3); /* Slightly different opacity for mobile */
     }
