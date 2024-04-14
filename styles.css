@@ -39,18 +39,22 @@
 
         #header {
             width: 100%;
-            position: fixed;
+            display: flex;
             top: 0;
             height 60px;
-            display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             padding-top: 100px;
             padding: 10px 20px;
             position: fixed;
             z-index: 1500;
         }
+   .header-left, .header-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+   }
 
      .network-actions, .main-navigation {
         display: flex;
@@ -59,11 +63,10 @@
 }
 
 button {
-    padding: 8px 16px; /* Sizing of buttons */
+    padding: 5px 15px; /* Sizing of buttons */
     border: none; /* Remove default border */
     background-color: #007bff; /* Example background color */
     color: white; /* Text color */
-    text-transform: uppercase; /* Styling choice */
     border-radius: 4px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
 }
