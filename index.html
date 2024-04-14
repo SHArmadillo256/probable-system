@@ -6,9 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>$SHA256 - Screaming Hairy Armadillo</title>
-    <link rel="stylesheet" href="styles.css">
-     <script src="./web3connect.js"></script>
-
+    <link rel="stylesheet" href="styles.css", href="src/styles.css" >
+    <script src="./web3connect.js","src/web3modal.js"></script>
+    <div id="root"></div>  <!-- React will load your app component into this div -->
   
 </head>
 
@@ -26,13 +26,16 @@
         <button class="neon-button" onclick="loadStakeLiquidity();">Stake/Liquidity</button>
         <button class="neon-button" onclick="loadAirdrops();">Airdrops</button>
         <button class="neon-button" onclick="loadLock();">Lock</button>
+        <button class="neon-button" onclick="loadLoan();">Loan</button>
+        <button class="neon-button" onclick="loadStore();">Store</button>
+        
     </div>
     <div class="header-right">
         <!-- Connect and Network -->
         
         <button class="neon-button" onclick="changeNetwork();">Change Network</button>
         <button class="neon-button" onclick="sendTransaction('YourPublicKey', 'DestinationPublicKey', 1000)">Send Transaction</button>
-        <button class="neon-button" onclick="connectWallet();">Connect</button>
+        <button class="neon-button" onclick="connectWallet();">Connect Wallet</button>
     </div>
 </div>
 
