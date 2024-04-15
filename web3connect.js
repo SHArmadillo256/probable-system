@@ -1,4 +1,4 @@
-// web3.js
+// web3connectsolana.js
 import { Connection, PublicKey, Transaction, clusterApiUrl } from '@solana/web3.js';
 import { WalletNotConnectedError } from '@solana/wallet-adapter-base';
 

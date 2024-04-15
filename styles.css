@@ -30,6 +30,18 @@ body {
     animation: gradientBG 15s ease infinite;
 }
 
+/* Hide the WalletConnect expand/collapse behavior */
+.walletconnect-qrcode__base {
+    display: none !important;
+}
+
+/* Make sure all wallet options are visible upfront */
+.walletconnect-modal__base {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 @keyframes gradientBG {
     0% {
         background-position: 0% 50%;
