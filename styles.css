@@ -154,7 +154,7 @@ button:hover {
 
         #center-content, #additional-info {
             flex-grow: 1;
-            flex-bais: 220px;
+            flex-basis: 220px;
             width: 18%;
             margin-left: 220px;
             text-align: center;
