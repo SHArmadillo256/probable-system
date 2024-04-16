@@ -1,5 +1,5 @@
-    import Web3 from 'web3';
-    import Web3Modal from 'web3modal';
+    import Web3 from 'https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js';
+    import Web3Modal from 'https://cdn.jsdelivr.net/npm/web3modal@latest/dist/web3modal.min.js';
     import WalletConnectProvider from '@walletconnect/web3-provider';
     import CoinbaseWalletSDK from '@coinbase/wallet-sdk';
     import Fortmatic from 'fortmatic';
