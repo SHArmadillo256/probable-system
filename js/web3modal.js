@@ -12,7 +12,6 @@ const providerOptions = {
     options: {
       infuraId: 'e2c71b288df14e9877b4a6af1d6f571d'  // This will be used to connect to the Ethereum network
     }
-   }
   },
   coinbasewallet: {
     package: CoinbaseWalletSDK,
