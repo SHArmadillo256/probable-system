@@ -61,6 +61,33 @@ async function connectWallet() {
   provider.on("disconnect", (error) => {
     console.log("Disconnected", error);
   });
+
+  } catch (error) {
+    console.error("Could not connect to wallet:", error);
+  }
+}
+
+// Change Network functionality
+async function changeNetwork(chainId) {
+  try {
+    await provider.request({
+      method: "wallet_switchEthereumChain",
+      params: [{ chainId: Web3.utils.toHex(chainId) }]
+    });
+  } catch (error) {
+    if (error.code === 4902) {
+      try {
+        // This network is not added to the wallet yet, attempt to add it
+        await provider.request({
+          method: "wallet_addEthereumChain",
+          params: [/* Network parameters for the network to be added */],
+        });
+      } catch (addError) {
+        console.error('Unable to add network:', addError);
+      }
+    }
+    console.error('Error changing network:', error);
+  }
 }
 
 async function disconnectWallet() {
