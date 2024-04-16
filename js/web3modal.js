@@ -42,10 +42,9 @@ const web3Modal = new Web3Modal({
 let web3;
 let provider;
 
-async function connectWallet() {
- try {
-  provider = await web3Modal.connect();
-  web3 = new Web3(provider);
+export async function connectWallet() {
+  const provider = await web3Modal.connect();
+  const web3 = new Web3(provider);
 
   provider.on("accountsChanged", (accounts) => {
     console.log("Accounts Changed", accounts);
@@ -62,6 +61,8 @@ async function connectWallet() {
   } catch (error) {
     console.error("Could not connect to wallet:", error);
   }
+
+return web3;
 }
 
 // Change Network functionality
@@ -87,7 +88,7 @@ async function changeNetwork(chainId) {
   }
 }
 
-function disconnectWallet() {
+export function disconnectWallet() {
   if(provider && provider.close) {
      provider.close();
   }
