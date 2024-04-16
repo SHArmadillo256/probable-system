@@ -43,42 +43,16 @@
     </div>
 </div>
 
-    <script type="module">
-        import { connectWallet, disconnectWallet, sendTransaction } from '/js/web3modal.js';
+<script type="module">
+        import { connectWallet, disconnectWallet } from './js/web3modal.js';
         
-        document.addEventListener('DOMContentLoaded', () => {
-            const connectButton = document.getElementById('connectWalletButton');
-            const disconnectButton = document.getElementById('disconnectWalletButton');
-            const sendTxButton = document.getElementById('sendTxButton');  // Ensure this button is added with this ID in your HTML
+        document.getElementById('connectWalletButton').addEventListener('click', () => {
+            connectWallet().then(() => console.log('Wallet connected!'));
+        });
 
-            if (connectButton) {
-                connectButton.addEventListener('click', async () => {
-                    try {
-                        await connectWallet();
-                        console.log('Wallet connected!');
-                    } catch (error) {
-                        console.error('Error connecting wallet:', error);
-                    }
-                });
-            }
-
-            if (disconnectButton) {
-                disconnectButton.addEventListener('click', () => {
-                    disconnectWallet();
-                    console.log('Wallet disconnected.');
-                });
-            }
-
-            if (sendTxButton) {
-                sendTxButton.addEventListener('click', async () => {
-                    try {
-                        const signature = await sendTransaction('YourPublicKey', 'DestinationPublicKey', 1000);
-                        console.log('Transaction signature:', signature);
-                    } catch (error) {
-                        console.error('Error making transaction:', error);
-                    }
-                });
-            }
+        document.getElementById('disconnectWalletButton').addEventListener('click', () => {
+            disconnectWallet();
+            console.log('Wallet disconnected!');
         });
     </script>
      
