@@ -180,7 +180,7 @@ button:hover {
           
             margin-bottom: 10px;
             border: 1px solid #c8ccd0;
-            text-align: fixed;
+            align: fixed;
         }
 
         .info-box p b {
