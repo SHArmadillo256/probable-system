@@ -1,9 +1,9 @@
-    import Web3 from 'https://cdn.skypack.dev/web3';
-    import Web3Modal from 'https://cdn.skypack.dev/web3modal';
-    import WalletConnectProvider from 'https://cdn.skypack.dev/@walletconnect/web3-provider';
-    import CoinbaseWalletSDK from 'https://cdn.skypack.dev/@coinbase/wallet-sdk';
-    import Fortmatic from 'https://cdn.skypack.dev/fortmatic';
-    import Torus from 'https://cdn.skypack.dev/@toruslabs/torus-embed';
+    import Web3 from 'https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js';
+    import Web3Modal from 'https://cdn.jsdelivr.net/npm/web3modal@latest/dist/web3modal.min.js';
+    import WalletConnectProvider from 'https://cdn.jsdelivr.net/npm/@walletconnect/web3-provider/dist/umd/index.min.js';
+    import CoinbaseWalletSDK from 'https://cdn.jsdelivr.net/npm/@coinbase/wallet-sdk/dist/index.min.js';
+    import Fortmatic from 'https://cdn.jsdelivr.net/npm/fortmatic';
+    import Torus from 'https://cdn.jsdelivr.net/npm/@toruslabs/torus-embed/dist/torus.min.js';
 
 const providerOptions = {
   walletconnect: {
@@ -49,7 +49,10 @@ async function connectWallet() {
   provider.on("chainChanged", (chainId) => console.log("Chain Changed", chainId));
   provider.on("disconnect", (error) => console.log("Disconnected", error));
   return web3;
-};
+}; catch (error) {
+    console.error("Could not connect to wallet:", error);
+  }
+}
 
 // Change Network functionality
 async function changeNetwork(chainId) {
@@ -81,7 +84,13 @@ function disconnectWallet() {
         const connectWalletButton = document.getElementById('connectWalletButton');
         const disconnectWalletButton = document.getElementById('disconnectWalletButton');
 
-        connectWalletBtn?.addEventListener('click', connectWallet);
-        disconnectWalletBtn?.addEventListener('click', disconnectWallet);
+        connectWalletButton?.addEventListener('click', async () => {
+        await connectWallet();
+        console.log('Wallet connected!');
+    });
+    disconnectWalletButton?.addEventListener('click', () => {
+        disconnectWallet();
+        console.log('Wallet disconnected!');
+    });
 });
 export { connectWallet, disconnectWallet, changeNetwork };
