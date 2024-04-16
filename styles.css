@@ -154,7 +154,7 @@ button:hover {
 
         #center-content, #additional-info {
             flex-grow: 1;
-            flex-bsis: 220px;
+            flex-bais: 220px;
             width: 18%;
             margin-left: 220px;
             text-align: center;
@@ -180,7 +180,7 @@ button:hover {
           
             margin-bottom: 10px;
             border: 1px solid #c8ccd0;
-            text-align: relative;
+            text-align: fixed;
         }
 
         .info-box p b {
@@ -238,9 +238,9 @@ button:hover {
 
     #sidebar {
         display: block; /* Display sidebar on mobile */
-        width: 100%
+        width: 100%;
         top: 0;
-        height: auto%; /* Full width on mobile */
+        height: auto; /* Full width on mobile */
         position: relative; /* Remove fixed positioning */
     }
 
