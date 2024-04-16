@@ -46,11 +46,12 @@
 
     <script>
         if (typeof connectWallet !== 'function' || typeof sendTransaction !== 'function') {
+            window.connectWallet = connectWallet;  // Make it accessible to inline onclick handlers
             console.error('Web3 functions are not properly defined.');
         } else {
             console.log('Web3 functions are ready to use.');
 
-             window.connectWallet = connectWallet;  // Make it accessible to inline onclick handlers
+             
 
 async function disconnectWallet() {
     // your existing code...
