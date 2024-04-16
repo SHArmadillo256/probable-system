@@ -32,26 +32,7 @@ const providerOptions = {
   torus: {
     package: Torus,
     options: {}
-  }
-  // Example Solana wallet setup
-  solana: {
-     display: {
-       name: "Phantom",
-       description: "Connect to your Phantom Wallet"
-    package: SolanaAdapter,  // Make sure to use the actual adapter you have installed
-    options: {
-      network: 'mainnet-beta'
-    }
-  },
-   customSolanaWallet: {
-    display: {
-      name: "Solflare",
-      description: "Connect to your Solflare Wallet"
-    },
-    package: CustomSolanaProvider,  // Your custom provider package
-    options: {
-      network: "mainnet"  // or 'testnet' or other Solana networks
-    }
+   }
   }
 };
 
