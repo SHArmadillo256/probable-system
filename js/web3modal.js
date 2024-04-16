@@ -43,13 +43,15 @@ let web3;
 let provider;
 
 async function connectWallet() {
+ try {
   provider = await web3Modal.connect();
   web3 = new Web3(provider);
   provider.on("accountsChanged", (accounts) => console.log("Accounts Changed", accounts));
   provider.on("chainChanged", (chainId) => console.log("Chain Changed", chainId));
   provider.on("disconnect", (error) => console.log("Disconnected", error));
+  
   return web3;
-}; catch (error) {
+} catch (error) {
     console.error("Could not connect to wallet:", error);
   }
 }
