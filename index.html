@@ -44,24 +44,26 @@
     </div>
 </div>
 
-              
+                            
+</div>
 
     <script>
-        const { connectWallet, sendTransaction } = getWeb3();
+        if (typeof connectWallet !== 'function' || typeof sendTransaction !== 'function') {
+            console.error('Web3 functions are not properly defined.');
+        } else {
+            console.log('Web3 functions are ready to use.');
+        }
 
         async function makeTransaction() {
             try {
                 await connectWallet();
                 const signature = await sendTransaction('YourPublicKey', 'DestinationPublicKey', 1000);
-                console.log('Transaction signature', signature);
-                 
+                console.log('Transaction signature:', signature);
             } catch (error) {
-                 
-                 console.error('Error:', error);
+                console.error('Error making transaction:', error);
             }
         }
-    </script>                
-</div>
+    </script>  
      
 <body>
 
