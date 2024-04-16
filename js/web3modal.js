@@ -102,10 +102,10 @@ function disconnectWallet() {
         const connectWallet = document.getElementById('connectWallet');
         const disconnectWallet = document.getElementById('disconnectWallet');
 
-        if (connectWalletButton) {
+        if (connectWallet) {
             connectWallet.addEventListener('click', connectWallet);
         }
-        if (disconnectWalletButton) {
+        if (disconnectWallet) {
             disconnectWallet.addEventListener('click', disconnectWallet);
         }
 
