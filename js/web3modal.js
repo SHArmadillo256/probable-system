@@ -89,16 +89,6 @@ async function changeNetwork(chainId) {
   }
 }
 
-try {
-    import Web3 from 'web3';
-    import Web3Modal from 'web3modal';
-    import WalletConnectProvider from '@walletconnect/web3-provider';
-    import CoinbaseWalletSDK from '@coinbase/wallet-sdk';
-    import Fortmatic from 'fortmatic';
-    import Torus from '@toruslabs/torus-embed';
-
-    // Your existing setup code...
-
     window.connectWallet = connectWallet;
     window.disconnectWallet = disconnectWallet;
     // and so on for other functions...
