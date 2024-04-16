@@ -49,7 +49,7 @@ async function connectWallet() {
   provider.on("chainChanged", (chainId) => console.log("Chain Changed", chainId));
   provider.on("disconnect", (error) => console.log("Disconnected", error));
   return web3;
-});
+};
 
 // Change Network functionality
 async function changeNetwork(chainId) {
