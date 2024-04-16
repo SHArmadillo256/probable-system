@@ -84,10 +84,3 @@ function disconnectWallet() {
         connectWalletBtn?.addEventListener('click', connectWallet);
         disconnectWalletBtn?.addEventListener('click', disconnectWallet);
 });
-
-export { connectWallet, disconnectWallet, changeNetwork };
-
-    window.connectWallet = connectWallet;
-    window.disconnectWallet = disconnectWallet;
-    // and so on for other functions...
-}
