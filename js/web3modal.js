@@ -15,7 +15,7 @@ const providerOptions = {
   coinbasewallet: {
     package: CoinbaseWalletSDK,
     options: {
-      appName: "Web3Modal Example",
+      appName: "SHA256-Web3-Harmony",
       infuraId: 'e2c71b288df14e9877b4a6af1d6f571d'
   rpc: "", // optional
       chainId: 1, // optional
@@ -89,7 +89,7 @@ async function changeNetwork(chainId) {
   }
 }
 
-async function disconnectWallet() {
+function disconnectWallet() {
   if(provider.close) {
     await provider.close();
   }
