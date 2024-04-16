@@ -90,7 +90,7 @@ async function changeNetwork(chainId) {
 
 function disconnectWallet() {
   if(provider && provider.close) {
-    await provider.close();
+     provider.close();
   }
   web3Modal.clearCachedProvider();
   provider = null;
@@ -98,15 +98,15 @@ function disconnectWallet() {
 }
 
 // Adding Event Listeners
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const connectWallet = document.getElementById('connectWallet');
-        const disconnectWallet = document.getElementById('disconnectWallet');
+    document.addEventListener('DOMContentLoaded', () => {
+        const connectWalletButton = document.getElementById('connectWalletButton');
+        const disconnectWalletButton = document.getElementById('disconnectWalletButton');
 
-        if (connectWallet) {
-            connectWallet.addEventListener('click', connectWallet);
+        if (connectWalletButton) {
+            connectWalletButton.addEventListener('click', connectWallet);
         }
-        if (disconnectWallet) {
-            disconnectWallet.addEventListener('click', disconnectWallet);
+        if (disconnectWalletButton) {
+            disconnectWalletButton.addEventListener('click', disconnectWallet);
         }
 
         // Add similar event listeners for other buttons
