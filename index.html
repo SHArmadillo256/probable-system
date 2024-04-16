@@ -49,6 +49,14 @@
             console.error('Web3 functions are not properly defined.');
         } else {
             console.log('Web3 functions are ready to use.');
+
+             window.connectWallet = connectWallet;  // Make it accessible to inline onclick handlers
+
+async function disconnectWallet() {
+    // your existing code...
+}
+window.disconnectWallet = disconnectWallet;
+             
         }
 
         async function makeTransaction() {
