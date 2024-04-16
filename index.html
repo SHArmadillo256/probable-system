@@ -16,58 +16,70 @@
      
 <body>
 
-     <div id="header">
+  <div id="header">
     <div class="header-left">
         <!-- Logo and Navigation -->
         <h1>$SHA256</h1>
         <img src="https://pbs.twimg.com/profile_images/1772860313978667008/aIdJMtL7_400x400.jpg" alt="Logo" style="vertical-align: middle;">
-        <button class="neon-button" onclick="loadSwap();">Swap</button>
-        <button class="neon-button" onclick="loadBridge();">Bridge</button>
-        <button class="neon-button" onclick="loadDashboard();">Dashboard</button>
-        <button class="neon-button" onclick="loadStakeLiquidity();">Stake/Liquidity</button>
-        <button class="neon-button" onclick="loadAirdrops();">Airdrops</button>
-        <button class="neon-button" onclick="loadLock();">Lock</button>
-        <button class="neon-button" onclick="loadLoan();">Loan</button>
-        <button id="storeButton" class="neon-button">Store</button>
+        <button class="neon-button" id="swapButton;">Swap</button>
+        <button class="neon-button" id="bridgeButton;">Bridge</button>
+        <button class="neon-button" id="dashboardButton;">Dashboard</button>
+        <button class="neon-button" id="liquidityButton;">Stake/Liquidity</button>
+        <button class="neon-button" id="airdropsButton;">Airdrops</button>
+        <button class="neon-button" id="lockButton;">Lock</button>
+        <button class="neon-button" id="loanButton;">Loan</button>
+        <button class="neon-button" id="storeButton;">Store</button>
         
     </div>
     <div class="header-right">
         <!-- Connect and Network -->
         
-        <button id="changeNetworkButton" class="neon-button">Change Network</button>
-        <button id="sendTransactionButton" class="neon-button">Send Transaction</button>
-        <button id="connectWalletButton" class="neon-button">Connect Wallet</button>
+        <button class="neon-button" id="changeNetworkButton;">Change Network</button>
+        <button class="neon-button" id="sendTransactionButton;">Send Transaction</button>
+        <button class="neon-button" id="connectWalletButton;">Connect Wallet</button>
           <div>
-             <button id="disconnectWalletButton">Disconnect Wallet</button>
+             <button id="disconnectWalletButton;">Disconnect Wallet</button>
           </div>
     </div>
 </div>
 
-    <script>
-        if (typeof connectWallet !== 'function' || typeof sendTransaction !== 'function') {
-            window.connectWallet = connectWallet;  // Make it accessible to inline onclick handlers
-            console.error('Web3 functions are not properly defined.');
-        } else {
-            console.log('Web3 functions are ready to use.');
+    <script type="module">
+        import { connectWallet, disconnectWallet, sendTransaction } from '/js/web3modal.js';
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const connectButton = document.getElementById('connectWalletButton');
+            const disconnectButton = document.getElementById('disconnectWalletButton');
+            const sendTxButton = document.getElementById('sendTxButton');  // Ensure this button is added with this ID in your HTML
 
-             
-
-async function disconnectWallet() {
-    // your existing code...
-}
-window.disconnectWallet = disconnectWallet;
-             
-        }
-
-        async function sendTransaction() {
-            try {
-                await connectWallet();
-                const signature = await sendTransaction('YourPublicKey', 'DestinationPublicKey', 1000);
-                console.log('Transaction signature:', signature);
-            } catch (error) {
-                console.error('Error making transaction:', error);
+            if (connectButton) {
+                connectButton.addEventListener('click', async () => {
+                    try {
+                        await connectWallet();
+                        console.log('Wallet connected!');
+                    } catch (error) {
+                        console.error('Error connecting wallet:', error);
+                    }
+                });
             }
-        }
+
+            if (disconnectButton) {
+                disconnectButton.addEventListener('click', () => {
+                    disconnectWallet();
+                    console.log('Wallet disconnected.');
+                });
+            }
+
+            if (sendTxButton) {
+                sendTxButton.addEventListener('click', async () => {
+                    try {
+                        const signature = await sendTransaction('YourPublicKey', 'DestinationPublicKey', 1000);
+                        console.log('Transaction signature:', signature);
+                    } catch (error) {
+                        console.error('Error making transaction:', error);
+                    }
+                });
+            }
+        });
     </script>
      
    <div class="animated-background"></div>
