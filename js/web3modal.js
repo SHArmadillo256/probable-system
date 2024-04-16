@@ -62,7 +62,7 @@ export async function connectWallet() {
     console.error("Could not connect to wallet:", error);
   }
 
-return web3;
+   return web3;
 }
 
 // Change Network functionality
