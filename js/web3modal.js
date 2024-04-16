@@ -115,7 +115,4 @@ export function disconnectWallet() {
     window.connectWallet = connectWallet;
     window.disconnectWallet = disconnectWallet;
     // and so on for other functions...
-
-  } catch (error) {
-    console.error("Error setting up web3 modal:", error);
 }
