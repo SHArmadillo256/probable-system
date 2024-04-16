@@ -4,7 +4,6 @@ import WalletConnectProvider from '@walletconnect/web3-provider';
 import CoinbaseWalletSDK from '@coinbase/wallet-sdk';
 import Fortmatic from 'fortmatic';
 import Torus from '@toruslabs/torus-embed';
-import CustomSolanaProvider from './CustomSolanaProvider';
 
 const providerOptions = {
   walletconnect: {
