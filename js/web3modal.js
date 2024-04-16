@@ -30,12 +30,11 @@ const providerOptions = {
   torus: {
     package: Torus,
     options: {}
-   }
   }
 };
 
 const web3Modal = new Web3Modal({
-  network: "mainnet", // default network - can be changed by the user
+  network: "mainnet", 
   cacheProvider: true,
   providerOptions,
   disableInjectedProvider: false,
@@ -89,12 +88,6 @@ async function changeNetwork(chainId) {
   }
 }
 
-    window.connectWallet = connectWallet;
-    window.disconnectWallet = disconnectWallet;
-    // and so on for other functions...
-
-
-
 function disconnectWallet() {
   if(provider && provider.close) {
     await provider.close();
@@ -103,6 +96,25 @@ function disconnectWallet() {
   provider = null;
   web3 = null;
 }
+
+// Adding Event Listeners
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const connectWalletButton = document.getElementById('connectWalletButton');
+        const disconnectWalletButton = document.getElementById('disconnectWalletButton');
+
+        if (connectWalletButton) {
+            connectWalletButton.addEventListener('click', connectWallet);
+        }
+        if (disconnectWalletButton) {
+            disconnectWalletButton.addEventListener('click', disconnectWallet);
+        }
+
+        // Add similar event listeners for other buttons
+    });
+
+    window.connectWallet = connectWallet;
+    window.disconnectWallet = disconnectWallet;
+    // and so on for other functions...
 
   } catch (error) {
     console.error("Error setting up web3 modal:", error);
