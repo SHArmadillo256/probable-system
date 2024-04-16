@@ -83,11 +83,11 @@ async function changeNetwork(chainId) {
       } catch (addError) {
         console.error('Unable to add network:', addError);
       }
-    }
-    console.error('Error changing network:', error);
-  }
+     } else {
+     console.error('Error changing network:', error);
+     }
+   }
 }
-
 export function disconnectWallet() {
   if(provider && provider.close) {
      provider.close();
