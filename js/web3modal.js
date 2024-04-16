@@ -1,4 +1,3 @@
-try {
     import Web3 from 'web3';
     import Web3Modal from 'web3modal';
     import WalletConnectProvider from '@walletconnect/web3-provider';
@@ -17,7 +16,7 @@ const providerOptions = {
     package: CoinbaseWalletSDK,
     options: {
       appName: "SHA256-Web3-Harmony",
-      infuraId: 'e2c71b288df14e9877b4a6af1d6f571d'
+      infuraId: 'e2c71b288df14e9877b4a6af1d6f571d',
       darkMode: false
     }
   },
