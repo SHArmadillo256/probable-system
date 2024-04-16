@@ -2,8 +2,8 @@
     import Web3Modal from 'https://cdn.jsdelivr.net/npm/web3modal@latest/dist/web3modal.min.js';
     import WalletConnectProvider from 'https://cdn.skypack.dev/@walletconnect/web3-provider';
     import CoinbaseWalletSDK from 'https://cdn.skypack.dev/@coinbase/wallet-sdk';
-    import Fortmatic from 'fortmatic';
-    import Torus from '@toruslabs/torus-embed';
+    import Fortmatic from 'https://cdn.skypack.dev/fortmatic';
+    import Torus from 'https://cdn.skypack.dev/@toruslabs/torus-embed';
 
 const providerOptions = {
   walletconnect: {
