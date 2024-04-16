@@ -15,7 +15,7 @@ const providerOptions = {
   coinbasewallet: {
     package: CoinbaseWalletSDK,
     options: {
-      appName: "SHA256-Web3-Harmony",
+      appName: "Web3Modal Example",
       infuraId: 'e2c71b288df14e9877b4a6af1d6f571d',
       darkMode: false
     }
@@ -42,13 +42,14 @@ const web3Modal = new Web3Modal({
 let web3;
 let provider;
 
-export async function connectWallet() {
-  const provider = await web3Modal.connect();
-  const web3 = new Web3(provider);
-
-  provider.on("accountsChanged", (accounts) => {
-    console.log("Accounts Changed", accounts);
-  });
+async function connectWallet() {
+  provider = await web3Modal.connect();
+  web3 = new Web3(provider);
+  provider.on("accountsChanged", (accounts) => console.log("Accounts Changed", accounts));
+  provider.on("chainChanged", (chainId) => console.log("Chain Changed", chainId));
+  provider.on("disconnect", (error) => console.log("Disconnected", error));
+  return web3;
+});
 
   provider.on("chainChanged", (chainId) => {
     console.log("Chain Changed", chainId);
@@ -67,34 +68,27 @@ export async function connectWallet() {
 
 // Change Network functionality
 async function changeNetwork(chainId) {
-  try {
-    await provider.request({
-      method: "wallet_switchEthereumChain",
-      params: [{ chainId: Web3.utils.toHex(chainId) }]
-    });
-  } catch (error) {
-    if (error.code === 4902) {
-      try {
-        // This network is not added to the wallet yet, attempt to add it
-        await provider.request({
-          method: "wallet_addEthereumChain",
-          params: [/* Network parameters for the network to be added */],
-        });
-      } catch (addError) {
-        console.error('Unable to add network:', addError);
-      }
-     } else {
-     console.error('Error changing network:', error);
-     }
-   }
+    try {
+        await provider.request({ method: "wallet_switchEthereumChain", params: [{ chainId: Web3.utils.toHex(chainId) }]});
+    } catch (error) {
+        console.error('Error changing network:', error);
+        if (error.code === 4902) {
+            try {
+                await provider.request({ method: "wallet_addEthereumChain", params: [/* Network parameters here */]});
+            } catch (addError) {
+                console.error('Unable to add network:', addError);
+            }
+        }
+    }
 }
-export function disconnectWallet() {
-  if(provider && provider.close) {
-     provider.close();
-  }
-  web3Modal.clearCachedProvider();
-  provider = null;
-  web3 = null;
+
+function disconnectWallet() {
+    if (provider?.close) {
+        provider.close();
+    }
+    web3Modal.clearCachedProvider();
+    provider = null;
+    web3 = null;
 }
 
 // Adding Event Listeners
@@ -102,15 +96,11 @@ export function disconnectWallet() {
         const connectWalletButton = document.getElementById('connectWalletButton');
         const disconnectWalletButton = document.getElementById('disconnectWalletButton');
 
-        if (connectWalletButton) {
-            connectWalletButton.addEventListener('click', connectWallet);
-        }
-        if (disconnectWalletButton) {
-            disconnectWalletButton.addEventListener('click', disconnectWallet);
-        }
+        connectWalletBtn?.addEventListener('click', connectWallet);
+        disconnectWalletBtn?.addEventListener('click', disconnectWallet);
+});
 
-        // Add similar event listeners for other buttons
-    });
+export { connectWallet, disconnectWallet, changeNetwork };
 
     window.connectWallet = connectWallet;
     window.disconnectWallet = disconnectWallet;
