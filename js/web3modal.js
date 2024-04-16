@@ -1,9 +1,10 @@
-import Web3 from 'web3';
-import Web3Modal from 'web3modal';
-import WalletConnectProvider from '@walletconnect/web3-provider';
-import CoinbaseWalletSDK from '@coinbase/wallet-sdk';
-import Fortmatic from 'fortmatic';
-import Torus from '@toruslabs/torus-embed';
+try {
+    import Web3 from 'web3';
+    import Web3Modal from 'web3modal';
+    import WalletConnectProvider from '@walletconnect/web3-provider';
+    import CoinbaseWalletSDK from '@coinbase/wallet-sdk';
+    import Fortmatic from 'fortmatic';
+    import Torus from '@toruslabs/torus-embed';
 
 const providerOptions = {
   walletconnect: {
@@ -88,6 +89,22 @@ async function changeNetwork(chainId) {
   }
 }
 
+try {
+    import Web3 from 'web3';
+    import Web3Modal from 'web3modal';
+    import WalletConnectProvider from '@walletconnect/web3-provider';
+    import CoinbaseWalletSDK from '@coinbase/wallet-sdk';
+    import Fortmatic from 'fortmatic';
+    import Torus from '@toruslabs/torus-embed';
+
+    // Your existing setup code...
+
+    window.connectWallet = connectWallet;
+    window.disconnectWallet = disconnectWallet;
+    // and so on for other functions...
+
+
+
 function disconnectWallet() {
   if(provider && provider.close) {
     await provider.close();
@@ -95,4 +112,8 @@ function disconnectWallet() {
   web3Modal.clearCachedProvider();
   provider = null;
   web3 = null;
+}
+
+  } catch (error) {
+    console.error("Error setting up web3 modal:", error);
 }
