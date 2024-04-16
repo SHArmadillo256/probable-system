@@ -17,8 +17,6 @@ const providerOptions = {
     options: {
       appName: "SHA256-Web3-Harmony",
       infuraId: 'e2c71b288df14e9877b4a6af1d6f571d'
-  rpc: "", // optional
-      chainId: 1, // optional
       darkMode: false
     }
   },
@@ -46,6 +44,7 @@ let web3;
 let provider;
 
 async function connectWallet() {
+ try {
   provider = await web3Modal.connect();
   web3 = new Web3(provider);
 
@@ -90,7 +89,7 @@ async function changeNetwork(chainId) {
 }
 
 function disconnectWallet() {
-  if(provider.close) {
+  if(provider && provider.close) {
     await provider.close();
   }
   web3Modal.clearCachedProvider();
