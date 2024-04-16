@@ -1,7 +1,7 @@
     import Web3 from 'https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js';
     import Web3Modal from 'https://cdn.jsdelivr.net/npm/web3modal@latest/dist/web3modal.min.js';
-    import WalletConnectProvider from '@walletconnect/web3-provider';
-    import CoinbaseWalletSDK from '@coinbase/wallet-sdk';
+    import WalletConnectProvider from 'https://cdn.skypack.dev/@walletconnect/web3-provider';
+    import CoinbaseWalletSDK from 'https://cdn.skypack.dev/@coinbase/wallet-sdk';
     import Fortmatic from 'fortmatic';
     import Torus from '@toruslabs/torus-embed';
 
