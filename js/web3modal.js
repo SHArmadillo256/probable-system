@@ -1,4 +1,5 @@
 try {
+    import Web3 from 'web3';
     import Web3Modal from 'web3modal';
     import WalletConnectProvider from '@walletconnect/web3-provider';
     import CoinbaseWalletSDK from '@coinbase/wallet-sdk';
@@ -98,14 +99,14 @@ function disconnectWallet() {
 
 // Adding Event Listeners
     document.addEventListener('DOMContentLoaded', (event) => {
-        const connectWalletButton = document.getElementById('connectWalletButton');
-        const disconnectWalletButton = document.getElementById('disconnectWalletButton');
+        const connectWallet = document.getElementById('connectWallet');
+        const disconnectWallet = document.getElementById('disconnectWallet');
 
         if (connectWalletButton) {
-            connectWalletButton.addEventListener('click', connectWallet);
+            connectWallet.addEventListener('click', connectWallet);
         }
         if (disconnectWalletButton) {
-            disconnectWalletButton.addEventListener('click', disconnectWallet);
+            disconnectWallet.addEventListener('click', disconnectWallet);
         }
 
         // Add similar event listeners for other buttons
