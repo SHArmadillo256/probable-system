@@ -1,0 +1,59 @@
+// Importing necessary libraries from wagmi, which includes web3modal capabilities
+import { createWeb3Modal } from '@web3modal/wagmi';
+import { createClient,  configureChains, defaultChains, createClient, publicProvider, useAccount, useConnect, useDisconnect, useSwitchNetwork } from 'wagmi';
+
+// Configuration for wagmi which includes setting up default chains and providers
+const { chains, provider } = configureChains(defaultChains, [publicProvider()]);
+
+const client = createClient({
+    autoConnect: true,
+    provider,
+    connectors() {
+        return [
+            // Define connectors here
+        ];
+    },
+});
+
+// Creating a Web3Modal instance using wagmi's createWeb3Modal
+const web3Modal = createWeb3Modal({
+  client,
+  chains,
+  provider,
+});
+
+function App() {
+    const { connect, error } = useConnect({
+        connector: web3Modal,
+    });
+    const { disconnect } = useDisconnect();
+    const { switchNetwork } = useSwitchNetwork();
+    const { address } = useAccount();
+
+    return (
+        <WagmiConfig client={client}>
+            <div>
+                <button onClick={() => connect()}>
+                    Connect Wallet
+                </button>
+                {address && (
+                    <>
+                        <p>Connected as: {address}</p>
+                        <button onClick={() => disconnect()}>
+                            Disconnect
+                        </button>
+                        <button onClick={() => switchNetwork(1)}> // 1 is the chain ID for Ethereum Mainnet
+                            Switch to Ethereum
+                        </button>
+                        {/* Add more buttons for other networks similarly */}
+                    </>
+                )}
+                {error && <p>Error: {error.message}</p>}
+            </div>
+        </WagmiConfig>
+    );
+}
+
+default App;
+
+});

@@ -7,10 +7,11 @@
     "build:examples": "vite build"
   },
   "dependencies": {
+    "@solana/web3.js": "1.91.6",
     "@web3modal/ethers5": "4.1.9",
     "ethers": "5.7.2"
   },
   "devDependencies": {
-    "vite": "5.0.12"
+    "vite": "^5.2.9"
   }
 }

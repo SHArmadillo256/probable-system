@@ -1,0 +1,39 @@
+// Importing necessary libraries from wagmi, which includes web3modal capabilities
+import { createWeb3Modal } from '@web3modal/wagmi';
+import { configureChains, defaultChains, createClient } from 'wagmi';
+import { publicProvider } from 'wagmi/providers/public';
+
+// Configuration for wagmi which includes setting up default chains and providers
+const { chains, provider } = configureChains(defaultChains, [
+  publicProvider()
+]);
+
+// Creating a Web3Modal instance using wagmi's createWeb3Modal
+const web3Modal = createWeb3Modal({
+  chains,
+  provider,
+});
+
+// Function to connect to the wallet
+async function connectWallet() {
+    try {
+        const { web3Provider, chain } = await web3Modal.connect(); // Connect to the selected provider
+        const web3 = new Web3(web3Provider); // Create a Web3 instance using the provider
+
+        // You can add listeners or other logic here using the web3 instance or chain info
+        console.log(`Connected to chain ${chain.id}`);
+
+        return web3; // Return the Web3 instance
+    } catch (error) {
+        console.error("Could not connect to wallet:", error);
+        return null;
+    }
+}
+
+// Example usage to connect to the wallet
+connectWallet().then((web3) => {
+    if (web3) {
+        console.log("Wallet connected successfully.");
+        // You can perform further blockchain operations here using the web3 instance
+    }
+});
