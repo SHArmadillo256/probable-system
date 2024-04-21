@@ -3,7 +3,7 @@ const ethers = require('ethers');
 const wagmi = require('wagmi');
 const web3ModalLib = require('@web3modal/wagmi');
 
-const { createClient, configureChains, defaultChains, publicProvider } = wagmi;
+const { createClient, CoinbaseWalletConnector, WalletConnectConnector, TorusConnector, InjectedConnector, defaultChains, configureChains, publicProvider } = wagmi;
 const { createWeb3Modal } = web3ModalLib;
 
 const client = createClient({
@@ -17,10 +17,6 @@ const client = createClient({
                 rpc: { 1: 'https://mainnet.infura.io/v3/e2c71b288df14e9877b4a6af1d6f571d' }
             }
         }),
-        new FortmaticConnector({
-            chains: defaultChains,
-            options: { key: 'YOUR_FORTMATIC_KEY' }
-        }),
         new TorusConnector({ chains: defaultChains }),
         new InjectedConnector({ chains: defaultChains })
         
@@ -31,8 +27,8 @@ const client = createClient({
 
 const web3Modal = createWeb3Modal({ client });
 
-async function connectWallet() {
-  try {
+window.connectWallet = async function() {
+    try {
     const connection = await web3Modal.connect();
     const provider = new ethers.providers.Web3Provider(connection);
     const signer = provider.getSigner();
@@ -40,27 +36,22 @@ async function connectWallet() {
   } catch (error) {
     console.error('Could not connect to wallet:', error);
   }
-}
+};
 
-async function disconnectWallet() {
+window.disconnectWallet = async function() {
     try {
         await web3Modal.disconnect();
         console.log('Disconnected');
     } catch (error) {
         console.error('Could not disconnect wallet:', error);
     }
-}
+};
 
-async function switchNetwork(chainId) {
+window.switchNetwork = async function(chainId) {
     try {
         await web3Modal.switchNetwork(chainId);
         console.log('Network switched');
     } catch (error) {
         console.error('Could not switch network:', error);
     }
-}
-
-global.connectWallet = connectWallet;
-global.disconnectWallet = disconnectWallet;
-global.switchNetwork = switchNetwork;
-
+};
