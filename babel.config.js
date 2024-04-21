@@ -5,7 +5,7 @@ module.exports = {
       targets: "defaults", // Adjust based on your target environments
       useBuiltIns: 'usage',
       corejs: 3, // It uses core-js for polyfilling
-      modules: 'commonjs' // auto automatically determines the module type (CommonJS, ES Modules, etc.)
+      modules: 'false' // auto automatically determines the module type (CommonJS, ES Modules, etc.)
     }]
   ],
   plugins: [
@@ -13,7 +13,7 @@ module.exports = {
             corejs: false,  // Do not use corejs in transform-runtime to simplify polyfills
             helpers: true,  // Use helpers from runtime
             regenerator: true,  // Enable regenerator
-            useESModules: false  // Do not transform imports to ES Modules
+            useESModules: true  // Do not transform imports to ES Modules
         }]
   ]
 };
