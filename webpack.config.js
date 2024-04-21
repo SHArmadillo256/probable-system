@@ -20,8 +20,14 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
           options: {
-            sourceType: "unambiguous",
-            presets: ['@babel/preset-env'],
+            presets: [
+             ['@babel/preset-env', [
+               targets: "defaults",
+                useBuiltIns: 'usage',
+                corejs: 3,
+                modules: false // Changed from 'commonjs' to false to use native ES Modules
+              }]
+            ],
             plugins: [
               ['@babel/plugin-transform-runtime', {
                 corejs: false,
@@ -30,15 +36,15 @@ module.exports = {
                 useESModules: false
               }]
             ]
-          },
-        },
-      },
-    ],
+          }
+        }
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './index.html'
     })
   ],
-    target: 'web'  // Make sure webpack knows this is for browser environment
+    target: ['web', 'es5']  // Make sure webpack knows this is for browser environment
 };
