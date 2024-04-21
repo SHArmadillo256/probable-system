@@ -4,8 +4,7 @@ module.exports = {
     ['@babel/preset-env', {
       targets: "defaults", // Adjust based on your target environments
       useBuiltIns: 'usage',
-      corejs: 3, // It uses core-js for polyfilling
-      modules: 'false' // auto automatically determines the module type (CommonJS, ES Modules, etc.)
+      corejs: 3
     }]
   ],
   plugins: [
