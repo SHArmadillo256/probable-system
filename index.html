@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>$SHA256 - Screaming Hairy Armadillo</title>
     <link rel="stylesheet" href="styles.css">
-    <script type="module" src="js/web3modal.js"></script> 
+  <script type="module" src="src/index.js"></script>
 </head>             
 <body>
   <div id="header">
@@ -21,21 +21,23 @@
         <button class="neon-button" id="lockButton;">Lock</button>
         <button class="neon-button" id="loanButton;">Loan</button>
         <button class="neon-button" id="storeButton;">Store</button>
-        
-    </div>
-    <div class="header-right">
+         <div id="header">
+          <div class="header-right">
         <!-- Connect and Network -->
-     <button id="changeNetworkButton" class="neon-button">Change Network</button>
-     <button id="connectWalletButton" class="neon-button">Connect Wallet</button>
-     <button id="disconnectWalletButton" class="neon-button">Disconnect Wallet</button>
-    </div>    
+     <button id="changeNetworkBtn" class="neon-button">Change Network</button>
+     <button id="connectBtn" class="neon-button">Connect Wallet</button>
+     <button id="disconnectBtn">Disconnect Wallet</button>
+    </div> 
+            
+    </div>
+       
     
 </div>
 
      
 
 <script type="module">
-        import { connectWallet, disconnectWallet } from './js/web3modal.js';
+        import { connectWallet, disconnectWallet } from './src/index.js';
         
         document.getElementById('connectWalletButton').addEventListener('click', async () => {
           await connectWallet();
@@ -154,6 +156,9 @@ Its natural habitats are subtropical or tropical dry forests, temperate shrublan
         <p>Skull of a screaming hairy armadillo</p>
         </div>
     </div>
+       
+<script src="bundle.js"></script>
+
 </body>
 
 <footer>
