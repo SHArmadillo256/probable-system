@@ -9,8 +9,24 @@ const { createWeb3Modal } = web3ModalLib;
 const client = createClient({
     autoConnect: true,
     connectors: () => [
+        new CoinbaseWalletConnector({ chains: defaultChains }),
+        new WalletConnectConnector({
+            chains: defaultChains,
+            options: {
+                qrcode: true,
+                rpc: { 1: 'https://mainnet.infura.io/v3/YOUR_INFURA_ID' }
+            }
+        }),
+        new FortmaticConnector({
+            chains: defaultChains,
+            options: { key: 'YOUR_FORTMATIC_KEY' }
+        }),
+        new TorusConnector({ chains: defaultChains }),
+        new InjectedConnector({ chains: defaultChains })
+        
         /* Define connectors here */
-      ]
+      ],
+       provider: publicProvider()
 });
 
 const web3Modal = createWeb3Modal({ client });
