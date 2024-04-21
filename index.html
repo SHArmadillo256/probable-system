@@ -37,7 +37,7 @@
      
 
 <script type="module">
-        import { connectWallet, disconnectWallet } from './js/web3modal.js';
+        import { connectWallet, disconnectWallet } from './sr/index.js';
         
         document.getElementById('connectWalletButton').addEventListener('click', async () => {
           await connectWallet();
