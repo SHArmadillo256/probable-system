@@ -8,6 +8,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    libraryTarget: 'commonjs2'  // This is important for CommonJS compatibility
   },
   module: {
     rules: [
@@ -37,7 +38,5 @@ module.exports = {
       template: 'index.html'
     })
   ],
-  devServer: {
-    static: './dist',
-  },
+    target: 'web'  // Make sure webpack knows this is for browser environment
 };
