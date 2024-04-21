@@ -7,7 +7,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: './bundle.js'
+    filename: 'bundle.js'
   },
   devtool: 'source-map', // Include source maps
   module: {
@@ -30,5 +30,5 @@ module.exports = {
       template: './index.html'
     })
   ],
-    target: ['web', 'es5']  // Make sure webpack knows this is for browser environment
+    target: 'web'  // Make sure webpack knows this is for browser environment
 };
