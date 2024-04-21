@@ -1,7 +1,7 @@
 // src/index.js
-const ethers = require('ethers');
-const wagmi = require('wagmi');
-const web3ModalLib = require('@web3modal/wagmi');
+import { ethers } from 'ethers';
+import wagmi from 'wagmi';
+import web3ModalLib = require'@web3modal/wagmi';
 
 const {
     createClient,
@@ -17,14 +17,11 @@ const { createWeb3Modal } = web3ModalLib;
 
 const client = createClient({
     autoConnect: true,
-    connectors: () => [
+    connectors: [
         new CoinbaseWalletConnector({ chains: defaultChains }),
         new WalletConnectConnector({
             chains: defaultChains,
-            options: {
-                qrcode: true,
-                rpc: { 1: 'https://mainnet.infura.io/v3/e2c71b288df14e9877b4a6af1d6f571d' }
-            }
+            options: { qrcode: true, rpc: { 1: 'https://mainnet.infura.io/v3/e2c71b288df14e9877b4a6af1d6f571d' } )
         }),
         new TorusConnector({ chains: defaultChains }),
         new InjectedConnector({ chains: defaultChains })
@@ -36,7 +33,7 @@ const client = createClient({
 
 const web3Modal = createWeb3Modal({ client });
 
-window.connectWallet = async function() {
+window.connectWallet = async () => {
     try {
     const connection = await web3Modal.connect();
     const provider = new ethers.providers.Web3Provider(connection);
@@ -47,7 +44,7 @@ window.connectWallet = async function() {
   }
 };
 
-window.disconnectWallet = async function() {
+window.disconnectWallet = async function() => {
     try {
         await web3Modal.disconnect();
         console.log('Disconnected');
@@ -56,7 +53,7 @@ window.disconnectWallet = async function() {
     }
 };
 
-window.switchNetwork = async function(chainId) {
+window.switchNetwork = async function(chainId) => {
     try {
         await web3Modal.switchNetwork(chainId);
         console.log('Network switched');
