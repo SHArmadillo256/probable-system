@@ -3,7 +3,16 @@ const ethers = require('ethers');
 const wagmi = require('wagmi');
 const web3ModalLib = require('@web3modal/wagmi');
 
-const { createClient, CoinbaseWalletConnector, WalletConnectConnector, TorusConnector, InjectedConnector, defaultChains, configureChains, publicProvider } = wagmi;
+const {
+    createClient,
+    CoinbaseWalletConnector,
+    WalletConnectConnector,
+    TorusConnector,
+    InjectedConnector,
+    defaultChains,
+    publicProvider
+} = wagmi;
+
 const { createWeb3Modal } = web3ModalLib;
 
 const client = createClient({
