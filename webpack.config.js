@@ -7,7 +7,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: './bundle.js',
     publicPath: '/',
     libraryTarget: 'umd', // Universal Module Definition for broad compatibility
     globalObject: 'this' // Ensuring compatibility with both browsers and Node.js environments
