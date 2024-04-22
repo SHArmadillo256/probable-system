@@ -41,7 +41,7 @@ function createAtomWithTrail() {
     
     // Randomly vary the orbit radius and speed
     const radius = 20 + Math.random() * 30; // Radius between 20px and 50px
-    const duration = 5 + Math.random() * 5; // Duration between 5s and 10s
+    const duration = 5 + Math.random() * 6; // Duration between 5s and 10s
     atom.style.transform = `translateX(${radius}px) * rotate(${Math.random() * 360}deg) translateX(50px)`; // Set radius
     
     trail.style.width = `${radius}px`; // Matching trail length to radius
