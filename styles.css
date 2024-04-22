@@ -70,6 +70,16 @@ body {
     border-radius: 50%;
 }
 
+.rising-ember {
+    animation: riseAndFade 8s infinite;
+    opacity: 0;  /* Start fully transparent */
+}
+
+@keyframes riseAndFade {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-200px); opacity: 0; }
+}
+
 @keyframes emberFall {
     0% { transform: translateY(0); opacity: 1; }
     100% { transform: translateY(100px); opacity: 0; }
