@@ -30,6 +30,18 @@ body {
     animation: gradientBG 15s ease infinite;
 }
 
+#cursor-glow {
+  position: fixed;
+  pointer-events: none; /* Makes sure the glow effect doesn't interfere with mouse events */
+  height: 50px;
+  width: 50px;
+  background-color: rgba(255, 165, 0, 0.5); /* Orange color glow */
+  border-radius: 50%;
+  box-shadow: 0 0 8px 8px rgba(255, 165, 0, 0.5); /* Soft glow effect */
+  transform: translate(-50%, -50%); /* Centers the glow on the cursor */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
 /* Hide the WalletConnect expand/collapse behavior */
 .walletconnect-qrcode__base {
     display: none !important;
