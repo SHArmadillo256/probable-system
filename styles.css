@@ -112,7 +112,7 @@ body {
     width: 5px; 
     height: 5px;
     border-radius: 50%;
-    animation: atomOrbit 10s infinite linear; /* Animation for orbiting */
+    animation: atomOrbit infinite linear; /* Animation for orbiting */
 }
 
 @keyframes atomOrbit {
