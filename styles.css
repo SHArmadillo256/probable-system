@@ -62,7 +62,7 @@ body {
 .smoke, .ember {
     position: absolute;
     border-radius: 50%;
-    animation-fill-mode: forwards;
+    animation-fill-mode: upwards;
 }
 
 .smoke {
