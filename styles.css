@@ -50,7 +50,6 @@ body {
     }
 }
     #cursor-glow {
-    position: fixed;
     pointer-events: none;
     width: 25px;  /* Smaller size */
     height: 25px;  /* Smaller size */
