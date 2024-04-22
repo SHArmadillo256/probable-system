@@ -59,3 +59,22 @@ document.addEventListener('mousemove', function(e) {
     var lightIntensity = 0.1 + 0.9*(1 - Math.max(Math.abs(xPos - 0.5), Math.abs(yPos - 0.5))*2);
     document.body.style.backgroundColor = `rgba(0, 0, 0, ${lightIntensity})`;
 });
+
+setInterval(function() {
+    var ember = document.createElement('div');
+    ember.style.position = 'absolute';
+    ember.style.left = (Math.random() * 100) + '%';
+    ember.style.bottom = '0px';
+    ember.style.background = 'rgba(255, 100, 0, 0.8)';
+    ember.style.width = ember.style.height = '5px';
+    ember.style.borderRadius = '50%';
+    document.getElementById('cursor-glow').appendChild(ember);
+
+    setTimeout(function() {
+        ember.style.bottom = '100px';
+        ember.style.opacity = '0';
+        setTimeout(function() {
+            document.getElementById('cursor-glow').removeChild(ember);
+        }, 1000);
+    }, 50);
+}, 200);
