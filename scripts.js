@@ -62,7 +62,7 @@ document.addEventListener('mousemove', function(e) {
 
 setInterval(function() {
     var ember = document.createElement('div');
-    ember.style.position = 'absolute';
+    ember.style.position = 'flex';
     ember.style.left = (Math.random() * 100) + '%';
     ember.style.bottom = '0px';
     ember.style.background = 'rgba(255, 100, 0, 0.8)';
