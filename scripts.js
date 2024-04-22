@@ -32,6 +32,18 @@ document.addEventListener('mousemove', function(e) {
 });
 
 
+function createRisingEmber() {
+    var ember = document.createElement('div');
+    ember.className = 'rising-ember';
+    ember.style.left = Math.random() * window.innerWidth + 'px';
+    ember.style.bottom = '0px';
+    document.body.appendChild(ember);
+    setTimeout(function() { ember.remove(); }, 8000);  // Match animation duration
+}
+
+setInterval(createRisingEmber, 1000);
+
+
 // Function to drop embers
 function dropEmber() {
     var ember = document.createElement('div');
@@ -49,30 +61,23 @@ document.addEventListener('mousedown', function() {
 });
 
 
-
-
 function createAtomWithTrail() {
     const atom = document.createElement('div');
     atom.className = 'atom';
+    document.getElementById('cursor-glow').appendChild(atom);
+    atom.style.animation = 'atomOrbit 10s infinite linear';
+
     const trail = document.createElement('div');
     trail.className = 'trail';
-    
-    // Randomly vary the orbit radius and speed
-    const radius = 20 + Math.random() * 30; // Radius between 20px and 50px
-    const duration = 5 + Math.random() * 6; // Duration between 5s and 10s
-    atom.style.transform = `translateX(${radius}px) * rotate(${Math.random() * 360}deg) translateX(50px)`; // Set radius
-    
-    trail.style.width = `${radius}px`; // Matching trail length to radius
-    trail.style.animationDuration = `${duration}s`;
-    
+    trail.style.width = '50px';  // Example trail length
+    trail.style.animation = 'trailFade 10s infinite linear';
     document.getElementById('cursor-glow').appendChild(trail);
-    document.getElementById('cursor-glow').appendChild(atom);
 }
 
-// Create three embers with trails
-createAtomWithTrail();
-createAtomWithTrail();
-createAtomWithTrail();
+for (let i = 0; i < 3; i++) {
+    createAtomWithTrail();
+}
+
 
 
 document.addEventListener('mousemove', updatePosition2);
