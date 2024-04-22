@@ -14,7 +14,7 @@
 body {
     margin: 0;
     padding: 0;
-    
+    background: #121212;  /* Dark background for better neon effect visibility *//* Cursor Glow - Non-static, continuously evolving glow */
     overflow-x: hidden; /* Hide horizontal scrollbar */
     overflow-y: auto; /* Allows vertical scrolling */
 }
@@ -49,9 +49,6 @@ body {
         border-radius: 60% 40% 60% 40%;
     }
 }
-
-/* Cursor Glow - Non-static, continuously evolving glow */
-#cursor-glow {
     #cursor-glow {
     width: 25px;  /* Smaller size */
     height: 25px;  /* Smaller size */
