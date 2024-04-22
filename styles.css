@@ -105,16 +105,16 @@ body {
     transform: perspective(100px) rotateX(45deg);
 }
 
-.ember {
+.atom {
     position: absolute;
     background-color: rgba(255, 69, 0, 0.9);
     width: 5px; 
     height: 5px;
     border-radius: 50%;
-    animation: emberOrbit 10s infinite linear; /* Animation for orbiting */
+    animation: atomOrbit 10s infinite linear; /* Animation for orbiting */
 }
 
-@keyframes emberOrbit {
+@keyframes atomOrbit {
     from { transform: rotate(0deg) translateX(50px); }
     to { transform: rotate(360deg) translateX(50px); }
 }
