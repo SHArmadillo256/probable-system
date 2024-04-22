@@ -19,6 +19,19 @@ body {
     overflow-y: auto; /* Allows vertical scrolling */
 }
 
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    box-shadow: 0 0 20px 20px rgba(255, 165, 0, 0.5), 
+                0 0 40px 40px rgba(255, 165, 0, 0.3), 
+                0 0 60px 60px rgba(255, 165, 0, 0.1);
+  }
+  20%, 24%, 55% {
+    box-shadow: 0 0 25px 25px rgba(255, 165, 0, 0.6), 
+                0 0 45px 45px rgba(255, 165, 0, 0.35), 
+                0 0 65px 65px rgba(255, 165, 0, 0.15);
+  }
+}
+
 .animated-background {
     position: fixed;
     top: 0; left: 0;
@@ -32,15 +45,18 @@ body {
 
 #cursor-glow {
   position: fixed;
-  pointer-events: none;  /* Ensures it doesn't interfere with mouse events */
-  height: 80px;  /* Increased size for a larger glow */
-  width: 80px;  /* Increased size for a larger glow */
+  pointer-events: none;
+  height: 80px;
+  width: 80px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 165, 0, 0.6) 0%, rgba(255, 165, 0, 0.4) 50%, rgba(255, 165, 0, 0) 100%);
-  box-shadow: 0 0 20px 20px rgba(255, 165, 0, 0.5), 0 0 40px 40px rgba(255, 165, 0, 0.3), 0 0 60px 60px rgba(255, 165, 0, 0.1); /* Multi-layered shadow for a soft fade */
-  transform: translate(-50%, -50%); /* Centers the glow on the cursor */
-  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
-  z-index: 9999;  /* High z-index to ensure it appears on top of other content */
+  background: radial-gradient(circle, rgba(255, 165, 0, 0.6) 0%, rgba(255, 165, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%);
+  box-shadow: 0 0 20px 20px rgba(255, 165, 0, 0.5), 
+              0 0 40px 40px rgba(255, 165, 0, 0.3), 
+              0 0 60px 60px rgba(255, 165, 0, 0.1);
+  transform: translate(-50%, -50%);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  z-index: 9999;
+  animation: flicker 1.5s infinite alternate;  
 }
 
 /* Hide the WalletConnect expand/collapse behavior */
