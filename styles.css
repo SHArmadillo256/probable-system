@@ -122,7 +122,7 @@ body {
     width: 5px; 
     height: 5px;
     border-radius: 50%;
-    animation: atomOrbit infinite linear; /* Animation for orbiting */
+    animation: atomOrbit infinite linear, trailFade infinite; /* Animation for orbiting */
 }
 
 @keyframes atomOrbit {
@@ -136,6 +136,11 @@ body {
     }
 }
 
+@keyframes trailFade {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
 .atom {
     position: absolute;
     width: 5px;
@@ -143,7 +148,6 @@ body {
     background-color: red;  // Color for visibility
     animation: atomOrbit 10s infinite linear; // Continuous rotation
     border-radius: 50%;
-}
 }
 
 .trail {
