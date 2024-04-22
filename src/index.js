@@ -44,7 +44,7 @@ window.connectWallet = async () => {
   }
 };
 
-window.disconnectWallet = async function() => {
+window.disconnectWallet = async () => {
     try {
         await web3Modal.disconnect();
         console.log('Disconnected');
