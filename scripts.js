@@ -14,7 +14,7 @@ function updatePosition(e) {
 /* Randomly create embers around the cursor */
 setInterval(function() {
     const ember = document.createElement('div');
-    ember.className = 'ember';
+    ember.className = 'ember2';
     document.body.appendChild(ember);
     ember.style.left = (Math.random() * window.innerWidth) + 'px';
     ember.style.top = (Math.random() * window.innerHeight) + 'px';
