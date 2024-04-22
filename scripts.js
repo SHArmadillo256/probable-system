@@ -60,7 +60,7 @@ createAtomWithTrail();
 document.addEventListener('mousemove', updatePosition2);
 document.addEventListener('touchmove', function(e) {
     e.preventDefault();
-    updatePosition(e.touches[0]);
+    updatePosition2(e.touches[0]);
 }, { passive: false });
 
 function updatePosition2(e) {
