@@ -1,14 +1,13 @@
 // src/index.js
-import { createConfig, createConnector, getClient } from '@wagmi/core';
-import { mainnet, sepolia } from '@wagmi/core/chains'; // Example chains
-import { injected, walletConnect } from '@wagmi/connectors'; // Example connectors
-
 import { ethers } from 'ethers';
 import wagmi from 'wagmi';
 import web3ModalLib from '@web3modal/wagmi';
 
+import { createConfig, createConnector, getClient } from '@wagmi/core';
+import { mainnet, sepolia } from '@wagmi/core/chains'; // Example chains
+import { injected, walletConnect } from '@wagmi/connectors'; // Example connectors
+
 const {
-    
     CoinbaseWalletConnector,
     WalletConnectConnector,
     TorusConnector,
@@ -17,39 +16,22 @@ const {
     publicProvider
 } = wagmi;
 
-const { createWeb3Modal } = web3ModalLib;
-
 const config = createConfig({
   chains: [mainnet, sepolia],
   connectors: [
-    injected(),
-    walletConnect({
-      rpc: { 1: 'https://mainnet.infura.io/v3/yourProjectId' }
+    new CoinbaseWalletConnector({ chains: [mainnet, sepolia] }),
+    new WalletConnectConnector({
+      chains: [mainnet, sepolia],
+      options: { qrcode: true, rpc: { 1: 'https://mainnet.infura.io/v3/e2c71b288df14e9877b4a6af1d6f571d' }}
     }),
-  ],
+    new TorusConnector({ chains: [mainnet, sepolia] }),
+    new InjectedConnector({ chains: [mainnet, sepolia] })
+  ]
 });
 
-// If getClient is a function that retrieves the configured client
-const client = getClient(config);
+const client = getClient({ config });
 
-
-const client = createClient({
-    autoConnect: true,
-    connectors: [
-        new CoinbaseWalletConnector({ chains: defaultChains }),
-        new WalletConnectConnector({
-            chains: defaultChains,
-            options: { qrcode: true, rpc: { 1: 'https://mainnet.infura.io/v3/e2c71b288df14e9877b4a6af1d6f571d' } }
-        }),
-        new TorusConnector({ chains: defaultChains }),
-        new InjectedConnector({ chains: defaultChains })
-        
-        /* Define connectors here */
-      ],
-       provider: publicProvider()
-});
-
-const web3Modal = createWeb3Modal({ client });
+const web3Modal = createWeb3ModalLib.Web3Modal({ client });
 
 window.connectWallet = async () => {
     try {
