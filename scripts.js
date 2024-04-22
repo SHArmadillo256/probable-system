@@ -21,3 +21,12 @@ setInterval(function() {
     
     setTimeout(() => { ember.remove(); }, 5100);
 }, 500);
+
+document.addEventListener('mousemove', function(e) {
+    var xPos = e.clientX / window.innerWidth;
+    var yPos = e.clientY / window.innerHeight;
+    var wallBrightness = Math.max(0, 1 - yPos * 2);
+    
+    document.getElementById('left-wall').style.backgroundColor = `rgba(0, 0, 0, ${wallBrightness})`;
+    document.getElementById('right-wall').style.backgroundColor = `rgba(0, 0, 0, ${wallBrightness})`;
+});
