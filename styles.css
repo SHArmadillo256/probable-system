@@ -54,7 +54,6 @@ body {
   width: 80px;
   border-radius: 50%;
   background: radial-gradient(circle at center, rgba(255, 165, 0, 0.6), rgba(0, 0, 0, 0) 70%);
-  box-shadow: 0 0 30px 30px rgba(255, 165, 0, 0.4), 0 0 60px 60px rgba(255, 165, 0, 0.2), 0 0 90px 90px rgba(255, 165, 0, 0.1);
   transform: translate(-50%, -50%);
   transition: background-color 0.5s, box-shadow 0.5s;
   z-index: 9999;
