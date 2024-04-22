@@ -56,7 +56,7 @@ body {
     height: 40px;  /* Smaller size */
     background: radial-gradient(circle, rgba(255, 140, 0, 0.8), transparent 70%);
     box-shadow: 0 0 35px 35px rgba(255, 140, 0, 0.1), 0 0 50px 100px rgba(255, 140, 0, 0.05);
-    animation: smokeFlow 8s infinite;
+    animation: smokeFlow 8s infinite, emberFall 2s infinite;
     z-index: 9999;
 }
 
@@ -152,6 +152,7 @@ body {
     top: 50%; /* Centered vertically */
     left: 5px; /* Starts near the ember */
     border-radius: 1px;
+    animation: trailFade 3s infinite;
 }
 
 /* Hide the WalletConnect expand/collapse behavior */
