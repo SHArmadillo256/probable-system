@@ -21,7 +21,7 @@ const client = createClient({
         new CoinbaseWalletConnector({ chains: defaultChains }),
         new WalletConnectConnector({
             chains: defaultChains,
-            options: { qrcode: true, rpc: { 1: 'https://mainnet.infura.io/v3/e2c71b288df14e9877b4a6af1d6f571d' } )
+            options: { qrcode: true, rpc: { 1: 'https://mainnet.infura.io/v3/e2c71b288df14e9877b4a6af1d6f571d' } }
         }),
         new TorusConnector({ chains: defaultChains }),
         new InjectedConnector({ chains: defaultChains })
