@@ -78,7 +78,7 @@ body {
 #left-wall, #right-wall, #floor {
     position: fixed;
     background: rgba(0, 0, 0, 0.1); /* Semi-transparent black */
-    z-index: 2;  /* Behind the cursor glow */
+    z-index: 1;  /* Behind the cursor glow */
 }
 
 #left-wall {
