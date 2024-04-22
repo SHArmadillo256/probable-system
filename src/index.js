@@ -53,7 +53,7 @@ window.disconnectWallet = async () => {
     }
 };
 
-window.switchNetwork = async function(chainId) => {
+window.switchNetwork = async (chainId) => {
     try {
         await web3Modal.switchNetwork(chainId);
         console.log('Network switched');
