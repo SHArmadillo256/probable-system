@@ -105,6 +105,30 @@ body {
     transform: perspective(100px) rotateX(45deg);
 }
 
+.ember2 {
+    position: absolute;
+    background-color: rgba(255, 69, 0, 0.9);
+    width: 5px; 
+    height: 5px;
+    border-radius: 50%;
+    animation: emberOrbit 10s infinite linear; /* Animation for orbiting */
+}
+
+@keyframes emberOrbit {
+    from { transform: rotate(0deg) translateX(50px); }
+    to { transform: rotate(360deg) translateX(50px); }
+}
+
+.trail {
+    position: absolute;
+    width: 100px; /* Width of the trail */
+    height: 2px; /* Height of the trail */
+    background: linear-gradient(to right, rgba(255, 165, 0, 0), rgba(255, 165, 0, 0.8));
+    top: 50%; /* Centered vertically */
+    left: 5px; /* Starts near the ember */
+    border-radius: 1px;
+}
+
 /* Hide the WalletConnect expand/collapse behavior */
 .walletconnect-qrcode__base {
     display: none !important;
