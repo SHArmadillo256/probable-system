@@ -35,15 +35,15 @@ document.addEventListener('mousemove', function(e) {
 
 function createAtomWithTrail() {
     const atom = document.createElement('div');
-    ember.className = 'atom';
+    atom.className = 'atom';
     const trail = document.createElement('div');
     trail.className = 'trail';
     
     // Randomly vary the orbit radius and speed
     const radius = 20 + Math.random() * 30; // Radius between 20px and 50px
     const duration = 5 + Math.random() * 5; // Duration between 5s and 10s
-    ember.style.animationDuration = `${duration}s`;
-    ember.style.transform = `translateX(${radius}px)`; // Set radius
+    atom.style.animationDuration = `${duration}s`;
+    atom.style.transform = `translateX(${radius}px)`; // Set radius
     
     trail.style.width = `${radius}px`; // Matching trail length to radius
     trail.style.animationDuration = `${duration}s`;
