@@ -32,6 +32,24 @@ document.addEventListener('mousemove', function(e) {
 });
 
 
+// Function to drop embers
+function dropEmber() {
+    var ember = document.createElement('div');
+    ember.className = 'ember';
+    ember.style.left = (Math.random() * 100) + '%';
+    document.body.appendChild(ember);
+    setTimeout(() => ember.remove(), 5000);  // Remove after 5 seconds
+}
+
+setInterval(dropEmber, 2000);  // Drop embers every 2 seconds
+
+// Click effects to create more embers
+document.addEventListener('mousedown', function() {
+    for (let i = 0; i < 5; i++) dropEmber();  // Drop multiple embers on click
+});
+
+
+
 
 function createAtomWithTrail() {
     const atom = document.createElement('div');
