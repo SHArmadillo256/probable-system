@@ -14,7 +14,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: #121212;  /* Dark background for better neon effect visibility */
+    
     overflow-x: hidden; /* Hide horizontal scrollbar */
     overflow-y: auto; /* Allows vertical scrolling */
 }
