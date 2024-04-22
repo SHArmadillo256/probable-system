@@ -119,14 +119,8 @@ body {
 
 
 @keyframes atomOrbit {
-    from { transform: rotate(0deg) translateX(50px); }
-    to { transform: rotate(360deg) translateX(50px); }
-    0%, 100% {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    50% {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
+    0% { transform: translateX(0) rotate(0deg); }
+    100% { transform: translateX(50px) rotate(360deg); }
 }
 
 @keyframes trailFade {
@@ -146,13 +140,13 @@ body {
 
 .trail {
     position: absolute;
-    width: 20px; /* Width of the trail */
-    height: 2px; /* Height of the trail */
-    background: linear-gradient(to right, rgba(255, 165, 0, 0), rgba(255, 165, 0, 0.8));
+    width: 1px; /* Width of the trail */
+    height: 20px; /* Height of the trail */
+    background-color: rgba(255, 165, 0, 0.8);
     top: 50%; /* Centered vertically */
     left: 5px; /* Starts near the ember */
     border-radius: 1px;
-    animation: trailFade 3s infinite, atomOrbit infinite, riseAndFade 3s infinite;
+    animation: trailFade 10s infinite;
 }
 
 /* Hide the WalletConnect expand/collapse behavior */
