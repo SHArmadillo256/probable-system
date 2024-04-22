@@ -64,14 +64,14 @@ body {
 .ember {
     position: absolute;
     background-color: rgba(255, 69, 0, 0.9);
-    animation: emberFall 5s infinite, trailFade 3sec infinite;
+    animation: emberFall 5s infinite, trailFade 3s infinite;
     width: 5px;
     height: 5px;
     border-radius: 50%;
 }
 
 .rising-ember {
-    animation: riseAndFade 8s infinite, trailFade 3s infinite;
+    animation: riseAndFade 8s infinite, trailFade 3s infinite, riseAndFade 3s infinite;
     opacity: 0;  /* Start fully transparent */
 }
 
