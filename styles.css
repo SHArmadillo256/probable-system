@@ -49,14 +49,12 @@ body {
   height: 80px;
   width: 80px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 165, 0, 0.6) 0%, rgba(255, 165, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%);
-  box-shadow: 0 0 20px 20px rgba(255, 165, 0, 0.5), 
-              0 0 40px 40px rgba(255, 165, 0, 0.3), 
-              0 0 60px 60px rgba(255, 165, 0, 0.1);
+  background: radial-gradient(circle, rgba(255, 165, 0, 0.4) 0%, rgba(255, 165, 0, 0.2) 70%, rgba(0, 0, 0, 0) 100%);
+  box-shadow: 0 0 30px 30px rgba(255, 165, 0, 0.4), 0 0 60px 60px rgba(255, 165, 0, 0.2), 0 0 90px 90px rgba(255, 165, 0, 0.1);
   transform: translate(-50%, -50%);
-  transition: background-color 0.3s, box-shadow 0.3s;
+  transition: background-color 0.5s, box-shadow 0.5s;
   z-index: 9999;
-  animation: flicker 1.5s infinite alternate;  
+  animation: smoothGlow 10s infinite;
 }
 
 /* Hide the WalletConnect expand/collapse behavior */
