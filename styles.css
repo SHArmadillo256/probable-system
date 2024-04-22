@@ -51,8 +51,8 @@ body {
 }
     #cursor-glow {
     pointer-events: none;
-    width: 25px;  /* Smaller size */
-    height: 25px;  /* Smaller size */
+    width: 40px;  /* Smaller size */
+    height: 40px;  /* Smaller size */
     background: radial-gradient(circle, rgba(255, 140, 0, 0.8), transparent 70%);
     box-shadow: 0 0 40px 40px rgba(255, 140, 0, 0.1), 0 0 50px 100px rgba(255, 140, 0, 0.05);
     animation: smokeFlow 8s infinite;
