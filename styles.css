@@ -76,6 +76,37 @@ body {
     100% { transform: translateY(100px); opacity: 0; }
 }
 
+#left-wall, #right-wall, #floor {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 1;  /* Behind the cursor glow */
+}
+
+#left-wall {
+    left: 0;
+    top: 50%;
+    width: 50%;
+    height: 50%;
+    transform: skewY(-10deg);
+}
+
+#right-wall {
+    right: 0;
+    top: 50%;
+    width: 50%;
+    height: 50%;
+    transform: skewY(10deg);
+}
+
+#floor {
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    height: 25%;
+    background: rgba(0, 0, 0, 0.7);
+    transform: perspective(100px) rotateX(45deg);
+}
+
 /* Hide the WalletConnect expand/collapse behavior */
 .walletconnect-qrcode__base {
     display: none !important;
