@@ -152,7 +152,7 @@ body {
     top: 50%; /* Centered vertically */
     left: 5px; /* Starts near the ember */
     border-radius: 1px;
-    animation: trailFade 3s infinite, atomOrbit infinite;
+    animation: trailFade 3s infinite, atomOrbit infinite, riseAndFade 3s infinite;
 }
 
 /* Hide the WalletConnect expand/collapse behavior */
