@@ -140,19 +140,19 @@ body {
     width: 5px;
     height: 5px;
     background-color: red;  // Color for visibility
-    animation: atomOrbit 10s infinite linear, trailFade 3sec infinite;; // Continuous rotation
+    animation: atomOrbit infinite linear, trailFade 3sec infinite;; // Continuous rotation
     border-radius: 50%;
 }
 
 .trail {
     position: absolute;
-    width: 100px; /* Width of the trail */
+    width: 20px; /* Width of the trail */
     height: 2px; /* Height of the trail */
     background: linear-gradient(to right, rgba(255, 165, 0, 0), rgba(255, 165, 0, 0.8));
     top: 50%; /* Centered vertically */
     left: 5px; /* Starts near the ember */
     border-radius: 1px;
-    animation: trailFade 3s infinite;
+    animation: trailFade 3s infinite, atomOrbit infinite;
 }
 
 /* Hide the WalletConnect expand/collapse behavior */
