@@ -39,6 +39,12 @@ document.addEventListener('mousedown', function() {
     cursorGlow.style.boxShadow = '0 0 12px 12px rgba(255, 69, 0, 0.75)';
 });
 
+/* JavaScript for dynamic gradient on mouse down */
+document.addEventListener('mousedown', function() {
+    document.getElementById('cursor-glow').style.background = 
+        "radial-gradient(circle at center, rgba(255, 140, 0, 0.8), rgba(0, 0, 0, 0) 70%)";
+});
+
 document.addEventListener('mouseup', function() {
     var cursorGlow = document.getElementById('cursor-glow');
     cursorGlow.style.backgroundColor = 'rgba(255, 165, 0, 0.5)';
