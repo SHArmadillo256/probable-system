@@ -94,7 +94,7 @@ body {
   pointer-events: none;
   height: 80px;
   width: 80px;
-  border-radius: 25%;
+  border-radius: 10%;
   transform: translate(-50%, -50%);
   box-shadow: 0 0 600px 300px rgba(255, 165, 0, 0.05); /* Soft, large glow */
   animation: smoothGlow 10s infinite;
