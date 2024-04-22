@@ -118,6 +118,22 @@ body {
 @keyframes atomOrbit {
     from { transform: rotate(0deg) translateX(50px); }
     to { transform: rotate(360deg) translateX(50px); }
+    0%, 100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.atom {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: red;  // Color for visibility
+    animation: atomOrbit 10s infinite linear; // Continuous rotation
+    border-radius: 50%;
+}
 }
 
 .trail {
