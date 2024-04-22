@@ -55,7 +55,7 @@ body {
     width: 40px;  /* Smaller size */
     height: 40px;  /* Smaller size */
     background: radial-gradient(circle, rgba(255, 140, 0, 0.8), transparent 70%);
-    box-shadow: 0 0 40px 40px rgba(255, 140, 0, 0.1), 0 0 50px 100px rgba(255, 140, 0, 0.05);
+    box-shadow: 0 0 35px 35px rgba(255, 140, 0, 0.1), 0 0 50px 100px rgba(255, 140, 0, 0.05);
     animation: smokeFlow 8s infinite;
     z-index: 9999;
 }
@@ -116,14 +116,7 @@ body {
     transform: perspective(100px) rotateX(45deg);
 }
 
-.atom {
-    position: absolute;
-    background-color: rgba(255, 69, 0, 0.9);
-    width: 5px; 
-    height: 5px;
-    border-radius: 50%;
-    animation: atomOrbit infinite linear, trailFade infinite; /* Animation for orbiting */
-}
+
 
 @keyframes atomOrbit {
     from { transform: rotate(0deg) translateX(50px); }
@@ -143,10 +136,11 @@ body {
 
 .atom {
     position: absolute;
+    background-color: rgba(255, 69, 0, 0.9);
     width: 5px;
     height: 5px;
     background-color: red;  // Color for visibility
-    animation: atomOrbit 10s infinite linear; // Continuous rotation
+    animation: atomOrbit 10s infinite linear, trailFade 3sec infinite;; // Continuous rotation
     border-radius: 50%;
 }
 
