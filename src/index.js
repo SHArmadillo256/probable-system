@@ -2,7 +2,6 @@
 import { ethers } from 'ethers';
 import wagmi from 'wagmi';
 import web3ModalLib from '@web3modal/wagmi';
-import { createClient } from 'wagmi';
 
 const {
     createClient,
