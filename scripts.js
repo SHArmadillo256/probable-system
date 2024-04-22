@@ -50,3 +50,12 @@ document.addEventListener('mouseup', function() {
     cursorGlow.style.backgroundColor = 'rgba(255, 165, 0, 0.5)';
     cursorGlow.style.boxShadow = '0 0 8px 8px rgba(255, 165, 0, 0.5)';
 });
+
+document.addEventListener('mousemove', function(e) {
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    var xPos = e.clientX / width;
+    var yPos = e.clientY / height;
+    var lightIntensity = 0.1 + 0.9*(1 - Math.max(Math.abs(xPos - 0.5), Math.abs(yPos - 0.5))*2);
+    document.body.style.backgroundColor = `rgba(0, 0, 0, ${lightIntensity})`;
+});
