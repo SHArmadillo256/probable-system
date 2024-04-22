@@ -32,28 +32,26 @@ document.addEventListener('mousemove', function(e) {
 });
 
 
-function createRisingEmber() {
+// Adjusting ember creation to be more dynamic and visually logical
+function createRisingFallingEmber() {
     var ember = document.createElement('div');
     ember.className = 'rising-ember';
-    ember.style.left = Math.random() * window.innerWidth + 'px';
-    ember.style.bottom = '0px';
+    ember.style.left = `${Math.random() * 100}%`;
+    ember.style.bottom = '0px'; // Starts from the bottom
     document.body.appendChild(ember);
-    setTimeout(function() { ember.remove(); }, 8000);  // Match animation duration
+    ember.style.animation = 'riseAndFall 8s forwards'; // Ensures the ember rises and then falls
 }
 
-setInterval(createRisingEmber, 1000);
+setInterval(createRisingFallingEmber, 1000);
 
-
-// Function to drop embers
-function dropEmber() {
-    var ember = document.createElement('div');
-    ember.className = 'ember';
-    ember.style.left = (Math.random() * 100) + '%';
-    document.body.appendChild(ember);
-    setTimeout(() => ember.remove(), 5000);  // Remove after 5 seconds
+@keyframes riseAndFall {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(-300px); opacity: 1; } // Midpoint at highest position
+    100% { transform: translateY(0); opacity: 0; } // Returns to start and fades out
 }
 
-setInterval(dropEmber, 2000);  // Drop embers every 2 seconds
+
+
 
 // Click effects to create more embers
 document.addEventListener('mousedown', function() {
@@ -77,6 +75,28 @@ function createAtomWithTrail() {
 for (let i = 0; i < 3; i++) {
     createAtomWithTrail();
 }
+
+function createEmberWithTrail() {
+    const ember = document.createElement('div');
+    ember.className = 'ember';
+    document.body.appendChild(ember);
+    ember.style.left = `${Math.random() * window.innerWidth}px`;
+    ember.style.top = `${Math.random() * window.innerHeight}px`;
+
+    // Creating a trail for each ember
+    const trail = document.createElement('div');
+    trail.className = 'trail';
+    document.body.appendChild(trail);
+    trail.style.left = ember.style.left; // Initial position matching the ember
+    trail.style.top = ember.style.top; // Initial position matching the ember
+
+    // Animation to move trail with ember
+    trail.style.animation = 'trailMove 5s infinite';
+    setTimeout(() => { ember.remove(); trail.remove(); }, 5100);
+}
+
+setInterval(createEmberWithTrail, 500);
+
 
 
 
