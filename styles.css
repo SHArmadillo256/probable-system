@@ -32,15 +32,15 @@ body {
 
 #cursor-glow {
   position: fixed;
-  pointer-events: none; /* Makes sure the glow effect doesn't interfere with mouse events */
-  height: 50px;
-  width: 50px;
-  background-color: rgba(255, 165, 0, 0.5); /* Orange color glow */
+  pointer-events: none;  /* Ensures it doesn't interfere with mouse events */
+  height: 80px;  /* Increased size for a larger glow */
+  width: 80px;  /* Increased size for a larger glow */
   border-radius: 50%;
-  box-shadow: 0 0 8px 8px rgba(255, 165, 0, 0.5); /* Soft glow effect */
+  background: radial-gradient(circle, rgba(255, 165, 0, 0.6) 0%, rgba(255, 165, 0, 0.4) 50%, rgba(255, 165, 0, 0) 100%);
+  box-shadow: 0 0 20px 20px rgba(255, 165, 0, 0.5), 0 0 40px 40px rgba(255, 165, 0, 0.3), 0 0 60px 60px rgba(255, 165, 0, 0.1); /* Multi-layered shadow for a soft fade */
   transform: translate(-50%, -50%); /* Centers the glow on the cursor */
   transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
-  z-index: 2000;
+  z-index: 9999;  /* High z-index to ensure it appears on top of other content */
 }
 
 /* Hide the WalletConnect expand/collapse behavior */
