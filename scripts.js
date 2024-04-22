@@ -33,9 +33,9 @@ document.addEventListener('mousemove', function(e) {
 
 
 
-function createEmberWithTrail() {
-    const ember = document.createElement('div');
-    ember.className = 'ember';
+function createAtomWithTrail() {
+    const atom = document.createElement('div');
+    ember.className = 'atom';
     const trail = document.createElement('div');
     trail.className = 'trail';
     
@@ -49,21 +49,21 @@ function createEmberWithTrail() {
     trail.style.animationDuration = `${duration}s`;
     
     document.getElementById('cursor-glow').appendChild(trail);
-    document.getElementById('cursor-glow').appendChild(ember);
+    document.getElementById('cursor-glow').appendChild(atom);
 }
 
 // Create three embers with trails
-createEmberWithTrail();
-createEmberWithTrail();
-createEmberWithTrail();
+createAtomWithTrail();
+createAtomWithTrail();
+createAtomWithTrail();
 
-document.addEventListener('mousemove', updatePosition);
+document.addEventListener('mousemove', updatePosition2);
 document.addEventListener('touchmove', function(e) {
     e.preventDefault();
     updatePosition(e.touches[0]);
 }, { passive: false });
 
-function updatePosition(e) {
+function updatePosition2(e) {
     const glow = document.getElementById('cursor-glow');
     glow.style.left = e.clientX + 'px';
     glow.style.top = e.clientY + 'px';
