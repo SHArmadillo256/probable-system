@@ -1,7 +1,7 @@
 // src/index.js
 import { ethers } from 'ethers';
 import wagmi from 'wagmi';
-import web3ModalLib = require'@web3modal/wagmi';
+import web3ModalLib from '@web3modal/wagmi';
 
 const {
     createClient,
