@@ -13,9 +13,9 @@ function updatePosition(e) {
 
 /* Randomly create embers around the cursor */
 setInterval(function() {
-    const ember = document.createElement('div');
+    const ember2 = document.createElement('div');
     ember.className = 'ember2';
-    document.body.appendChild(ember);
+    document.body.appendChild(ember2);
     ember.style.left = (Math.random() * window.innerWidth) + 'px';
     ember.style.top = (Math.random() * window.innerHeight) + 'px';
     
@@ -34,7 +34,7 @@ document.addEventListener('mousemove', function(e) {
 
 
 function createEmberWithTrail() {
-    const ember = document.createElement('div');
+    const ember2 = document.createElement('div');
     ember.className = 'ember';
     const trail = document.createElement('div');
     trail.className = 'trail';
