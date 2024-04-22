@@ -96,11 +96,10 @@ body {
   pointer-events: none;
   height: 80px;
   width: 80px;
-  border-radius: 50%;
+  border-radius: 25%;
   background: radial-gradient(circle at center, rgba(255, 165, 0, 0.6), rgba(0, 0, 0, 0) 70%);
   transform: translate(-50%, -50%);
   box-shadow: 0 0 600px 300px rgba(255, 165, 0, 0.05); /* Soft, large glow */
-  z-index: 9999;
   animation: smoothGlow 10s infinite;
 }
 
