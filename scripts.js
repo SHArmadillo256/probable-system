@@ -44,11 +44,7 @@ function createRisingFallingEmber() {
 
 setInterval(createRisingFallingEmber, 1000);
 
-@keyframes riseAndFall {
-    0% { transform: translateY(0); opacity: 1; }
-    50% { transform: translateY(-300px); opacity: 1; } // Midpoint at highest position
-    100% { transform: translateY(0); opacity: 0; } // Returns to start and fades out
-}
+
 
 
 
