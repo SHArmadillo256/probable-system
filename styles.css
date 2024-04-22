@@ -78,7 +78,7 @@ body {
 
 #left-wall, #right-wall, #floor {
     position: fixed;
-    background: rgba(0, 0, 0, 0.2); /* Semi-transparent black */
+    background: rgba(0, 0, 0, 0.1); /* Semi-transparent black */
     z-index: 2;  /* Behind the cursor glow */
 }
 
@@ -103,7 +103,7 @@ body {
     left: 25%;
     width: 50%;
     height: 25%;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.1);
     transform: perspective(100px) rotateX(45deg);
 }
 
