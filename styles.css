@@ -275,7 +275,7 @@ button:hover {
 }
 
 .connect-advisor {
-    animation: connectBlink 3s infinite alternate, plasmaGlow 5s infinite;
+    animation: connectBlink 3s infinite alternate;
     
 }
 
