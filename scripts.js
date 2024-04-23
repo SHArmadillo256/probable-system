@@ -175,10 +175,10 @@ document.addEventListener('scroll', function() {
 document.getElementById('theme-switch').addEventListener('change', function(e) {
     const background = document.querySelector('.animated-background-dark');
     if (e.target.checked) {
-        background.classList.add('animated-background-dark');
-        background.classList.remove('animated-background-light');
-    } else {
         background.classList.add('animated-background-light');
         background.classList.remove('animated-background-dark');
+    } else {
+        background.classList.add('animated-background-dark');
+        background.classList.remove('animated-background-light');
     }
 });
