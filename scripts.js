@@ -156,7 +156,7 @@ let lastScrollTop = 0; // Tracks the last scroll position
 
 document.addEventListener('scroll', function() {
     const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const buttons = document.querySelectorAll('.neon-button');
+    const buttons = document.querySelectorAll('.neon-button-before');
 
     buttons.forEach(button => {
         if (currentScrollTop > lastScrollTop) {
