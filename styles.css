@@ -171,7 +171,7 @@ body {
     width: 5px;
     height: 5px;
     background-color: red;  // Color for visibility
-    animation: atomOrbit infinite linear, trailFade 3sec infinite; // Continuous rotation
+    animation: atomOrbit infinite linear, trailFade 3s infinite; // Continuous rotation
     border-radius: 50%;
 }
 
