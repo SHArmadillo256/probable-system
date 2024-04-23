@@ -234,20 +234,23 @@ body {
    .header-left {
     display: flex;
     gap: 5px;
-    position: left;
+    justify-content: flex-start;
+    width: 33%;
    }
 
    .header-right {
       display: flex;
       gap: 5px;
-      position: right;
+      justify-content: flex-end; 
+      width: 33%;
    }
 
    .header-center {
       display: flex;
       align-items: center;
       gap: 5px;
-      position: center;
+      justify-content: center; 
+      width: 33%; 
    }
     
   .header-controls {
