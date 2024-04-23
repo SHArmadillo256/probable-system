@@ -282,7 +282,7 @@ button:hover {
 .neon-button {
     border: 2px solid #0F0;  /* Neon green outline */
     color: white;
-    background: black;
+    background: none;
     padding: 8px 20px;
     font-size: 16px;
     font-weight: bold;
@@ -291,12 +291,17 @@ button:hover {
     outline: none;
     box-shadow: 0 0 5px rgba(0, 255, 0, 0.5), 0 0 25px rgba(0, 255, 0, 0.75); /* Glow effect */
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-
-    position: relative;
-    overflow: hidden;  /* Ensures no part of the mesh effect spills out */
     cursor: pointer;
 }
 
+
+.neon-button-before {
+    overflow: hidden;  /* Ensures no part of the mesh effect spills out */
+    padding: 10px 20px;
+    background: black; /* Dark background to enhance the effect */
+    cursor: pointer;
+    border-radius: 10px;
+}
 
         .neon-button-mesh-effect {
     
