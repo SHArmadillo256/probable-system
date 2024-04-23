@@ -173,7 +173,7 @@ document.addEventListener('scroll', function() {
 }, { passive: true });
 
 document.getElementById('theme-switch').addEventListener('change', function(e) {
-    const background = document.querySelector('.animated-background');
+    const background = document.querySelector('.animated-background-dark');
     if (e.target.checked) {
         background.classList.add('animated-background-dark');
         background.classList.remove('animated-background-light');
