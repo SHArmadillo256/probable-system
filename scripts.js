@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var settingsBtutton = document.getElementById("settingsButton");
     var span = document.getElementsByClassName("close")[0];
 
-    connectWalletButton.addEventListener('click', function() {
+    connectButton.addEventListener('click', function() {
         // Simulate wallet connection
         connectButton.style.display = 'none';
         walletAndSettings.style.display = 'flex';  // Show wallet info and settings
