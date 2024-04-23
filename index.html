@@ -50,7 +50,7 @@
      <div id="header">
       <div class="header-left">
         <h1>$SHA256</h1>
-        <img src="img/SHA256_icon.png" alt="Logo" style="vertical-align: right;">
+        <img src="img/SHA256_icon.png" alt="Logo" style="vertical-align: left;">
       </div>
         <!-- Navigation -->
       <div class="header-center">
@@ -65,37 +65,36 @@
      </div>
       
           <div class="header-right">
-        <!-- Connect and Network -->
+               <div id="walletConnectionArea">
+          <!-- Connect and Network -->
          <button id="changeNetworkBtn" class="neon-button">Change Network</button>
          <button id="connectBtn" class="neon-button">Connect Wallet</button>
          
-    
-    <!-- Other buttons -->
+    <div id="walletAndSettings" style="display: none;">
+        <!-- Other buttons -->
     <span id="wallet-info">Wallet: Loading...</span>
     <button id="settingsBtn" class="neon-button"><i class="fa fa-cog"></i></button>
-
-
-              <!-- Modal Structure -->
-<div id="settingsModal" class="modal">
-    <div class="modal-content">
+     <div id="settingsModal" class="modal">
+      <div class="modal-content">
         <span class="close">&times;</span>
-          <h1>Settings</h1>
           <h2>Cursor</h2>
-        <select id="cursor-choice">
-            <option value="default">1. Standard</option>
-            <option value="atom-nucleus">2. Atom Nucleus</option>
-            <option value="torch-glow">3. Torch</option>
-        </select>
-        <button id="disconnectBtn">Disconnect Wallet</button>
-</div>
+               <select id="cursor-choice">
+                   <option value="default">1. Standard</option>
+                   <option value="atom-nucleus">2. Atom Nucleus</option>
+                   <option value="torch-glow">3. Torch</option>
+               </select>
+                  <button id="disconnectBtn">Disconnect Wallet</button>
+                     </div>
            
                 </div>
         
-         </div>
+            </div>
      
-            
-     </div> 
-
+        </div>       
+    
+    </div>
+         
+</div>
 
 <div class="container"> <!-- Container div for the entire content -->
   
