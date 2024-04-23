@@ -66,6 +66,58 @@ body {
     animation: gradientBG 15s ease infinite;
 }
 
+/* General Toggle Switch Styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Dark and Light mode specific styles */
+body.dark-mode {
+  background: linear-gradient(-45deg, #243B55, #141E30, #0A0F0D, #2F3C4F);
+  color: white;
+}
+
+body.light-mode {
+  background: linear-gradient(45deg, #FFFFFF, #F8F9FA, #ECEFF1, #E0E0E0);
+  color: black;
+}
+
 /* Keyframes for fluid, non-repetitive smoke movement */
 @keyframes smokeFlow {
     0%, 100% {
