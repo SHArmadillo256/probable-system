@@ -92,22 +92,6 @@ document.addEventListener('mousemove', function(e) {
 });
 
 
-// Adjusting ember creation to be more dynamic and visually logical
-function createRisingFallingEmber() {
-    var ember = document.createElement('div');
-    ember.className = 'rising-ember';
-    ember.style.left = `${Math.random() * 100}%`;
-    ember.style.bottom = '0px'; // Starts from the bottom
-    document.body.appendChild(ember);
-    ember.style.animation = 'riseAndFall 8s forwards'; // Ensures the ember rises and then falls
-}
-
-setInterval(createRisingFallingEmber, 1000);
-
-
-
-
-
 
 // Click effects to create more embers
 document.addEventListener('mousedown', function() {
