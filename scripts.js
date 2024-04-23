@@ -1,31 +1,30 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Get the modal
+    var connectBtn = document.getElementById('connectWalletBtn');
+    var walletAndSettings = document.getElementById('walletAndSettings');
     var modal = document.getElementById("settingsModal");
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("settingsBtn");
-
-    // Get the <span> element that closes the modal
+    var settingsBtn = document.getElementById("settingsBtn");
     var span = document.getElementsByClassName("close")[0];
 
-    // When the user clicks the button, open the modal 
-    btn.onclick = function() {
+    connectBtn.addEventListener('click', function() {
+        // Simulate wallet connection
+        connectBtn.style.display = 'none';
+        walletAndSettings.style.display = 'flex';  // Show wallet info and settings
+    });
+    
+    settingsBtn.onclick = function() {
         modal.style.display = "block";
     };
 
-    // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
         modal.style.display = "none";
     };
 
-    // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
         }
     };
 });
-
 
 function changeCursor(cursorType) {
     document.documentElement.style.cursor = 'url(css/' + cursorType + '.cur), auto';
