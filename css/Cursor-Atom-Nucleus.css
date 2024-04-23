@@ -1,0 +1,30 @@
+@keyframes atomOrbit {
+    0% { transform: translateX(0) rotate(0deg); }
+    100% { transform: translateX(50px) rotate(360deg); }
+}
+
+@keyframes trailFade {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.atom {
+    position: absolute;
+    background-color: rgba(255, 69, 0, 0.9);
+    width: 5px;
+    height: 5px;
+    background-color: red;  // Color for visibility
+    animation: atomOrbit infinite linear, trailFade 3sec infinite; // Continuous rotation
+    border-radius: 50%;
+}
+
+.trail {
+    position: absolute;
+    width: 1px; /* Width of the trail */
+    height: 20px; /* Height of the trail */
+    background-color: rgba(255, 165, 0, 0.8);
+    top: 50%; /* Centered vertically */
+    left: 5px; /* Starts near the ember */
+    border-radius: 1px;
+    animation: trailFade 10s infinite;
+}
