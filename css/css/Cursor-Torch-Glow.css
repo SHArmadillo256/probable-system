@@ -1,0 +1,30 @@
+#cursor-glow {
+    position: absolute;
+    pointer-events: none;
+    width: 35px;  /* Smaller size */
+    height: 35px;  /* Smaller size */
+    background: radial-gradient(circle, rgba(255, 140, 0, 0.8), transparent 70%);
+    box-shadow: 0 0 35px 35px rgba(255, 140, 0, 0.1), 0 0 50px 100px rgba(255, 140, 0, 0.05);
+    animation: smokeFlow 8s infinite;
+    z-index: 9999;
+}
+
+/* Keyframes for fluid, non-repetitive smoke movement */
+@keyframes smokeFlow {
+    0%, 100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        border-radius: 50%;
+    }
+    25% {
+        transform: translate(-60%, -50%) rotate(-20deg);
+        border-radius: 40% 60% 50% 50%;
+    }
+    50% {
+        transform: translate(-40%, -45%) rotate(20deg);
+        border-radius: 50% 50% 40% 60%;
+    }
+    75% {
+        transform: translate(-50%, -55%) rotate(10deg);
+        border-radius: 60% 40% 60% 40%;
+    }
+}
