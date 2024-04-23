@@ -69,14 +69,17 @@
           <!-- Connect and Network -->
          <button id="changeNetworkButton" class="neon-button">Change Network</button>
          <button id="connectButton" class="neon-button connect-advisor">Connect Wallet</button>
-         
-    <div class="wallet-and-settings" style="display: none;">
+         <label class="switch">
+              <input type="checkbox" id="mode-toggle">
+              <span class="slider"></span>
+         </label>
+       <div class="wallet-and-settings" style="display: none;">
         <!-- Settings buttons -->
-    <span id="wallet-info">Wallet: Loading...</span>
-    <button id="settingsButton" class="neon-button"><i class="fa fa-cog"></i></button>
-     <div id="settingsModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
+        <span id="wallet-info">Wallet: Loading...</span>
+        <button id="settingsButton" class="neon-button"><i class="fa fa-cog"></i></button>
+          <div id="settingsModal" class="modal">
+             <div class="modal-content">
+              <span class="close">&times;</span>
           <h2>Cursor</h2>
                <select id="cursor-choice">
                    <option value="default">1. Standard</option>
