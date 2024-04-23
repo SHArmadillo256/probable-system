@@ -56,7 +56,7 @@ body {
 }
 
 /* General Toggle Switch Styles */
-.switch {
+.theme-switch {
   position: relative;
   display: inline-block;
   width: 60px;
@@ -94,17 +94,6 @@ input:checked + .slider {
 
 input:checked + .slider:before {
   transform: translateX(26px);
-}
-
-/* Dark and Light mode specific styles */
-body.dark-mode {
-  background: linear-gradient(-45deg, #243B55, #141E30, #0A0F0D, #2F3C4F);
-  color: white;
-}
-
-body.light-mode {
-  background: linear-gradient(45deg, #FFFFFF, #F8F9FA, #ECEFF1, #E0E0E0);
-  color: black;
 }
 
 /* Keyframes for fluid, non-repetitive smoke movement */
