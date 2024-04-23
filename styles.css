@@ -220,7 +220,7 @@ body {
         #header {
             width: 90%;
             display: flex;
-            top: 0;
+            top: 10px;
             height: 60px;
             
             justify-content: space-between;
@@ -275,8 +275,7 @@ button:hover {
 }
 
 .connect-advisor {
-    animation: connectBlink 3s infinite alternate;
-    
+    animation: connectBlink 3s infinite alternate;  
 }
 
 .neon-button {
@@ -286,30 +285,22 @@ button:hover {
     padding: 8px 20px;
     font-size: 16px;
     font-weight: bold;
-    border-radius: 10px;
+    border-radius: 5px;
     text-transform: uppercase;
     outline: none;
     box-shadow: 0 0 5px rgba(0, 255, 0, 0.5), 0 0 25px rgba(0, 255, 0, 0.75); /* Glow effect */
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    cursor: pointer;
 }
 
 
 .neon-button-before {
-    overflow: hidden;  /* Ensures no part of the mesh effect spills out */
-    padding: 10px 20px;
+    border: 2px solid #0F0;  /* Neon green outline */
     background: black; /* Dark background to enhance the effect */
-    cursor: pointer;
-    border-radius: 10px;
 }
 
-        .neon-button-mesh-effect {
-    
-}
 
     .neon-button::after {
     content: '';
-    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
