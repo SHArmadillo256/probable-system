@@ -26,6 +26,23 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 });
 
+
+document.addEventListener('scroll', function() {
+    const headerHeight = document.querySelector('#header').offsetHeight;
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    const buttons = document.querySelectorAll('.neon-button');
+
+    buttons.forEach(button => {
+        if (scrollPosition > headerHeight) {
+            button.style.animationPlayState = 'running';
+        } else {
+            button.style.animationPlayState = 'paused';
+        }
+    });
+});
+
+
+
 function changeCursor(cursorType) {
     document.documentElement.style.cursor = 'url(css/' + cursorType + '.cur), auto';
 }
