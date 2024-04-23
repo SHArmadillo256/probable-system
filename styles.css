@@ -1,3 +1,5 @@
+
+
    body, html {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -246,6 +248,51 @@ button:hover {
     background-color: rgba(0, 255, 0, 0.4); /* Deeper green fill on active/click */
 }
 
+
+   .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content select {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border: none;
+    width: 100%;
+    box-sizing: border-box; /* Ensures the select fits within the dropdown */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.fa-cog {
+    font-size: 24px;
+}
+
+
+   
         #header h1 {
             margin: 0;
             padding: 0;
