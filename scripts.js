@@ -1,17 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var connectButton = document.getElementById('connectWalletBtn');
+    var connectButton = document.getElementById('connectWalletButton');
     var walletAndSettings = document.getElementById('walletAndSettings');
     var modal = document.getElementById("settingsModal");
-    var settingsBtuttonn = document.getElementById("settingsBtn");
+    var settingsBtutton = document.getElementById("settingsButton");
     var span = document.getElementsByClassName("close")[0];
 
-    connectWalletBtn.addEventListener('click', function() {
+    connectWalletButton.addEventListener('click', function() {
         // Simulate wallet connection
-        connectBtn.style.display = 'none';
+        connectButton.style.display = 'none';
         walletAndSettings.style.display = 'flex';  // Show wallet info and settings
     });
     
-    settingsBtn.onclick = function() {
+    settingsButton.onclick = function() {
         modal.style.display = "block";
     };
 
