@@ -275,7 +275,8 @@ button:hover {
 }
 
 .connect-advisor {
-    animation: connectBlink 3s infinite alternate;
+    animation: connectBlink 3s infinite alternate, plasmaGlow 5s infinite;
+    
 }
 
 .neon-button {
@@ -287,7 +288,6 @@ button:hover {
     font-weight: bold;
     border-radius: 5px;
     text-transform: uppercase;
-    animation: plasmaGlow 5s infinite ;
     outline: none;
     box-shadow: 0 0 5px rgba(0, 255, 0, 0.5), 0 0 25px rgba(0, 255, 0, 0.75); /* Glow effect */
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
