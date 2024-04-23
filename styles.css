@@ -397,7 +397,15 @@ button:hover {
             background: rgba(0, 0, 0, 0.5); /* Adding a semi-transparent background */
         }
 
-        #additional-info 
+        #additional-info {
+            position: fixed;
+            right: 0;
+            top: 60px;
+            width: 200px;
+            overflow-y: auto;
+            height: calc(100% - 60px); /* Adjust based on header */
+            background: rgba(0, 0, 0, 0.5); /* Consistent with sidebar */
+        }
 
         .info-box {
             
