@@ -254,13 +254,14 @@ button:hover {
     display: inline-block;
 }
 
-.dropbtn {
+.dropbtn, #wallet-info {
     background-color: #4CAF50;
     color: white;
-    padding: 16px;
+    padding: 10px;
     font-size: 16px;
     border: none;
     cursor: pointer;
+    display: inline-block;
 }
 
 .dropdown-content {
@@ -271,6 +272,13 @@ button:hover {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+}
+
+   #wallet-info {
+    margin-right: 10px;  /* Adds spacing between the wallet info and the cog icon */
+    overflow: hidden;   /* Ensures the text does not overflow */
+    white-space: nowrap; /* Keeps the wallet address on one line */
+    text-overflow: ellipsis; /* Adds an ellipsis if the text overflows */
 }
 
 .dropdown-content select {
