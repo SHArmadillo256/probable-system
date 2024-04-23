@@ -46,12 +46,15 @@
       <div class="atom"></div>
       <div class="atom"></div>
      </div>
-
+     
+       <!-- Logo and title -->
      <div id="header">
-    <div class="header-left">
-        <!-- Logo and Navigation -->
+      <div class="header-left">
         <h1>$SHA256</h1>
         <img src="img/SHA256_icon.png" alt="Logo" style="vertical-align: middle;">
+      </div>
+        <!-- Navigation --
+         <div class="header-center">
         <button class="neon-button" id="swapButton;">Swap</button>
         <button class="neon-button" id="bridgeButton;">Bridge</button>
         <button class="neon-button" id="dashboardButton;">Dashboard</button>
@@ -60,13 +63,20 @@
         <button class="neon-button" id="lockButton;">Lock</button>
         <button class="neon-button" id="loanButton;">Loan</button>
         <button class="neon-button" id="storeButton;">Store</button>
-        </div>
+     </div>
+      
           <div class="header-right">
         <!-- Connect and Network -->
          <button id="changeNetworkBtn" class="neon-button">Change Network</button>
          <button id="connectBtn" class="neon-button">Connect Wallet</button>
          <button id="disconnectBtn">Disconnect Wallet</button>
-           <div class="dropdown">
+    
+    <!-- Other buttons -->
+    <span id="wallet-info">Wallet: Loading...</span>
+    <button id="settingsBtn" class="neon-button"><i class="fa fa-cog"></i></button>
+</div>
+           <div id="settingsModal" class="modal">
+           <div class="modal-content">
              <span id="wallet-info">Wallet: Loading...</span>
                 <button class="dropbtn"><i class="fa fa-cog" aria-hidden="true"></i></button>
                   <div class="dropdown-content">
@@ -75,7 +85,7 @@
                        <option value="atom-nucleus">2. Atom Nucleus</option>
                        <option value="torch-glow">3. Torch</option>
                    </select>
-               </div>
+               
         
          </div>
      
