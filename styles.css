@@ -231,14 +231,20 @@ body {
             position: fixed;
             z-index: 1500;
         }
-   .header-left, .header-center, .header-right {
+   .header-left, .header-right {
       display: flex;
-      gap: 40px;
+      gap: 10px;
    }
 
+   .header-center {
+      display: flex;
+      align-items: center;
+      gap: 10px; 
+   }
+    
   .header-controls {
     justify-content: flex-end;
-}
+   }
 
      .network-actions, .main-navigation {
         display: flex;
@@ -332,7 +338,6 @@ button:hover {
 .fa-cog {
     font-size: 24px;
 }
-
 
    
         #header h1 {
