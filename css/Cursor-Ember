@@ -1,0 +1,41 @@
+/* Additional elements for embers and dynamically changing effects */
+.ember {
+    position: absolute;
+    background-color: rgba(255, 69, 0, 0.9);
+    animation: trailFade 3s infinite;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+
+.rising-ember {
+    animation: riseAndFade 8s infinite, trailFade 3s infinite, riseAndFade 3s infinite;
+    opacity: 0;  /* Start fully transparent */
+}
+
+@keyframes riseAndFade {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-200px); opacity: 0; }
+}
+
+@keyframes riseAndFall {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(-300px); opacity: 1; } // Midpoint at highest position
+    100% { transform: translateY(0); opacity: 0; } // Returns to start and fades out
+}
+
+@keyframes trailFade {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.trail {
+    position: absolute;
+    width: 1px; /* Width of the trail */
+    height: 20px; /* Height of the trail */
+    background-color: rgba(255, 165, 0, 0.8);
+    top: 50%; /* Centered vertically */
+    left: 5px; /* Starts near the ember */
+    border-radius: 1px;
+    animation: trailFade 10s infinite;
+}
