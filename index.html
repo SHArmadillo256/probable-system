@@ -18,12 +18,12 @@
 <script type="module">
         import { connectWallet, disconnectWallet } from './src/index.js';
         
-        document.getElementById('connectWalletButton').addEventListener('click', async () => {
+        document.getElementById('connectWalletBtn').addEventListener('click', async () => {
           await connectWallet();
           console.log('Wallet connected!');
         });
 
-        document.getElementById('disconnectWalletButton').addEventListener('click', () => {
+        document.getElementById('disconnectWalletBtn').addEventListener('click', () => {
             disconnectWallet();
             console.log('Wallet disconnected!');
         });
