@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var connectBtn = document.getElementById('connectWalletBtn');
+    var connectButton = document.getElementById('connectWalletBtn');
     var walletAndSettings = document.getElementById('walletAndSettings');
     var modal = document.getElementById("settingsModal");
-    var settingsBtn = document.getElementById("settingsBtn");
+    var settingsBtuttonn = document.getElementById("settingsBtn");
     var span = document.getElementsByClassName("close")[0];
 
-    connectBtn.addEventListener('click', function() {
+    connectWalletBtn.addEventListener('click', function() {
         // Simulate wallet connection
         connectBtn.style.display = 'none';
         walletAndSettings.style.display = 'flex';  // Show wallet info and settings
@@ -47,7 +47,7 @@ function applyCursorEffect(effectName) {
         link.rel = 'stylesheet';
         document.head.appendChild(link);
     }
-    link.href = `css/${effectName}.css`;  // Path to the cursor CSS file
+    link.href = `Cursor_Designs/${effectName}.css`;  // Path to the cursor CSS file
 }
 
 // On load, apply saved cursor effect if any
