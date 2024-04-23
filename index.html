@@ -76,16 +76,16 @@
     <button id="settingsBtn" class="neon-button"><i class="fa fa-cog"></i></button>
 
 
-              <div id="settingsModal" class="modal">
-           <div class="modal-content">
-             <span id="wallet-info">Wallet: Loading...</span>
-                <button class="dropbtn"><i class="fa fa-cog" aria-hidden="true"></i></button>
-                  <div class="dropdown-content">
-                    <select id="cursor-choice" onchange="changeCursor(this.value)">
-                       <option value="default">1. Default</option>
-                       <option value="atom-nucleus">2. Atom Nucleus</option>
-                       <option value="torch-glow">3. Torch</option>
-                    </select>
+              <!-- Modal Structure -->
+<div id="settingsModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Customize Cursor</h2>
+        <select id="cursor-choice">
+            <option value="default">Standard Cursor</option>
+            <option value="atom-nucleus">Atom Nucleus</option>
+            <option value="torch-glow">Torch Glow</option>
+        </select>
 </div>
            
                 </div>
@@ -94,9 +94,6 @@
      
             
     </div>
-       
-    
-</div>
    
 
 
