@@ -32,8 +32,6 @@ function changeCursor(cursorType) {
     document.documentElement.style.cursor = 'url(css/' + cursorType + '.cur), auto';
 }
 
-
-
 document.getElementById('cursor-choice').addEventListener('change', function() {
     const selectedCursor = this.value;
     applyCursorEffect(selectedCursor);
@@ -153,3 +151,23 @@ function updatePosition2(e) {
     glow.style.left = e.clientX + 'px';
     glow.style.top = e.clientY + 'px';
 }
+
+let lastScrollTop = 0; // Tracks the last scroll position
+
+document.addEventListener('scroll', function() {
+    const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const buttons = document.querySelectorAll('.neon-button');
+
+    buttons.forEach(button => {
+        if (currentScrollTop > lastScrollTop) {
+            // Scrolling down
+            button.querySelector(':after').style.animationPlayState = 'running';
+        } else {
+            // Scrolling up
+            button.querySelector(':after').style.animationPlayState = 'paused';
+            button.querySelector(':after').style.transform = 'scaleY(0)';
+        }
+    });
+
+    lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
+}, { passive: true });
