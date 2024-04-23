@@ -61,3 +61,9 @@ window.switchNetwork = async (chainId) => {
         console.error('Could not switch network:', error);
     }
 };
+
+function displayWalletAddress(address) {
+    const walletDisplay = document.getElementById('wallet-info');
+    walletDisplay.textContent = `Wallet: ${address.substring(0, 6)}...${address.slice(-4)}`;
+}
+
