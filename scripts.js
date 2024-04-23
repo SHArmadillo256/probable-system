@@ -1,3 +1,9 @@
+function changeCursor(cursorType) {
+    document.documentElement.style.cursor = 'url(css/' + cursorType + '.cur), auto';
+}
+
+
+
 document.getElementById('cursor-choice').addEventListener('change', function() {
     const selectedCursor = this.value;
     applyCursorEffect(selectedCursor);
