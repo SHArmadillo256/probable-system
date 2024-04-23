@@ -18,12 +18,12 @@
 <script type="module">
         import { connectWallet, disconnectWallet } from './src/index.js';
         
-        document.getElementById('connectWalletBtn').addEventListener('click', async () => {
+        document.getElementById('connectWalletButton').addEventListener('click', async () => {
           await connectWallet();
           console.log('Wallet connected!');
         });
 
-        document.getElementById('disconnectWalletBtn').addEventListener('click', () => {
+        document.getElementById('disconnectWalletButon').addEventListener('click', () => {
             disconnectWallet();
             console.log('Wallet disconnected!');
         });
@@ -73,7 +73,7 @@
     <div id="walletAndSettings" style="display: none;">
         <!-- Settings buttons -->
     <span id="wallet-info">Wallet: Loading...</span>
-    <button id="settingsBtn" class="neon-button"><i class="fa fa-cog"></i></button>
+    <button id="settingsButton" class="neon-button"><i class="fa fa-cog"></i></button>
      <div id="settingsModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
@@ -83,7 +83,7 @@
                    <option value="atom-nucleus">2. Atom Nucleus</option>
                    <option value="torch-glow">3. Torch</option>
                </select>
-                  <button id="disconnectBtn">Disconnect Wallet</button>
+                  <button id="disconnectButton">Disconnect Wallet</button>
                      </div>
            
                 </div>
