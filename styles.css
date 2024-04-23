@@ -92,7 +92,7 @@ body {
     height: 35px;  /* Smaller size */
     background: radial-gradient(circle, rgba(255, 140, 0, 0.8), transparent 70%);
     box-shadow: 0 0 35px 35px rgba(255, 140, 0, 0.1), 0 0 50px 100px rgba(255, 140, 0, 0.05);
-    animation: smokeFlow 8s infinite;
+    animation: smokeFlow 8s infinite, riseAndFade 3s infinite;
     z-index: 9999;
 }
 
@@ -107,7 +107,7 @@ body {
 }
 
 .rising-ember {
-    animation: riseAndFade 8s infinite, trailFade 3s infinite, riseAndFade 3s infinite;
+    animation: trailFade 3s infinite, riseAndFade 3s infinite;
     opacity: 0;  /* Start fully transparent */
 }
 
@@ -286,7 +286,7 @@ button:hover {
     padding: 8px 20px;
     font-size: 16px;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: none;
     text-transform: uppercase;
     outline: none;
     box-shadow: 0 0 5px rgba(0, 255, 0, 0.5), 0 0 25px rgba(0, 255, 0, 0.75); /* Glow effect */
