@@ -413,6 +413,9 @@ button:hover {
 
         #additional-info {
             position: relative;
+            right: 0;
+            top: 60px;
+            width: 200px;
             margin-left: 200px;
             flex-grow: 1;
             overflow-y: auto;
@@ -426,8 +429,9 @@ button:hover {
             padding: 10px;
           
             margin-bottom: 10px;
-            border: 1px solid #c8ccd0;
+            border: 1px solid #0F0;
             align: fixed;
+            color: #0F0;
         }
 
         .info-box p b {
@@ -435,6 +439,7 @@ button:hover {
             padding: 5px 10px;
             margin-top: 0;
             text-align: center;
+            color: #0F0;
         }
 
         .info-box img {
