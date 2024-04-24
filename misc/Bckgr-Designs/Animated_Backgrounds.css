@@ -1,5 +1,5 @@
 .animated-background-dark, .animated-background-light {
-    transition: background 1.5s ease; /* Adjust time as needed */
+    transition: background 5s ease; /* Adjust time as needed */
 }
 
 .animated-background-light {
