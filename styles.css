@@ -416,7 +416,7 @@ button:hover {
             position: fixed;
              top: 70px;
             width: 220px;
-            margin-right: 120px;
+            margin-right: 100px;
             text-align: center;
             height: calc(100% - 60px); /* Subtract the header height from the total height */
             overflow-y: auto; /* Makes sidebar scrollable independently */
@@ -429,7 +429,7 @@ button:hover {
             position: relative;
             top: 70px;
             width: 220px;
-            margin-left: 120px;
+            margin-left: 100px;
             flex-grow: 1;
             height: calc(100% - 60px); /* Adjust based on header */
             background: rgba(0, 0, 0, 0.5); /* Consistent with sidebar */
@@ -489,6 +489,11 @@ button:hover {
 
         /* Media query for mobile devices */
 @media only screen and (max-width: 768px) {
+    .header-left, .header-right {
+        flex-direction: column;
+        align-items: center;
+    }
+
     #content {
         width: 100%; /* Full width on mobile */
     }
@@ -514,3 +519,9 @@ button:hover {
     .container, #sidebar, #center-content, #additional-info, #content {
         background: rgba(0, 0, 0, 0.3); /* Slightly different opacity for mobile */
     }
+
+    .neon-button {
+        width: 100%;  // Full width buttons for easier access on mobile
+        margin-bottom: 5px;  // Adds space between buttons for easier clicking
+    }
+}
