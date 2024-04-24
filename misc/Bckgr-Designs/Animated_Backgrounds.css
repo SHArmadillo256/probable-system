@@ -7,6 +7,7 @@
 .animated-background-dark, .animated-background-light {
     transition: background 5s ease; /* Adjust time as needed */
     animation: gradientBG 15s ease infinite;
+    animation-delay: 0s;
 }
 
 .animated-background-light {
