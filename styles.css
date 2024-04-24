@@ -421,7 +421,6 @@ button:hover {
             width: 180px;
             margin-left: 170px;
             flex-grow: 1;
-            overflow-y: auto;
             height: calc(100% - 60px); /* Adjust based on header */
             background: rgba(0, 0, 0, 0.5); /* Consistent with sidebar */
             z-index: 6;
