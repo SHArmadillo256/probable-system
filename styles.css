@@ -401,15 +401,25 @@ button:hover {
             justify-content: center;
 }
 
+         .left-box {
+            background: black;
+            padding: 10px;
+            box-shadow: 0 0 5px rgba(0, 255, 0, 0.5), 0 0 25px rgba(0, 255, 0, 0.75);
+            margin-bottom: 10px;
+            border: 1px solid #0F0;
+            align: fixed;
+            color: #0F0;
+        }
+    
         #sidebar {
             position: fixed;
-             top: 180px;
+             top: 60px;
+            width: 210px;
             margin-right: 180px;
-            width: 190px;
             text-align: center;
-            height: calc(100% - 180px); /* Subtract the header height from the total height */
+            height: calc(100% - 60px); /* Subtract the header height from the total height */
             overflow-y: auto; /* Makes sidebar scrollable independently */
-            background: black;
+            
             box-shadow: 0 0 5px rgba(0, 255, 0, 0.5), 0 0 25px rgba(0, 255, 0, 0.75);
             border: 1px solid #0F0;
         }
@@ -417,7 +427,7 @@ button:hover {
         #additional-info {
             position: relative;
             top: 60px;
-            width: 200px;
+            width: 210px;
             margin-left: 180px;
             flex-grow: 1;
             height: calc(100% - 60px); /* Adjust based on header */
