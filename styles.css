@@ -392,7 +392,7 @@ button:hover {
         #center-content {
             flex-grow: 1;
             flex-basis: 200px;
-            width: calc(100% - 400px);
+            width: calc(100% - 440px);
             margin: 0 auto;
             box-sizing: border-box;
             padding: 20px;
@@ -413,7 +413,7 @@ button:hover {
         #sidebar {
             position: fixed;
              top: 60px;
-            width: 210px;
+            width: 220px;
             margin-right: 150px;
             text-align: center;
             height: calc(100% - 60px); /* Subtract the header height from the total height */
@@ -426,7 +426,7 @@ button:hover {
         #additional-info {
             position: relative;
             top: 60px;
-            width: 210px;
+            width: 220px;
             margin-left: 150px;
             flex-grow: 1;
             height: calc(100% - 60px); /* Adjust based on header */
