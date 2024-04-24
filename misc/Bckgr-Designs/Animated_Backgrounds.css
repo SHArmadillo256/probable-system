@@ -1,3 +1,7 @@
+.animated-background-dark, .animated-background-light {
+    transition: background 1.5s ease; /* Adjust time as needed */
+}
+
 .animated-background-light {
     position: fixed;
     top: 0; left: 0;
@@ -7,7 +11,6 @@
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
-    transition: background 1.5s ease; /* Adjust time as needed */
 }
 
 .animated-background-dark {
@@ -19,7 +22,6 @@
     background: linear-gradient(-45deg, #243B55, #141E30, #0A0F0D, #2F3C4F);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
-    transition: background-color 1.5s ease; /* Adjust time as needed */
 }
 
 @keyframes gradientBG {
