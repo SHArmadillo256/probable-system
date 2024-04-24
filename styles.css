@@ -391,8 +391,7 @@ button:hover {
         #center-content {
             flex-grow: 1;
             flex-basis: 200px;
-            width: calc(100% - 200px);
-            position: center;
+            width: calc(100% - 400px);
             text-align: center;
             margin: 0 auto;
             box-sizing: border-box;
@@ -403,13 +402,15 @@ button:hover {
 
         #sidebar {
             position: fixed;
-             top: 60px;
-            margin-right: 160px;
+             top: 120px;
+            margin-right: 180px;
             width: 190px;
             text-align: center;
-            height: calc(100% - 60px); /* Subtract the header height from the total height */
+            height: calc(100% - 180px); /* Subtract the header height from the total height */
             overflow-y: auto; /* Makes sidebar scrollable independently */
             background: rgba(0, 0, 0, 0.5); /* Adding a semi-transparent background */
+            box-shadow: 0 0 5px rgba(0, 255, 0, 0.5), 0 0 25px rgba(0, 255, 0, 0.75);
+            border: 1px solid #0F0;
         }
 
         #additional-info {
@@ -424,7 +425,7 @@ button:hover {
         }
 
         .info-box {
-            
+            background: black;
             padding: 10px;
             box-shadow: 0 0 5px rgba(0, 255, 0, 0.5), 0 0 25px rgba(0, 255, 0, 0.75);
             margin-bottom: 10px;
@@ -434,7 +435,6 @@ button:hover {
         }
 
         .info-box p b {
-            background-color: #ffeeaa;
             padding: 5px 10px;
             margin-top: 0;
             text-align: center;
