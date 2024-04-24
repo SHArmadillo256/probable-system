@@ -403,13 +403,13 @@ button:hover {
 
         #sidebar {
             position: fixed;
-             top: 120px;
+             top: 180px;
             margin-right: 180px;
             width: 190px;
             text-align: center;
             height: calc(100% - 180px); /* Subtract the header height from the total height */
             overflow-y: auto; /* Makes sidebar scrollable independently */
-            background: rgba(0, 0, 0, 0.5); /* Adding a semi-transparent background */
+            background: black;
             box-shadow: 0 0 5px rgba(0, 255, 0, 0.5), 0 0 25px rgba(0, 255, 0, 0.75);
             border: 1px solid #0F0;
         }
@@ -418,7 +418,7 @@ button:hover {
             position: relative;
             top: 60px;
             width: 200px;
-            margin-left: 160px;
+            margin-left: 180px;
             flex-grow: 1;
             height: calc(100% - 60px); /* Adjust based on header */
             background: rgba(0, 0, 0, 0.5); /* Consistent with sidebar */
