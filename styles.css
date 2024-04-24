@@ -52,6 +52,7 @@ body {
     padding: 0;
     background: #121212;  /* Dark background for better neon effect visibility *//* Cursor Glow - Non-static, continuously evolving glow */
     overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: hidden; /* Hide horizontal scrollbar */
     overflow-y: auto; /* Allows vertical scrolling */
 }
 
@@ -189,7 +190,6 @@ body {
     max-width: 1600px;
     margin: 0 auto;
     padding-top: 120px;
-    border: 1px solid #c8ccd0; /* Add border to create the box effect */
     display: flex;
     height: calc(100vh - 120px);
     overflow: hidden; /* Prevents any overflow from the container itself */
@@ -233,12 +233,6 @@ body {
   .header-controls {
     justify-content: flex-end;
    }
-
-     .network-actions, .main-navigation {
-        display: flex;
-    justify-content: center;
-    gap: 10px; /* Space between buttons */
-}
 
 button {
     padding: 5px 15px; /* Sizing of buttons */
@@ -396,7 +390,7 @@ button:hover {
 
         #center-content {
             flex-grow: 1;
-            flex-basis: 220px;
+            flex-basis: 200px;
             width: calc(100% - 200px);
             position: center;
             text-align: center;
@@ -404,12 +398,15 @@ button:hover {
             box-sizing: border-box;
             padding: 20px;
             overflow-y: auto; /* Content scrollable */
+            overflow-y: hidden; /* Content scrollable */
 }
 
         #sidebar {
             position: fixed;
-            margin-right: 100px;
+             top: 60px;
+            margin-right: 160px;
             width: 190px;
+            text-align: center;
             height: calc(100% - 60px); /* Subtract the header height from the total height */
             overflow-y: auto; /* Makes sidebar scrollable independently */
             background: rgba(0, 0, 0, 0.5); /* Adding a semi-transparent background */
@@ -418,8 +415,8 @@ button:hover {
         #additional-info {
             position: relative;
             top: 60px;
-            width: 180px;
-            margin-left: 170px;
+            width: 190px;
+            margin-left: 160px;
             flex-grow: 1;
             height: calc(100% - 60px); /* Adjust based on header */
             background: rgba(0, 0, 0, 0.5); /* Consistent with sidebar */
