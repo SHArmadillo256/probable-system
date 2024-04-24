@@ -191,6 +191,9 @@ body {
     padding-top: 120px;
     border: 1px solid #c8ccd0; /* Add border to create the box effect */
     display: flex;
+    height: calc(100vh - 120px);
+    overflow: hidden; /* Prevents any overflow from the container itself */
+
     }
 
         #header {
@@ -405,6 +408,7 @@ button:hover {
 
         #sidebar {
             position: fixed;
+            margin-right: 170px;
             width: 200px;
             height: calc(100% - 60px); /* Subtract the header height from the total height */
             overflow-y: auto; /* Makes sidebar scrollable independently */
@@ -415,7 +419,7 @@ button:hover {
             position: relative;
             right: 0;
             top: 60px;
-            width: 200px;
+            width: 180px;
             margin-left: 200px;
             flex-grow: 1;
             overflow-y: auto;
