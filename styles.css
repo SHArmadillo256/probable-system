@@ -390,8 +390,10 @@ button:hover {
         }
 
         #center-content {
+            position: relative;
             flex-grow: 1;
             flex-basis: 200px;
+            top: 70px;
             width: calc(100% - 440px);
             margin: 0 auto;
             box-sizing: border-box;
@@ -412,7 +414,7 @@ button:hover {
     
         #sidebar {
             position: fixed;
-             top: 60px;
+             top: 70px;
             width: 220px;
             margin-right: 150px;
             text-align: center;
