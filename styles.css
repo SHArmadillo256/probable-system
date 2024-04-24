@@ -398,7 +398,7 @@ button:hover {
             flex-grow: 1;
             flex-basis: 220px;
             width: calc(100% - 200px);
-            margin-left: 200px;
+            margin-left: 100px;
             text-align: center;
             margin: 0 auto;
             box-sizing: border-box;
@@ -420,7 +420,7 @@ button:hover {
             right: 0;
             top: 60px;
             width: 180px;
-            margin-left: 200px;
+            margin-left: 170px;
             flex-grow: 1;
             overflow-y: auto;
             height: calc(100% - 60px); /* Adjust based on header */
