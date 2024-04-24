@@ -186,7 +186,7 @@ body {
 }
 
     .container {
-    max-width: 1260px;
+    max-width: 1600px;
     margin: 0 auto;
     padding-top: 120px;
     border: 1px solid #c8ccd0; /* Add border to create the box effect */
@@ -408,8 +408,8 @@ button:hover {
 
         #sidebar {
             position: fixed;
-            margin-right: 170px;
-            width: 200px;
+            margin-right: 100px;
+            width: 190px;
             height: calc(100% - 60px); /* Subtract the header height from the total height */
             overflow-y: auto; /* Makes sidebar scrollable independently */
             background: rgba(0, 0, 0, 0.5); /* Adding a semi-transparent background */
