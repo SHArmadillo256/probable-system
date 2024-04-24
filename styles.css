@@ -395,7 +395,7 @@ button:hover {
             flex-basis: 200px;
             top: 70px;
             width: calc(100% - 440px);
-            margin: 0 auto;
+            margin: auto;
             box-sizing: border-box;
             padding: 20px;
             overflow-y: auto; /* Content scrollable */
