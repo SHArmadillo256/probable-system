@@ -75,7 +75,7 @@ body {
     }
 }
     #cursor-glow {
-    position: relative;
+    position: absolute;
     pointer-events: none;
     width: 35px;  /* Smaller size */
     height: 35px;  /* Smaller size */
@@ -279,6 +279,7 @@ button:hover {
     height: 100%;
     background: rgba(255, 255, 255, 0.2); /* Light mesh background */
     animation: creepingEffect 5s linear infinite paused;
+        z-index: 3;
 }
        
 
@@ -364,7 +365,6 @@ button:hover {
     font-size: 24px;
 }
 
-   
         #header h1 {
             margin: 0;
             padding: 0;
@@ -404,7 +404,7 @@ button:hover {
 }
 
         #sidebar {
-            position: fixed;
+            position: relative;
             left: 0;
             top: 60px;
             width: 200px;
@@ -414,13 +414,14 @@ button:hover {
         }
 
         #additional-info {
-            position: fixed;
+            position: relative;
             right: 0;
             top: 60px;
             width: 200px;
             overflow-y: auto;
             height: calc(100% - 60px); /* Adjust based on header */
             background: rgba(0, 0, 0, 0.5); /* Consistent with sidebar */
+            z-index: 6;
         }
 
         .info-box {
