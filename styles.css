@@ -382,17 +382,17 @@ button:hover {
     justify-content: space-between;
     overflow-y: auto;
     z-index: 999;
+    justify-content: center;
 }
 
         #center-content h2 {
-            text-align: left;
+            text-align: center;
         }
 
         #center-content {
             flex-grow: 1;
             flex-basis: 200px;
             width: calc(100% - 400px);
-            text-align: center;
             margin: 0 auto;
             box-sizing: border-box;
             padding: 20px;
@@ -415,7 +415,7 @@ button:hover {
             position: fixed;
              top: 60px;
             width: 210px;
-            margin-right: 180px;
+            margin-right: 150px;
             text-align: center;
             height: calc(100% - 60px); /* Subtract the header height from the total height */
             overflow-y: auto; /* Makes sidebar scrollable independently */
@@ -428,7 +428,7 @@ button:hover {
             position: relative;
             top: 60px;
             width: 210px;
-            margin-left: 180px;
+            margin-left: 150px;
             flex-grow: 1;
             height: calc(100% - 60px); /* Adjust based on header */
             background: rgba(0, 0, 0, 0.5); /* Consistent with sidebar */
