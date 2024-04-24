@@ -91,13 +91,10 @@ document.addEventListener('mousemove', function(e) {
     document.getElementById('right-wall').style.backgroundColor = `rgba(0, 0, 0, ${wallBrightness})`;
 });
 
-
-
 // Click effects to create more embers
 document.addEventListener('mousedown', function() {
     for (let i = 0; i < 5; i++) dropEmber();  // Drop multiple embers on click
 });
-
 
 function createAtomWithTrail() {
     const atom = document.createElement('div');
@@ -139,18 +136,23 @@ setInterval(createEmberWithTrail, 500);
 
 
 
-
-document.addEventListener('mousemove', updatePosition2);
-document.addEventListener('touchmove', function(e) {
-    e.preventDefault();
-    updatePosition2(e.touches[0]);
-}, { passive: false });
-
-function updatePosition2(e) {
+document.addEventListener('mousemove', function(e) {
     const glow = document.getElementById('cursor-glow');
-    glow.style.left = e.clientX + 'px';
-    glow.style.top = e.clientY + 'px';
-}
+    if (glow) {
+        glow.style.left = e.clientX + 'px';
+        glow.style.top = e.clientY + 'px';
+    }
+});
+
+document.addEventListener('touchmove', function(e) {
+    e.preventDefault(); // Prevent scrolling
+    const touch = e.touches[0];
+    const glow = document.getElementById('cursor-glow');
+    if (glow) {
+        glow.style.left = touch.clientX + 'px';
+        glow.style.top = touch.clientY + 'px';
+    }
+}, { passive: false });
 
 let lastScrollTop = 0; // Tracks the last scroll position
 
@@ -172,32 +174,3 @@ document.addEventListener('scroll', function() {
     lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
 }, { passive: true });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const background = document.querySelector('.animated-background');
-    const switchControl = document.getElementById('theme-switch');
-
-    // Check for saved theme or use system preference
-    const savedTheme = localStorage.getItem('theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    
-    if (savedTheme === 'light') {
-        background.classList.add('animated-background-light');
-        background.classList.remove('animated-background-dark');
-        switchControl.checked = true;
-    } else {
-        background.classList.add('animated-background-dark');
-        background.classList.remove('animated-background-light');
-        switchControl.checked = false;
-    }
-    
-    switchControl.addEventListener('change', function() {
-        if (this.checked) {
-            background.classList.add('animated-background-light');
-            background.classList.remove('animated-background-dark');
-            localStorage.setItem('theme', 'light');
-        } else {
-            background.classList.add('animated-background-dark');
-            background.classList.remove('animated-background-light');
-            localStorage.setItem('theme', 'dark');
-        }
-    });
-});
