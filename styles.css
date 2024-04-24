@@ -398,6 +398,7 @@ button:hover {
             padding: 20px;
             overflow-y: auto; /* Content scrollable */
             overflow-y: hidden; /* Content scrollable */
+            justify-content: center;
 }
 
         #sidebar {
@@ -416,7 +417,7 @@ button:hover {
         #additional-info {
             position: relative;
             top: 60px;
-            width: 190px;
+            width: 200px;
             margin-left: 160px;
             flex-grow: 1;
             height: calc(100% - 60px); /* Adjust based on header */
