@@ -48,12 +48,15 @@
 }
 
 body {
+    cursor: none;
     margin: 0;
     padding: 0;
     background: #121212;  /* Dark background for better neon effect visibility *//* Cursor Glow - Non-static, continuously evolving glow */
     overflow-x: hidden; /* Hide horizontal scrollbar */
     overflow-y: hidden; /* Hide horizontal scrollbar */
 }
+
+
 
 /* Keyframes for fluid, non-repetitive smoke movement */
 @keyframes smokeFlow {
@@ -107,13 +110,13 @@ body {
 .smoke, .ember {
     position: absolute;
     border-radius: 50%;
-    animation-fill-mode: forwards;
 }
 
 .smoke {
     animation: smokeFlow 4s infinite smokeRise 4s infinite;
     width: 120%;
     height: 120%;
+    z-index: 5000;
 }
 
 @keyframes smokeRise {
