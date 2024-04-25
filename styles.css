@@ -187,7 +187,7 @@ body {
     display: flex;
     height: calc(100vh - 120px);
     overflow: hidden; /* Prevents any overflow from the container itself */
-    z-index: 6;
+    z-index: 999;
     }
 
         #header {
@@ -375,7 +375,6 @@ button:hover {
     display: flex;
     justify-content: space-between;
     overflow-y: auto;
-    z-index: 999;
 }
 
         #center-content h2 {
@@ -456,6 +455,7 @@ button:hover {
             border-top: 1px solid #c8ccd0;
             clear: both;
             text-align: center;
+            z-indedx: 999;
         }
 
         #footer p {
