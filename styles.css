@@ -98,10 +98,17 @@ body {
 .ember2 {
     position: absolute;
     background-color: rgba(255, 69, 0, 0.9);
-    animation: risingEmber 3s infinite;
+    animation: risingEmber 3s infinite trailFade 3s infinite riseAndFade;
     width: 3px;
     height: 3px;
     border-radius: 50%;
+}
+
+.smoke {
+    position: absolute;
+    animation: smokeFlow 4s infinite;
+    width: 4px;
+
 }
 
 .rising-ember {
