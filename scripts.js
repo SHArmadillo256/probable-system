@@ -59,6 +59,17 @@ setInterval(function() {
     setTimeout(() => { ember.remove(); }, 5100);
 }, 500);
 
+/* Randomly create ember 2 around the cursor */
+setInterval(function() {
+    const ember = document.createElement('div');
+    ember2.className = 'ember2';
+    document.body.appendChild(ember2);
+    ember2.style.left = (Math.random() * window.innerWidth) + 'px';
+    ember2.style.top = (Math.random() * window.innerHeight) + 'px';
+    
+    setTimeout(() => { ember2.remove(); }, 5100);
+}, 500);
+
 document.addEventListener('mousemove', function(e) {
     var xPos = e.clientX / window.innerWidth;
     var yPos = e.clientY / window.innerHeight;
