@@ -487,24 +487,24 @@ button:hover {
     }
 
     #content {
-        width: 100%; /* Full width on mobile */
+        width: 75%; /* Full width on mobile */
     }
 
     #center-content {
         margin-left: 0;
-        margin-top: 10px;
+        margin-top: 25px;
     }
 
     #sidebar {
         display: block; /* Display sidebar on mobile */
-        width: 100%;
+        width: 75%;
         top: 0;
         height: auto; /* Full width on mobile */
         position: relative; /* Remove fixed positioning */
     }
 
     #additional-info {
-        width: 100%; /* Full width on mobile */
+        width: 75%; /* Full width on mobile */
         position: static; /* Remove fixed positioning */
     }
 
