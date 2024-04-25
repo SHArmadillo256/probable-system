@@ -167,7 +167,7 @@ body {
     
 }
 
-.trail {
+.atom-trail {
     position: absolute;
     width: 1px; /* Width of the trail */
     height: 1px; /* Height of the trail */
@@ -175,7 +175,18 @@ body {
     top: 50%; /* Centered vertically */
     left: 5px; /* Starts near the ember */
     border-radius: 1px;
-    animation: trailFade 3s infinite emberFall 3s infinite trailMove 3sec infinite;
+    animation: trailFade 3s infinite trailMove 3s infinite;
+}
+
+.ember-trail {
+    position: absolute;
+    width: 1px; /* Width of the trail */
+    height: 1px; /* Height of the trail */
+    background-color: rgba(255, 165, 0, 0.8);
+    top: 50%; /* Centered vertically */
+    left: 5px; /* Starts near the ember */
+    border-radius: 1px;
+    animation: trailFade 3s infinite emberFall 3s infinite trailMove 3s infinite;
 }
 
 /* Hide the WalletConnect expand/collapse behavior */
