@@ -90,8 +90,17 @@ body {
     position: absolute;
     background-color: rgba(255, 69, 0, 0.9);
     animation: emberFall 3s infinite;
-    width: 5px;
-    height: 5px;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+}
+
+.ember2 {
+    position: absolute;
+    background-color: rgba(255, 69, 0, 0.9);
+    animation: risingEmber 3s infinite;
+    width: 3px;
+    height: 3px;
     border-radius: 50%;
 }
 
@@ -165,7 +174,7 @@ body {
     top: 50%; /* Centered vertically */
     left: 5px; /* Starts near the ember */
     border-radius: 1px;
-    animation: trailFade 5s infinite;
+    animation: trailFade 5s infinite emberFall 5s infinite;
 }
 
 /* Hide the WalletConnect expand/collapse behavior */
