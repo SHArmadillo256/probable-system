@@ -426,7 +426,6 @@ button:hover {
             flex-grow: 1;
             height: calc(100% - 60px); /* Adjust based on header */
             background: rgba(0, 0, 0, 0.5); /* Consistent with sidebar */
-            z-index: 6;
         }
 
         .info-box {
