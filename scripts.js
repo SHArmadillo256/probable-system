@@ -61,7 +61,7 @@ setInterval(function() {
 
 /* Randomly create ember 2 around the cursor */
 setInterval(function() {
-    const ember = document.createElement('div');
+    const ember2 = document.createElement('div');
     ember2.className = 'ember2';
     document.body.appendChild(ember2);
     ember2.style.left = (Math.random() * window.innerWidth) + 'px';
