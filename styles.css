@@ -89,7 +89,7 @@ body {
 .ember {
     position: absolute;
     background-color: rgba(255, 69, 0, 0.9);
-    animation: trailFade 3s infinite, emberFall 3s infinite;
+    animation: riseAndFade 3s infinite, emberFall 3s infinite;
     width: 5px;
     height: 5px;
     border-radius: 50%;
