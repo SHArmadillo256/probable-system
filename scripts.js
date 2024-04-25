@@ -49,6 +49,34 @@ document.addEventListener('touchmove', function(e) {
  });
 
 
+function dropEmber2() {
+    var ember2 = document.createElement('div');
+    ember2.className = 'ember2';
+    ember2.style.left = Math.random() * 100 + '%';
+    document.getElementById('cursor-glow').appendChild(ember2);
+
+    setTimeout(() => {
+        ember2.style.transform = 'translateY(100px)';
+        ember2.style.opacity = 0;
+        setTimeout(() => ember2.remove(), 1000);
+    }, 100);
+}
+
+document.addEventListener('mousemove', function(e) {
+    var glow = document.getElementById('cursor-glow');
+    glow.style.left = e.pageX + 'px';
+    glow.style.top = e.pageY + 'px';
+});
+
+// Click effects to create more embers
+document.addEventListener('mousedown', function() {
+    for (let i = 0; i < 5; i++) dropEmber();
+});
+
+setInterval(dropEmber, 2000);
+
+
+
 /* Randomly create ember 2 around the cursor */
 setInterval(function() {
     const ember2 = document.createElement('div');
@@ -76,8 +104,6 @@ document.addEventListener('mousedown', function() {
 
 
 
-
-
 function dropEmber() {
     var ember = document.createElement('div');
     ember.className = 'ember';
@@ -97,6 +123,7 @@ document.addEventListener('mousemove', function(e) {
     glow.style.top = e.pageY + 'px';
 });
 
+// Click effects to create more embers
 document.addEventListener('mousedown', function() {
     for (let i = 0; i < 5; i++) dropEmber();
 });
