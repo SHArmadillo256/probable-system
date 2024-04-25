@@ -87,9 +87,8 @@ body {
 
 /* Additional elements for embers and dynamically changing effects */
 .ember {
-    position: absolute;
     background-color: rgba(255, 69, 0, 0.9);
-    animation: emberFall 3s infinite;
+    animation: emberFall 3s infinite emberMovement 2s infinite;
     width: 3px;
     height: 3px;
     border-radius: 50%;
@@ -97,7 +96,6 @@ body {
 }
 
 .ember2 {
-    position: absolute;
     background-color: rgba(255, 69, 0, 0.9);
     animation: risingEmber 3s infinite trailFade 3s infinite;
     width: 3px;
@@ -106,12 +104,23 @@ body {
     z-index: 5000;
 }
 
-.smoke {
+.smoke, .ember {
     position: absolute;
-    animation: smokeFlow 4s infinite;
-    width: 4px;
-
+    border-radius: 50%;
+    animation-fill-mode: forwards;
 }
+
+.smoke {
+    animation: smokeFlow 4s infinite smokeRise 4s infinite;
+    width: 120%;
+    height: 120%;
+}
+
+@keyframes smokeRise {
+    0% { transform: scale(1) translateY(0); opacity: 1; }
+    100% { transform: scale(1.5) translateY(-50px); opacity: 0; border-radius: 40% 60% 60% 40%; }
+}
+
 
 .rising-ember {
     animation: trailFade 3s infinite riseAndFade 3s infinite;
