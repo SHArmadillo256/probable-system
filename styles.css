@@ -422,7 +422,7 @@ button:hover {
             position: relative;
             top: 70px;
             width: 220px;
-            margin-left: 100px;
+            margin-left: 50px;
             flex-grow: 1;
             height: calc(100% - 60px); /* Adjust based on header */
             background: rgba(0, 0, 0, 0.5); /* Consistent with sidebar */
