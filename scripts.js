@@ -77,6 +77,36 @@ document.addEventListener('mousedown', function() {
 
 
 
+
+function dropEmber() {
+    var ember = document.createElement('div');
+    ember.className = 'ember';
+    ember.style.left = Math.random() * 100 + '%';
+    document.getElementById('cursor-glow').appendChild(ember);
+
+    setTimeout(() => {
+        ember.style.transform = 'translateY(100px)';
+        ember.style.opacity = 0;
+        setTimeout(() => ember.remove(), 1000);
+    }, 100);
+}
+
+document.addEventListener('mousemove', function(e) {
+    var glow = document.getElementById('cursor-glow');
+    glow.style.left = e.pageX + 'px';
+    glow.style.top = e.pageY + 'px';
+});
+
+document.addEventListener('mousedown', function() {
+    for (let i = 0; i < 5; i++) dropEmber();
+});
+
+setInterval(dropEmber, 2000);
+
+
+
+
+
 /* Randomly create embers around the cursor */
 setInterval(function() {
     const ember = document.createElement('div');
