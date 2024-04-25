@@ -90,11 +90,11 @@ function createAtomWithTrail() {
     document.getElementById('cursor-glow').appendChild(atom);
     atom.style.animation = 'atomOrbit infinite linear';
 
-    const atom-trail = document.createElement('div');
-    atom-trail.className = 'atom-trail';
-    atom-trail.style.width = '25px';  // Example trail length
-    atom-trail.style.animation = 'trailFade 1s infinite linear';
-    document.getElementById('cursor-glow').appendChild(atom-trail);
+    const atomtrail = document.createElement('div');
+    atomtrail.className = 'atomtrail';
+    atomtrail.style.width = '25px';  // Example trail length
+    atomtrail.style.animation = 'trailFade 1s infinite linear';
+    document.getElementById('cursor-glow').appendChild(atomtrail);
 }
 
 for (let i = 0; i < 3; i++) {
@@ -109,15 +109,15 @@ function createEmberWithTrail() {
     ember.style.top = `${Math.random() * window.innerHeight}px`;
 
     // Creating a trail for each ember
-    const ember-trail = document.createElement('div');
-    ember-trail.className = 'ember-trail';
-    document.body.appendChild(ember-trail);
-    ember-trail.style.left = ember.style.left;
-    ember-trail.style.top = ember.style.top; 
+    const embertrail = document.createElement('div');
+    embertrail.className = 'embertrail';
+    document.body.appendChild(embertrail);
+    embertrail.style.left = ember.style.left;
+    embertrail.style.top = ember.style.top; 
 
     // Animation to move trail with ember
-    ember-trail.style.animation = 'trailMove 2.5s infinite';
-    setTimeout(() => { ember.remove(); ember-trail.remove(); }, 5100);
+    embertrail.style.animation = 'trailMove 2.5s infinite';
+    setTimeout(() => { ember.remove(); embertrail.remove(); }, 5100);
 }
 
 setInterval(createEmberWithTrail, 250);
