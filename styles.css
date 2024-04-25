@@ -174,7 +174,7 @@ body {
     
 }
 
-.atom-trail {
+.atomtrail {
     position: absolute;
     width: 1px; /* Width of the trail */
     height: 1px; /* Height of the trail */
@@ -185,7 +185,7 @@ body {
     animation: trailFade 3s infinite trailMove 3s infinite;
 }
 
-.ember-trail {
+.embertrail {
     position: absolute;
     width: 1px; /* Width of the trail */
     height: 1px; /* Height of the trail */
