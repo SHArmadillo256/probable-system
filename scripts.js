@@ -116,7 +116,7 @@ function createEmberWithTrail() {
     ember-trail.style.top = ember.style.top; 
 
     // Animation to move trail with ember
-    trail.style.animation = 'trailMove 2.5s infinite';
+    ember-trail.style.animation = 'trailMove 2.5s infinite';
     setTimeout(() => { ember.remove(); ember-trail.remove(); }, 5100);
 }
 
