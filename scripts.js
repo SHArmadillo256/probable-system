@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     connectButton.addEventListener('click', function() {
         // Simulate wallet connection
         connectButton.style.display = 'none';
-        walletAndSettings.style.display = 'flex';  // Show wallet info and settings
+        walletAndSettings.style.display = 'flex';  
     });
     
     settingsButton.onclick = function() {
@@ -35,7 +35,7 @@ function changeCursor(cursorType) {
 document.getElementById('cursor-choice').addEventListener('change', function() {
     const selectedCursor = this.value;
     applyCursorEffect(selectedCursor);
-    localStorage.setItem('userCursorChoice', selectedCursor);  // Save choice in localStorage
+    localStorage.setItem('userCursorChoice', selectedCursor);
 });
 
 function applyCursorEffect(effectName) {
@@ -47,7 +47,7 @@ function applyCursorEffect(effectName) {
         link.rel = 'stylesheet';
         document.head.appendChild(link);
     }
-    link.href = `misc/cursor_themes/${effectName}.css`;  // Path to the cursor CSS file
+    link.href = `misc/cursor_themes/${effectName}.css`;  
 }
 
 // On load, apply saved cursor effect if any
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
 /* Position cursor glow based on mouse or touch movement */
 document.addEventListener('mousemove', updatePosition);
 document.addEventListener('touchmove', function(e) {
-    e.preventDefault();  // Optional: prevent scrolling when touching the glow
+    e.preventDefault();
     updatePosition(e.touches[0]);
   });
  });
@@ -103,7 +103,7 @@ document.addEventListener('mousemove', function(e) {
 
 // Click effects to create more embers
 document.addEventListener('mousedown', function() {
-    for (let i = 0; i < 5; i++) dropEmber();  // Drop multiple embers on click
+    for (let i = 0; i < 5; i++) dropEmber(); 
 });
 
 function createAtomWithTrail() {
@@ -134,8 +134,8 @@ function createEmberWithTrail() {
     const trail = document.createElement('div');
     trail.className = 'trail';
     document.body.appendChild(trail);
-    trail.style.left = ember.style.left; // Initial position matching the ember
-    trail.style.top = ember.style.top; // Initial position matching the ember
+    trail.style.left = ember.style.left;
+    trail.style.top = ember.style.top; 
 
     // Animation to move trail with ember
     trail.style.animation = 'trailMove 5s infinite';
