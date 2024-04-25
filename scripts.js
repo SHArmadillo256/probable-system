@@ -28,34 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-function changeCursor(cursorType) {
-    document.documentElement.style.cursor = 'url(css/' + cursorType + '.cur), auto';
-}
 
-document.getElementById('cursor-choice').addEventListener('change', function() {
-    const selectedCursor = this.value;
-    applyCursorEffect(selectedCursor);
-    localStorage.setItem('userCursorChoice', selectedCursor);
-});
-
-function applyCursorEffect(effectName) {
-    const linkId = 'cursor-style';
-    let link = document.getElementById(linkId);
-    if (!link) {
-        link = document.createElement('link');
-        link.id = linkId;
-        link.rel = 'stylesheet';
-        document.head.appendChild(link);
-    }
-    link.href = `misc/cursor_themes/${effectName}.css`;  
-}
-
-// On load, apply saved cursor effect if any
-window.onload = () => {
-    const savedCursor = localStorage.getItem('userCursorChoice') || 'default';
-    applyCursorEffect(savedCursor);
-    document.getElementById('cursor-choice').value = savedCursor;
-};
 
 
 document.addEventListener('DOMContentLoaded', function() {
