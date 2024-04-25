@@ -191,7 +191,7 @@ body {
     }
 
         #header {
-            width: 90%;
+            width: 100%;
             display: flex;
             top: 10px;
             height: 60px;
