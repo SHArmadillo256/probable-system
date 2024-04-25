@@ -486,6 +486,10 @@ button:hover {
         align-items: center;
     }
 
+     .container {
+        width: 100%; /* Full width */
+    }
+
     #content {
         width: 75%; /* Full width on mobile */
     }
