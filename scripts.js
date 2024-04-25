@@ -90,7 +90,7 @@ function createAtomWithTrail() {
     document.getElementById('cursor-glow').appendChild(atom);
     atom.style.animation = 'atomOrbit infinite linear';
 
-    const trail = document.createElement('div');
+    const atom-trail = document.createElement('div');
     atom-trail.className = 'atom-trail';
     atom-trail.style.width = '25px';  // Example trail length
     atom-trail.style.animation = 'trailFade 1s infinite linear';
@@ -109,7 +109,7 @@ function createEmberWithTrail() {
     ember.style.top = `${Math.random() * window.innerHeight}px`;
 
     // Creating a trail for each ember
-    const trail = document.createElement('div');
+    const ember-trail = document.createElement('div');
     ember-trail.className = 'ember-trail';
     document.body.appendChild(ember-trail);
     ember-trail.style.left = ember.style.left;
