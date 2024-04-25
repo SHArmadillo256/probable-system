@@ -514,6 +514,6 @@ button:hover {
     }
 
     .neon-button {
-        width: 100%;  // Full width buttons for easier access on mobile
-        margin-bottom: 5px;  // Adds space between buttons for easier clicking
+        width: 100%;
+        margin-bottom: 5px;
     }
