@@ -145,11 +145,13 @@ function createAtomWithTrail() {
     atomtrail.style.width = '25px';  // Example trail length
     atomtrail.style.animation = 'trailFade 1s infinite linear';
     document.getElementById('cursor-glow').appendChild(atomtrail);
+
+    // Animation to move trail with atom
+    atomtrail.style.animation = 'trailMove 2.5s infinite';
+    setTimeout(() => { ember.remove(); atomtrail.remove(); }, 5100);
 }
 
-for (let i = 0; i < 3; i++) {
-    createAtomWithTrail();
-}
+setInterval(createEmberWithTrail, 250);
 
 function createEmberWithTrail() {
     const ember = document.createElement('div');
