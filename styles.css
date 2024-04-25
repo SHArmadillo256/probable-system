@@ -89,7 +89,7 @@ body {
 .ember {
     position: absolute;
     background-color: rgba(255, 69, 0, 0.9);
-    animation: riseAndFade 3s infinite, emberFall 3s infinite;
+    animation: emberFall 3s infinite;
     width: 5px;
     height: 5px;
     border-radius: 50%;
@@ -103,11 +103,6 @@ body {
 @keyframes emberFall {
     0% { transform: translateY(0); opacity: 1; }
     100% { transform: translateY(100px); opacity: 0; }
-}
-
-@keyframes riseAndFade {
-    0% { transform: translateY(0); opacity: 1; }
-    100% { transform: translateY(-200px); opacity: 0; }
 }
 
 #left-wall, #right-wall, #floor {
