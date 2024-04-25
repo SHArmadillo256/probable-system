@@ -48,12 +48,6 @@ document.addEventListener('touchmove', function(e) {
   });
  });
 
-function updatePosition(e) {
-    const glow = document.getElementById('cursor-glow');
-    glow.style.left = e.clientX + 'px';
-    glow.style.top = e.clientY + 'px';
-}
-
 /* Randomly create embers around the cursor */
 setInterval(function() {
     const ember = document.createElement('div');
