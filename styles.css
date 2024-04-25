@@ -93,6 +93,7 @@ body {
     width: 3px;
     height: 3px;
     border-radius: 50%;
+    z-index: 5000;
 }
 
 .ember2 {
@@ -102,6 +103,7 @@ body {
     width: 3px;
     height: 3px;
     border-radius: 50%;
+    z-index: 5000;
 }
 
 .smoke {
@@ -114,6 +116,7 @@ body {
 .rising-ember {
     animation: trailFade 3s infinite riseAndFade 3s infinite;
     opacity: 0;  /* Start fully transparent */
+    z-index: 5000;
 }
 
 @keyframes emberFall {
@@ -171,6 +174,7 @@ body {
     height: 4px;
     animation: atomOrbit infinite linear trailFade 3s infinite;
     border-radius: 50%;
+    z-index: 5000;
     
 }
 
@@ -183,6 +187,7 @@ body {
     left: 5px; /* Starts near the ember */
     border-radius: 1px;
     animation: trailFade 3s infinite trailMove 3s infinite;
+    z-index: 5000;
 }
 
 .embertrail {
@@ -194,6 +199,7 @@ body {
     left: 5px; /* Starts near the ember */
     border-radius: 1px;
     animation: trailFade 3s infinite emberFall 3s infinite trailMove 3s infinite;
+    z-index: 5000;
 }
 
 /* Hide the WalletConnect expand/collapse behavior */
