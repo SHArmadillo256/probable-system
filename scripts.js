@@ -48,16 +48,6 @@ document.addEventListener('touchmove', function(e) {
   });
  });
 
-/* Randomly create embers around the cursor */
-setInterval(function() {
-    const ember = document.createElement('div');
-    ember.className = 'ember';
-    document.body.appendChild(ember);
-    ember.style.left = (Math.random() * window.innerWidth) + 'px';
-    ember.style.top = (Math.random() * window.innerHeight) + 'px';
-    
-    setTimeout(() => { ember.remove(); }, 5100);
-}, 500);
 
 /* Randomly create ember 2 around the cursor */
 setInterval(function() {
@@ -69,6 +59,19 @@ setInterval(function() {
     
     setTimeout(() => { ember2.remove(); }, 5100);
 }, 500);
+
+/* Randomly create embers around the cursor */
+setInterval(function() {
+    const ember = document.createElement('div');
+    ember.className = 'ember';
+    document.body.appendChild(ember);
+    ember.style.left = (Math.random() * window.innerWidth) + 'px';
+    ember.style.top = (Math.random() * window.innerHeight) + 'px';
+    
+    setTimeout(() => { ember.remove(); }, 5100);
+}, 500);
+
+
 
 document.addEventListener('mousemove', function(e) {
     var xPos = e.clientX / window.innerWidth;
