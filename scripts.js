@@ -47,7 +47,7 @@ function applyCursorEffect(effectName) {
         link.rel = 'stylesheet';
         document.head.appendChild(link);
     }
-    link.href = `Cursor_Designs/${effectName}.css`;  // Path to the cursor CSS file
+    link.href = `misc/cursor_themes/${effectName}.css`;  // Path to the cursor CSS file
 }
 
 // On load, apply saved cursor effect if any
