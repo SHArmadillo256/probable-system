@@ -58,12 +58,22 @@ window.onload = () => {
 };
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const glow = document.getElementById('cursor-glow');
+    function updatePosition(e) {
+    if (glow) {
+        glow.style.left = e.clientX + 'px';
+        glow.style.top = e.clientY + 'px';
+    }
+}
+                          
 /* Position cursor glow based on mouse or touch movement */
 document.addEventListener('mousemove', updatePosition);
 document.addEventListener('touchmove', function(e) {
     e.preventDefault();  // Optional: prevent scrolling when touching the glow
     updatePosition(e.touches[0]);
-});
+  });
+ });
 
 function updatePosition(e) {
     const glow = document.getElementById('cursor-glow');
@@ -135,14 +145,6 @@ function createEmberWithTrail() {
 setInterval(createEmberWithTrail, 500);
 
 
-
-document.addEventListener('mousemove', function(e) {
-    const glow = document.getElementById('cursor-glow');
-    if (glow) {
-        glow.style.left = e.clientX + 'px';
-        glow.style.top = e.clientY + 'px';
-    }
-});
 
 document.addEventListener('touchmove', function(e) {
     e.preventDefault(); // Prevent scrolling
