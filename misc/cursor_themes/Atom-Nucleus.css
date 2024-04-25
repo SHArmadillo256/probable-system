@@ -1,11 +1,12 @@
-@keyframes atomOrbit {
-    0% { transform: translateX(0) rotate(0deg); }
-    100% { transform: translateX(50px) rotate(360deg); }
-}
-
-@keyframes trailFade {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+#cursor-glow {
+    position: absolute;
+    pointer-events: none;
+    width: 35px;  /* Smaller size */
+    height: 35px;  /* Smaller size */
+    background: radial-gradient(circle, rgba(255, 140, 0, 0.8), transparent 70%);
+    box-shadow: 0 0 35px 35px rgba(255, 140, 0, 0.1), 0 0 50px 100px rgba(255, 140, 0, 0.05);
+    animation: smokeFlow 8s infinite;
+    z-index: 9999;
 }
 
 .atom {
@@ -28,3 +29,15 @@
     border-radius: 1px;
     animation: trailFade 10s infinite;
 }
+
+
+@keyframes atomOrbit {
+    0% { transform: translateX(0) rotate(0deg); }
+    100% { transform: translateX(50px) rotate(360deg); }
+}
+
+@keyframes trailFade {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
