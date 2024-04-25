@@ -384,7 +384,6 @@ button:hover {
         #center-content {
             position: relative;
             flex-grow: 1;
-            margin-left: 210px;
             top: 70px;
             width: calc(100% - 440px);
             margin: auto;
