@@ -28,6 +28,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+// Function to create embers at the cursor position
+function createEmber() {
+    const ember = document.createElement('div');
+    ember.className = 'ember';
+    ember.style.position = 'absolute';
+    ember.style.left = '50%'; // Start at center of the cursor glow
+    ember.style.top = '50%';  // Start at center of the cursor glow
+    document.getElementById('cursor-glow').appendChild(ember);
+
+    // Set animation for rising
+    ember.style.animation = 'riseAndFade 2s forwards';
+    
+    // Remove ember after animation
+    setTimeout(() => ember.remove(), 2000);
+}
+
+// Update ember positions to follow cursor
+document.addEventListener('mousemove', function(e) {
+    const glow = document.getElementById('cursor-glow');
+    if (glow) {
+        glow.style.left = `${e.clientX - glow.offsetWidth / 2}px`;
+        glow.style.top = `${e.clientY - glow.offsetHeight / 2}px`;
+    }
+});
+
+// Interval to create embers
+setInterval(createEmber, 500);
+
 
 
 
@@ -70,10 +98,10 @@ document.addEventListener('mousemove', function(e) {
 
 // Click effects to create more embers
 document.addEventListener('mousedown', function() {
-    for (let i = 0; i < 5; i++) dropEmber();
+    for (let i = 0; i < 5; i++) dropEmber2();
 });
 
-setInterval(dropEmber, 2000);
+setInterval(dropEmber2, 2000);
 
 
 
