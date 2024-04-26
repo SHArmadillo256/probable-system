@@ -127,7 +127,7 @@ body {
 
 
 .rising-ember {
-    animation: trailFade 3s infinite riseAndFade 3s infinite;
+    animation: trailFade 3s infinite;
     opacity: 0;  /* Start fully transparent */
     z-index: 5000;
 }
@@ -185,7 +185,7 @@ body {
     background-color: rgba(255, 69, 0, 0.9);
     width: 4px;
     height: 4px;
-    animation: atomOrbit infinite linear trailFade 3s infinite;
+    animation: atomOrbit 10s infinite linear trailFade 3s infinite;
     border-radius: 50%;
     z-index: 5000;
     
@@ -199,7 +199,7 @@ body {
     top: 50%; /* Centered vertically */
     left: 5px; /* Starts near the ember */
     border-radius: 1px;
-    animation: trailFade 3s infinite trailMove 3s infinite;
+    animation: trailFade 3s infinite;
     z-index: 5000;
 }
 
@@ -211,7 +211,7 @@ body {
     top: 50%; /* Centered vertically */
     left: 5px; /* Starts near the ember */
     border-radius: 1px;
-    animation: trailFade 3s infinite emberFall 3s infinite trailMove 3s infinite;
+    animation: trailFade 3s infinite emberFall 3s infinite;
     z-index: 5000;
 }
 
