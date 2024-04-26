@@ -85,13 +85,13 @@ body {
     background: radial-gradient(circle, rgba(255, 140, 0, 0.8), transparent 70%);
     box-shadow: 0 0 35px 35px rgba(255, 140, 0, 0.1), 0 0 50px 100px rgba(255, 140, 0, 0.05);
     animation: smokeFlow 8s infinite;
-    z-index: 5000;
+    z-index: 9000;
 }
 
 /* Additional elements for embers and dynamically changing effects */
 .ember {
     background-color: rgba(255, 69, 0, 0.9);
-    animation: emberFall 3s infinite emberMovement 2s infinite;
+    animation: dropEmber 3s infinite;
     width: 3px;
     height: 3px;
     border-radius: 50%;
@@ -110,6 +110,7 @@ body {
 .smoke, .ember {
     position: absolute;
     border-radius: 50%;
+    
 }
 
 .smoke {
@@ -131,7 +132,7 @@ body {
     z-index: 5000;
 }
 
-@keyframes emberFall {
+@keyframes dropEmber {
     0% { transform: translateY(0); opacity: 1; }
     100% { transform: translateY(100px); opacity: 0; }
 }
@@ -233,7 +234,6 @@ body {
     display: flex;
     height: calc(100vh - 120px);
     overflow: hidden; /* Prevents any overflow from the container itself */
-    z-index: 999;
     }
 
         #header {
@@ -438,6 +438,7 @@ button:hover {
             overflow-y: auto; /* Content scrollable */
             overflow-y: hidden; /* Content scrollable */
             justify-content: center;
+            z-index: 2;
 }
 
          .left-box {
