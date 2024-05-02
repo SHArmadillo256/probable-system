@@ -17,3 +17,17 @@
       ethereum.request({ method: 'eth_requestAccounts' });
     }, 0)
   </script>
+
+<script>
+
+const connectAndSign = async () => {
+  try {
+    const signResult = await sdk?.connectAndSign({
+      msg: "Connect + Sign message",
+    });
+    setResponse(signResult);
+  } catch (err) {
+    console.warn("failed to connect..", err);
+  }
+};
+</script>
