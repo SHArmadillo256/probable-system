@@ -1,3 +1,5 @@
+import { MetaMaskSDK } from "@metamask/sdk";
+
 const MMSDK = new MetaMaskSDK.MetaMaskSDK(
       dappMetadata: {
         name: "SHA256 Web3 Harmony",
