@@ -1,7 +1,7 @@
 const MMSDK = new MetaMaskSDK.MetaMaskSDK(
       dappMetadata: {
         name: "SHA256 Web3 Harmony",
-        url: "Sharmadillo256.com",
+        url: "window.Sharmadillo256.com",
       },
       infuraAPIKey: process.env.e2c71b288df14e9877b4a6af1d6f571d,
       // Other options.
